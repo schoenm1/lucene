@@ -1,0 +1,26 @@
+\BOOKMARK [0][]{chapter*.2}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [0][]{chapter*.3}{Tabellenverzeichnis}{}% 2
+\BOOKMARK [0][]{chapter*.4}{Verzeichnis der Listings}{}% 3
+\BOOKMARK [0][]{chapter.1}{Versionierung}{}% 4
+\BOOKMARK [0][]{chapter.2}{Aufw\344nde}{}% 5
+\BOOKMARK [0][]{chapter.3}{Einleitung}{}% 6
+\BOOKMARK [1][]{section.3.1}{Das Projekt}{chapter.3}% 7
+\BOOKMARK [2][]{subsection.3.1.1}{Ausgangslage}{section.3.1}% 8
+\BOOKMARK [2][]{subsection.3.1.2}{Ziel der Arbeit}{section.3.1}% 9
+\BOOKMARK [2][]{subsection.3.1.3}{Aufgabenstellung}{section.3.1}% 10
+\BOOKMARK [2][]{subsection.3.1.4}{Erwartetes Resultat}{section.3.1}% 11
+\BOOKMARK [2][]{subsection.3.1.5}{Geplante Termine}{section.3.1}% 12
+\BOOKMARK [0][]{chapter.4}{Die Search-Engine}{}% 13
+\BOOKMARK [1][]{section.4.1}{eingesetzte Software}{chapter.4}% 14
+\BOOKMARK [0][]{chapter.5}{Vergleich der Ergebnisse}{}% 15
+\BOOKMARK [1][]{section.5.1}{Syntax f\374r Suche mit Lucene / Luke}{chapter.5}% 16
+\BOOKMARK [2][]{subsection.5.1.1}{Felder}{section.5.1}% 17
+\BOOKMARK [2][]{subsection.5.1.2}{Wildcard Suche}{section.5.1}% 18
+\BOOKMARK [2][]{subsection.5.1.3}{Fuzzy Suche}{section.5.1}% 19
+\BOOKMARK [2][]{subsection.5.1.4}{Proximity Suche \(Nachbarschaftliche\)}{section.5.1}% 20
+\BOOKMARK [2][]{subsection.5.1.5}{Range Suche \(Bereichssuche\)}{section.5.1}% 21
+\BOOKMARK [2][]{subsection.5.1.6}{Boosting Suche \(verst\344rktes Suchen\)}{section.5.1}% 22
+\BOOKMARK [2][]{subsection.5.1.7}{Boolsches Suchen}{section.5.1}% 23
+\BOOKMARK [0][]{chapter.6}{Fazit}{}% 24
+\BOOKMARK [0][]{appendix.A}{Anhang}{}% 25
+\BOOKMARK [0][]{appendix*.9}{Literaturverzeichnis}{}% 26
