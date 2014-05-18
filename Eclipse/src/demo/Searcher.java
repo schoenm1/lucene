@@ -1,4 +1,4 @@
-package zhaw;
+package demo;
 
 /**
  * Copyright Manning Publications Co.

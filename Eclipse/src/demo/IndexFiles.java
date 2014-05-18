@@ -1,4 +1,4 @@
-package zhaw;
+package demo;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
@@ -92,7 +92,7 @@ public class IndexFiles {
 	public void index(File root, boolean create, String index) {
 
 		try {
-			//Date start = new Date();
+			// Date start = new Date();
 			Directory dir = FSDirectory.open(new File(index));
 
 			System.out.println("Directory = " + index);
@@ -108,14 +108,14 @@ public class IndexFiles {
 
 			indexDocs(root, index, create); // add new docs
 
-		//	System.out.println("Optimizing index...");
-		//	writer.optimize();
+			// System.out.println("Optimizing index...");
+			// writer.optimize();
 			writer.close();
 
-		//	Date end = new Date();
+			// Date end = new Date();
 
-		//	System.out.print(end.getTime() - start.getTime());
-		//	System.out.println(" total milliseconds");
+			// System.out.print(end.getTime() - start.getTime());
+			// System.out.println(" total milliseconds");
 
 		} catch (Exception e) {
 			e.printStackTrace();

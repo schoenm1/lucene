@@ -17,7 +17,7 @@ package zhaw;
  * 
  * @Author: Arturo Beltran
  */
-package zhaw;
+package demo;
 
 import java.io.IOException;
 import java.io.InputStream;

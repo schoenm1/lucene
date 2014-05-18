@@ -3,7 +3,6 @@ package zhaw;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +30,7 @@ public class myFunctions {
 	public static String[] validFileextensions = { "txt", "java", "c", "h", "pdf" };
 	private PDFTextStripper stripper = null;
 	private static final char FILE_SEPARATOR = System.getProperty("file.separator").charAt(0);
-	
+
 	static IndexWriter writer;
 
 	public myFunctions(IndexWriter _writer) {
@@ -62,7 +61,6 @@ public class myFunctions {
 		return validFileextensions;
 	}
 
-	
 	/**
 	 * Set the text stripper that will be used during extraction.
 	 * 
@@ -81,9 +79,7 @@ public class myFunctions {
 	public DateTools.Resolution getDateTimeResolution() {
 		return dateTimeResolution;
 	}
-	
-	
-	
+
 	/**
 	 * Set the Lucene data time resolution.
 	 * 
@@ -93,9 +89,7 @@ public class myFunctions {
 	public void setDateTimeResolution(DateTools.Resolution resolution) {
 		dateTimeResolution = resolution;
 	}
-	
-	
-	
+
 	public static String getFileExtensionFunction(String ext) {
 		// System.out.println("**EXT = " + ext);
 		try {
@@ -133,6 +127,10 @@ public class myFunctions {
 		return directories;
 	}
 
+	/*
+	 * @return: returns the Extension of the file return "NULL" if the file has
+	 * no extension
+	 */
 	public static String getFileExtension(File path) {
 
 		String pathstring = path.getName().toLowerCase();
@@ -150,15 +148,13 @@ public class myFunctions {
 	}
 
 	public static void prepareindexFile(File f) {
-		// System.out.println("in prepareindexFile: Filename = " + f);
 		String fileExtension = "NULL";
-		// String pathstring = f.getName().toLowerCase();
-		String fileextension = getFileExtension(f);
-		// TODO check which indexer should be used
+		fileExtension = getFileExtension(f);
 
-		String IndexType = getFileExtensionFunction(fileextension);
+		String IndexType = getFileExtensionFunction(fileExtension);
 		// System.out.println("#EXT = " + fileextension + "\t " + IndexType);
 
+		/* if File Extension is "PDF", index it as a PDF */
 		if (IndexType.equals("TEXT")) {
 			try {
 				indexTextFile(f);
@@ -168,6 +164,7 @@ public class myFunctions {
 			}
 		}
 
+		/* if File Extension is "PDF", index it as a PDF */
 		else if (IndexType.equals("PDF")) {
 			try {
 
@@ -177,36 +174,36 @@ public class myFunctions {
 				e.printStackTrace();
 			}
 
+			{
+				try {
+					indexTextFile(f);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
 		}
 
 	}
 
-	
-	
-	
 	private String timeToString(long time) {
 		return DateTools.timeToString(time, dateTimeResolution);
 	}
-	
-	
+
 	private void addKeywordField(Document document, String name, String value) {
 		if (value != null) {
 			document.add(new Field(name, value, Field.Store.YES, Field.Index.NOT_ANALYZED));
 		}
 	}
 
-	
-	
 	public static void indexTextFile(File f) throws Exception {
 		Logger.writeToLog("TXT:\t" + f.getName());
 		System.out.println("- " + f.getName());
-		// System.out.println("Indexing " + f.getCanonicalPath());
-		// Document doc = Main.getDocument(f);
-		// writer.addDocument(doc);
+		System.out.println("Indexing " + f.getCanonicalPath());
+		Document doc = Main.getDocument(f);
+		writer.addDocument(doc);
 	}
-
-	
-	
 
 	/**
 	 * This will get a lucene document from a PDF file.
@@ -235,17 +232,12 @@ public class myFunctions {
 	 * @throws IOException
 	 *             If there is an error parsing or indexing the document.
 	 */
-	public static Document getDocument(File file) throws IOException {
+	public static Document getPDFDocument(File file) throws IOException {
 		LucenePDFDocument converter = new LucenePDFDocument();
+
 		return converter.convertDocument(file);
 	}
-	
-	
-	
-	
-	
-	
-	
+
 	/**
 	 * This will get a lucene document from a PDF file.
 	 * 
@@ -261,36 +253,29 @@ public class myFunctions {
 		LucenePDFDocument converter = new LucenePDFDocument();
 		return converter.convertDocument(url);
 	}
-	
-	
-	
-	
-	
-	
+
 	/*
-	
-	protected static Document getDocument(File f) throws Exception {
-		Document doc = new Document();
-		doc.add(new Field("contents", new FileReader(f)));
-		doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		return doc;
-	}
-*/
+	 * 
+	 * protected static Document getDocument(File f) throws Exception { Document
+	 * doc = new Document(); doc.add(new Field("contents", new FileReader(f)));
+	 * doc.add(new Field("filename", f.getName(), Field.Store.YES,
+	 * Field.Index.NOT_ANALYZED)); doc.add(new Field("fullpath",
+	 * f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED)); return
+	 * doc; }
+	 */
 	private static void indexPDFFile(File f) throws Exception {
 		System.out.println("Indexing PDF File: " + f.getCanonicalPath());
 		Logger.writeToLog("PDF:\t" + f.getCanonicalPath());
-		Document doc = getDocument(f);
+		Document doc = getPDFDocument(f);
 		writer.addDocument(doc);
 	}
 
-	/* Filter for File extensions, which should be indexed */
-	private static class TextFilesFilter implements FileFilter {
-		public boolean accept(File path) {
-			// return path.getName().toLowerCase().endsWith(".java");
-			return true;
-		}
-	}
+	/*
+	 * Filter for File extensions, which should be indexed private static class
+	 * TextFilesFilter implements FileFilter { public boolean accept(File path)
+	 * { // return path.getName().toLowerCase().endsWith(".java"); return true;
+	 * } }
+	 */
 
 	/**
 	 * Convert the PDF stream to a lucene document.
@@ -307,8 +292,6 @@ public class myFunctions {
 		return document;
 	}
 
-	
-	
 	/**
 	 * This will take a reference to a PDF document and create a lucene
 	 * document.
@@ -323,24 +306,12 @@ public class myFunctions {
 	public Document convertDocument(File file) throws IOException {
 		Document document = new Document();
 
-		// Add the url as a field named "url". Use an UnIndexed field, so
-		// that the url is just stored with the document, but is not searchable.
 		addUnindexedField(document, "path", file.getPath());
 		addUnindexedField(document, "url", file.getPath().replace(FILE_SEPARATOR, '/'));
 
-		// Add the last modified date of the file a field named "modified". Use
-		// a
-		// Keyword field, so that it's searchable, but so that no attempt is
-		// made
-		// to tokenize the field into words. 
 		addKeywordField(document, "modified", timeToString(file.lastModified()));
 
 		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-
-		// Add the uid as a field, so that index can be incrementally
-		// maintained.
-		// This field is not stored with document, it is indexed, but it is not
-		// tokenized prior to indexing.
 		addUnstoredKeywordField(document, "uid", uid);
 
 		FileInputStream input = null;
@@ -357,31 +328,16 @@ public class myFunctions {
 
 		return document;
 	}
-	
-	
-	
-	
+
 	public Document convertDocument(URL url) throws IOException {
 		Document document = new Document();
 		URLConnection connection = url.openConnection();
 		connection.connect();
-		// Add the url as a field named "url". Use an UnIndexed field, so
-		// that the url is just stored with the document, but is not searchable.
 		addUnindexedField(document, "url", url.toExternalForm());
 
-		// Add the last modified date of the file a field named "modified". Use
-		// a
-		// Keyword field, so that it's searchable, but so that no attempt is
-		// made
-		// to tokenize the field into words.
 		addKeywordField(document, "modified", timeToString(connection.getLastModified()));
 
 		String uid = url.toExternalForm().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(connection.getLastModified());
-
-		// Add the uid as a field, so that index can be incrementally
-		// maintained.
-		// This field is not stored with document, it is indexed, but it is not
-		// tokenized prior to indexing.
 		addUnstoredKeywordField(document, "uid", uid);
 
 		InputStream input = null;
@@ -397,16 +353,8 @@ public class myFunctions {
 		// return the document
 		return document;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/** 
+
+	/**
 	 * This will add the contents to the lucene document.
 	 * 
 	 * @param document
@@ -429,7 +377,7 @@ public class myFunctions {
 				pdfDocument.decrypt("");
 			}
 
-			// create a writer where to append the text content.
+			/* create a writer where to append the text content. */
 			StringWriter writer = new StringWriter();
 			if (stripper == null) {
 				stripper = new PDFTextStripper();
@@ -438,18 +386,14 @@ public class myFunctions {
 			}
 			stripper.writeText(pdfDocument, writer);
 
-			// Note: the buffer to string operation is costless;
-			// the char array value of the writer buffer and the content string
-			// is shared as long as the buffer content is not modified, which
-			// will
-			// not occur here.
 			String contents = writer.getBuffer().toString();
 
 			StringReader reader = new StringReader(contents);
 
-			// Add the tag-stripped contents as a Reader-valued Text field so it
-			// will
-			// get tokenized and indexed.
+			/*
+			 * Add the tag-stripped contents as a Reader-valued Text field so it
+			 * will get tokenized and indexed.
+			 */
 			addTextField(document, "contents", reader);
 
 			PDDocumentInformation info = pdfDocument.getDocumentInformation();
@@ -489,13 +433,6 @@ public class myFunctions {
 			}
 		}
 	}
-
-	
-	
-	
-	
-	
-	
 
 	private void addTextField(Document document, String name, Reader value) {
 		if (value != null) {

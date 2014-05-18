@@ -28,24 +28,15 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
-// From chapter 1
-
 /**
  * This code was originally written for Erik's Lucene intro java.net article
  */
 public class Indexer {
 
 	public static void main(String[] args) throws Exception {
-		/*
-		 * if (args.length != 2) { throw new
-		 * IllegalArgumentException("Usage: java " + Indexer.class.getName() +
-		 * " <index dir> <data dir>"); }
-		 */
 
 		String indexDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/";
 		String dataDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/ToIndex/";
-		// String indexDir = args[0]; // 1
-		// String dataDir = args[1]; // 2
 
 		long start = System.currentTimeMillis();
 		Indexer indexer = new Indexer(indexDir);
@@ -90,7 +81,6 @@ public class Indexer {
 	/* Filter for File extensions, which should be indexed */
 	private static class TextFilesFilter implements FileFilter {
 		public boolean accept(File path) {
-			// return path.getName().toLowerCase().endsWith(".java");
 			return true;
 		}
 	}
@@ -98,8 +88,8 @@ public class Indexer {
 	protected Document getDocument(File f) throws Exception {
 		Document doc = new Document();
 		doc.add(new Field("contents", new FileReader(f)));
-		doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+		doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.ANALYZED));
+		doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.ANALYZED));
 		return doc;
 	}
 

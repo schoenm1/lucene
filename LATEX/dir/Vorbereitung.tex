@@ -1,0 +1,174 @@
+
+%==============  N E W  ==== C H A P T E R ==============%
+\chapter{Vorbereitung für Vergleich}
+\label{chapter:Vorbereitung}
+
+Bevor ein Vergleich zwischen den Verschiedenen Search-Engines gemacht werden kann, sollte ein Überblick über die Search-Engines erstellt werden.
+
+
+
+%==============  N E W  ==== S E C T I O N ==============%
+\section{Windows Index Suche}
+\label{sec:WindowsSearchEngine}
+
+Standardmässig werden bei Windows nur einzelne Ordner indexiert. Gleichzeitig indexiert Windows nicht die kompletten Datei Inhalte, sondern lediglich die Einstellungen.\\
+Um die Inhalte auch zu indexieren, muss dies in den Einstellungen geändert werden (siehe Abbildung \ref{fig:WindowsSearchDefault} rechte Seite).
+
+Um nun ein Netzlaufwerk indexieren zu können (was hier auch gewünscht ist), muss ein Add-in von Microsoft installiert werden. Dieses nennt sich \flqq Windows Desktop Search: Add-in for Files on Microsoft Networks\frqq und ist auf der Microsoft Homepage verfügbar\footnote{\url{http://www.microsoft.com/en-us/download/details.aspx?id=3383}}.
+
+Da dies leider nach einem Neustart nicht funktionierte, wurde eine weitere Möglichkeit gesucht.\\
+So wurde gemäss dem Microsoft Technet-Artikel\footnote{\url{http://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking}} folgdene Punkte erledigt:
+
+ \begin{itemize}
+\item  Erstellen einer neuen Windows Library \flqq ZHAW Docs\frqq  \ erstellt.
+\item Erstellen eines neuen Ordners C:\textbackslash ZHAW Docs
+\item Hinzufügen des neu erstellten Ordners zur neuen Library
+\item Ordner C:\textbackslash ZHAW Docs löschen
+\item Über cmd (als Administrator) folgenden Befehl ausführen:\\
+mklink /d \grqq C:\textbackslash ZHAW Docs\grqq \  \grqq \textbackslash \textbackslash<IP Synology>\textbackslash <Share-Path>\grqq \\
+Mit diesem Befehl wurde ein symbolischer Link des Netzwerkpfades auf den lokalen Pfad gesetzt.
+
+\end{itemize}
+
+\newpage
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{WindowsSearchDefault.PNG} 
+\caption[Windows Indexing - Default Einstellungen]{Windows Indexing - Default Einstellungen\\Quelle: eigener Screenshot}
+\label{fig:WindowsSearchDefault}
+\end{figure}
+
+
+
+%==============  N E W  ==== S E C T I O N ==============%
+\newpage
+\section{Mac OS X Spotlight}
+\label{sec:Mac OS X Spotlight}
+
+Beim MAC OS X Spotlight gibt es weniger Einstellungen, die man selber vornehmen kann. So kann zum Beispiel nicht gewählt werden, ob das ganze File oder nur die Einstellungen oder Metadaten zum Index hinzugefügt werden.
+
+Abbildung \ref{fig:MACOSXSpotlight} zeigt die Einstellungsmöglichkeiten. Wird hier Nummer 7 (=PDF) angewählt, indexiert MAC OS X automatisch den ganzen Inhalt des PDF, vorausgesetzt der Text im PDF ist lesbar.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=.75\textwidth]{MACOSXSpotlight.PNG} 
+\caption[Mac OS X Spotlight - Default Einstellungen]{Mac OS X Spotlight - Default Einstellungen\\Quelle: eigener Screenshot}
+\label{fig:MACOSXSpotlight}
+\end{figure}
+
+Beim MAC OS ist war es nicht notwendig, ein Netzlaufwerk zu indexieren, da die Daten bereits lokal auf der Festplatte vorhanden waren.
+
+
+
+%==============  N E W  ==== S E C T I O N ==============%
+\newpage
+\section{Syntax für Suche mit Lucene / Luke}
+\label{sec:LukeQuery}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Luke-Query.PNG} 
+\caption[Such-Maske von Luke]{Such-Maske von Luke\\ Quelle: eigener Screenshot}
+\label{fig:Luke-Query}
+\end{figure}
+
+\newpage
+Anbei einige Beispiele, wie man den Syntax optimal einsetzen kann für sie Suche mit Luke/Lucene:
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Felder}
+\begin{tabular}[t]{|l|l|} \hline
+contents:prtg & sucht das Wort \grqq prtg\grqq\ im Feld contents   \\ \cline{1-2}
+Author:micha monitor & sucht das Wort \grqq micha\grqq\ im Feld Author, \\ 
+ & das Wort \grqq netzwerk\grqq\ im default Feld \\ \cline{1-2}
+contents:?mit prtg? & sucht die Wörter \grqq mit prtg\grqq\ als ganzes im Feld contents \\   \cline{1-2}
+\end{tabular}
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Wildcard Suche}
+\begin{tabular}[t]{|l|l|} \hline
+pr?g	& Das ? ersetzt einen einzelnen Charakter. So wird hier \\
+ & z.B. nach ?prtg?, aber auch nach ?prag? gesucht \\ \cline{1-2}
+bildschirm* & * steht für beliebig viele Zeichen (0 bis x) .\\
+& Suche nach z.B. \grqq bildschirmeingabe\grqq\ oder \grqq bildschirme\grqq\\ \cline{1-2}
+ver*en & * steht auch hier für beliebige Zeichen (0 bis x)\\
+& Suche nach z.B. \grqq verwerfen\grqq\, \grqq verwalten\grqq\  oder \grqq veruntreuen\grqq \\ \cline{1-2}
+\end{tabular}
+ 
+Grundsätzlich gilt: * und ? dürfen nicht am Anfang der suche sein. (bei Luke gibt es eine Einstellung, mit der man * am Anfang erlauben kann)
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Fuzzy Suche}
+Die Fuzzy Suche basiert auf dem Levenshtein Distanz Algorithmus\footnote{siehe \url{http://www.levenshtein.de/}}, auf welchen hier nicht eingegangen wird.\\
+Um eine Fuzzy Suche durchzuführen, wird mit der Tilde (~) gearbeitet.
+
+\begin{tabular}[t]{|l|l|} \hline
+roam~ & Sucht ähnliche Wörter zu roam \\ \cline{1-2}
+roam~0.8 & Gibt die gesuchte Ähnlichkeit an [0-1]. Je grösser die Zahl, desto ähnlicher. \\ \cline{1-2}
+\end{tabular}
+
+
+
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Proximity Suche (Nachbarschaftliche)}
+Lucene erlaubt es, zwei Wörter in einer bestimmten Distanz zu suchen.
+
+\begin{tabular}[t]{|l|l|} \hline
+ \multirow{2}{3.5cm}{\grqq prtg monitor\grqq \textasciitilde10} &  Sucht die Wörter \grqq prtg\grqq \ und \grqq monitor\grqq  \\   
+ & mit einem maximalen Abstand von 10 Wörtern\\ \cline{1-2}
+\end{tabular}
+
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Range Suche (Bereichssuche)}
+Lucene erlaubt es, zum Beispiel Daten in einem bestimmten Bereich zu suchen.
+
+\begin{tabular}[t]{|l|l|} \hline
+ \multirow{2}{5.75cm}{modified:[20140501 TO 20140515]}&  Sucht eine Datei mit einem Änderungsdatum \\
+ & zwischen dem 01.05.2014 und 15.05.2014\\ \cline{1-2}
+ 
+  \multirow{2}{5.75cm}{Title:\{Anton TO Max\}}&  Sucht eine Datei mit dem Titel \\
+ & zwischen Anton und Max (alphabetisch)\\ \cline{1-2}
+ \end{tabular}
+
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Boosting Suche (verstärktes Suchen)}
+Lucene erlaubt es, gewissen Suchbegriffen eine stärkere Gewichtung zu verleihen. Durch diesen Boost wird das Ergebnis die Relevanz der gefundenen Dateien verändert.
+
+\begin{tabular}[t]{|l|l|} \hline
+ \multirow{2}{5.75cm}{prtg\^\ 4 monitoring}&  Sucht eine Datei mit \flqq prtg\frqq \ und \flqq monitoring\frqq \\
+ & wobei \flqq prtg\frqq \ 4-fach gewertet wird.\\ \cline{1-2}
+  \end{tabular}
+
+
+%==============  N E W  ==== S U B - S E C T I O N ==============%
+\subsection{Boolsches Suchen}
+Ganz wichtig beim Suchen sind die verschiedenen Verknüpfungen der eingegebenen Suchbegriffe. Erlaubt sind AND, +, NOT, -
+
+\begin{tabular}[t]{|l|l|} \hline
+
+prtg OR monitor & Sucht entweder nach \flqq prtg\frqq \ oder nach \flqq monitor\frqq \\  \cline{1-2}
+ \multirow{2}{4cm}{prtg AND monitor} & Sucht nach  \flqq prtg\frqq \ und nach \flqq monitor\frqq . Beide\\
+ & Wörter müssen im selben Dokument enthalten sein.\\  \cline{1-2}
+ 
+  \multirow{2}{4cm}{prtg NOT monitor} & Sucht ein Dokument, in welchem \flqq prtg\frqq \ vorkommt, \\
+   & \flqq monitor\frqq \ aber nicht.\\ \cline{1-2}
+  \multirow{2}{4cm}{NOT prtg} & NOT darf nicht mit nur einem Wort verwendet werden.\\
+  & Das Resultat wird hier leer sein.\\ \cline{1-2}
+  \end{tabular}
+  
+  
+Anstelle von AND kann auch \&\& oder + verwendet werden.\\
+Anstelle von NOT kann auch ! oder - verwendet werden.\\
+
+Quelle Kapitel \ref{sec:LukeQuery}: \cite{Luke_Query}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

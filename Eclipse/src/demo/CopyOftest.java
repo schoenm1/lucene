@@ -1,4 +1,4 @@
-package zhaw;
+package demo;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
@@ -44,73 +44,8 @@ import org.apache.pdfbox.exceptions.InvalidPasswordException;
 import org.apache.pdfbox.searchengine.lucene.LucenePDFDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
 
-/**
- * This class is used to create a document for the lucene search engine. This
- * should easily plug into the IndexHTML or IndexFiles that comes with the
- * lucene project. This class will populate the following fields.
- * <table>
- * <tr>
- * <th>Lucene Field Name</th>
- * <th>Description</th>
- * </tr>
- * <tr>
- * <td>path</td>
- * <td>File system path if loaded from a file</td>
- * </tr>
- * <tr>
- * <td>url</td>
- * <td>URL to PDF document</td>
- * </tr>
- * <tr>
- * <td>contents</td>
- * <td>Entire contents of PDF document, indexed but not stored</td>
- * </tr>
- * <tr>
- * <td>summary</td>
- * <td>First 500 characters of content</td>
- * </tr>
- * <tr>
- * <td>modified</td>
- * <td>The modified date/time according to the url or path</td>
- * </tr>
- * <tr>
- * <td>uid</td>
- * <td>A unique identifier for the Lucene document.</td>
- * </tr>
- * <tr>
- * <td>CreationDate</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>Creator</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>Keywords</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>ModificationDate</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>Producer</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>Subject</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * <tr>
- * <td>Trapped</td>
- * <td>From PDF meta-data if available</td>
- * </tr>
- * </table>
- * 
- * @author <a href="mailto:ben@benlitchfield.com">Ben Litchfield</a>
- * @version $Revision: 1.23 $
- */
-public class test {
+
+public class CopyOftest {
 	private static final char FILE_SEPARATOR = System.getProperty("file.separator").charAt(0);
 
 	// given caveat of increased search times when using
@@ -119,11 +54,7 @@ public class test {
 
 	private PDFTextStripper stripper = null;
 
-	/**
-	 * Constructor.
-	 */
-	public test() {
-	}
+	
 
 	/**
 	 * Set the text stripper that will be used during extraction.

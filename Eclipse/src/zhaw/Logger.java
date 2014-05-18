@@ -23,18 +23,12 @@ public class Logger {
 
 	public static void writeToLog(String msg) {
 		try {
-			out.write(msg+ "\n");
-	//		out.close();
+			out.write(msg + "\n");
+			// out.close();
 		} catch (IOException e) {
 			System.err.println("Error: " + e.getMessage());
 		}
 
 	}
 
-	
-	
-	
-	
-	
-	
 }
