@@ -1,10 +1,9 @@
 package demo;
 
-import org.apache.poi.extractor.ExtractorFactory;  
+import java.io.File;
+import java.io.IOException;
 
-
-import java.io.File;  
-import java.io.IOException;  
+import org.apache.poi.extractor.ExtractorFactory;
 
 public class MSDocumentIndexer implements FileIndexer {  
 

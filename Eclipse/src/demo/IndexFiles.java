@@ -23,12 +23,13 @@ package demo;
  * -Ben Litchfield
  */
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
 import org.apache.lucene.demo.HTMLDocument;
-
 import org.apache.lucene.document.Document;
-
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.Term;
@@ -37,13 +38,6 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 import org.apache.pdfbox.searchengine.lucene.LucenePDFDocument;
-
-import java.util.Arrays;
-
-import java.io.File;
-import java.io.IOException;
-
-import java.util.Date;
 
 /**
  * This is a class that will index some files on a local filesystem. This code

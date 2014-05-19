@@ -93,7 +93,7 @@
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-fsa-1.7.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-polish-1.7.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-stemming-1.7.1.jar"/>
-	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/pdfbox-app-1.8.5.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/pdfbox-app-1.8.5.jar" sourcepath="/Users/micha/.m2/repository/org/apache/pdfbox/pdfbox-app/1.8.5/pdfbox-app-1.8.5-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/servlet-api-2.4.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/Tagger-2.3.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/tika-app-0.6.jar"/>
