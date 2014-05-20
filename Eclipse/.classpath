@@ -103,5 +103,12 @@
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/hadoop-0.19.1-core.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/lucene-core-2.4.0.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/nutch-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/poi-src-3.8.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-examples-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-excelant-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-scratchpad-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,5 +1,5 @@
 /*
- * Code from http://svn.apache.org/repos/asf/pdfbox
+ * Code from http://svn.apache.org/repos/asf/pdfbox and partially modified
  */
 
 package zhaw;
@@ -14,6 +14,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
 import org.apache.pdfbox.exceptions.CryptographyException;
 import org.apache.pdfbox.exceptions.InvalidPasswordException;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -24,11 +25,8 @@ import org.apache.pdfbox.util.PDFTextStripper;
 public class PDFIndexer extends Indexer {
 	private PDFTextStripper stripper = null;
 
-	
-	
-	
 	public PDFIndexer() {
-	//	System.out.println("in PDF Indexer()");
+
 	}
 
 	/*
@@ -71,20 +69,25 @@ public class PDFIndexer extends Indexer {
 	 *             If there is an exception while converting the document.
 	 */
 	public Document convertDocument(File file) throws IOException {
-		Document document = new Document();
 
-		addUnindexedField(document, "path", file.getPath());
-		addUnindexedField(document, "url", file.getPath().replace(FILE_SEPARATOR, '/'));
+		Document doc = new Document();
 
-		addKeywordField(document, "modified", timeToString(file.lastModified()));
+		doc.add(new Field(Indexer.filename, file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+
+		addUnindexedField(doc, Indexer.fullpath, file.getCanonicalPath());
+
+		addKeywordField(doc, Indexer.modified, timeToString(file.lastModified()));
 
 		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-		addUnstoredKeywordField(document, "uid", uid);
+		addUnstoredKeywordField(doc, Indexer.uid, uid);
+
+		String extension = myFunctions.getFileExtension(file);
+		addTextField(doc, Indexer.extension, extension);
 
 		FileInputStream input = null;
 		try {
 			input = new FileInputStream(file);
-			addContent(document, input, file.getPath());
+			// addContent(doc, input, file.getPath());
 		} finally {
 			if (input != null) {
 				input.close();
@@ -93,7 +96,7 @@ public class PDFIndexer extends Indexer {
 
 		// return the document
 
-		return document;
+		return doc;
 	}
 
 	/**
@@ -137,6 +140,7 @@ public class PDFIndexer extends Indexer {
 	 */
 	private void addContent(Document document, InputStream is, String documentLocation) throws IOException {
 		PDDocument pdfDocument = null;
+		System.out.println("##  ## ");
 		try {
 			pdfDocument = PDDocument.load(is);
 
@@ -145,7 +149,7 @@ public class PDFIndexer extends Indexer {
 				pdfDocument.decrypt("");
 			}
 
-			/* create a writer where to append the text content. */
+			// create a writer where to append the text content.
 			StringWriter writer = new StringWriter();
 			if (stripper == null) {
 				stripper = new PDFTextStripper();
@@ -162,34 +166,35 @@ public class PDFIndexer extends Indexer {
 			 * Add the tag-stripped contents as a Reader-valued Text field so it
 			 * will get tokenized and indexed.
 			 */
-			addTextField(document, "contents", reader);
+			addTextField(document, Indexer.contents, reader);
 
 			PDDocumentInformation info = pdfDocument.getDocumentInformation();
+
 			if (info != null) {
-				addTextField(document, "Author", info.getAuthor());
+				addTextField(document, Indexer.Author, info.getAuthor());
 				try {
-					addTextField(document, "CreationDate", info.getCreationDate());
+					addTextField(document, Indexer.created, info.getCreationDate());
 				} catch (IOException io) {
 					// ignore, bad date but continue with indexing
 				}
-				addTextField(document, "Creator", info.getCreator());
-				addTextField(document, "Keywords", info.getKeywords());
+				addTextField(document, Indexer.keywords, info.getKeywords());
 				try {
-					addTextField(document, "ModificationDate", info.getModificationDate());
+					addTextField(document, Indexer.modified, info.getModificationDate());
 				} catch (IOException io) {
-					// ignore, bad date but continue with indexing
 				}
-				addTextField(document, "Producer", info.getProducer());
-				addTextField(document, "Subject", info.getSubject());
-				addTextField(document, "Title", info.getTitle());
-				addTextField(document, "Trapped", info.getTrapped());
+				addTextField(document, Indexer.Subject, info.getSubject());
+				addTextField(document, Indexer.Title, info.getTitle());
+
+				addTextField(document, Indexer.filename, info.getTitle());
+				addTextField(document, Indexer.fullpath, info.getTitle());
+
 			}
 			int summarySize = Math.min(contents.length(), 500);
 			String summary = contents.substring(0, summarySize);
 			// Add the summary as an UnIndexed field, so that it is stored and
 			// returned
 			// with hit documents for display.
-			addUnindexedField(document, "summary", summary);
+			addUnindexedField(document, Indexer.summary, summary);
 		} catch (CryptographyException e) {
 			throw new IOException("Error decrypting document(" + documentLocation + "): " + e);
 		} catch (InvalidPasswordException e) {
@@ -206,12 +211,13 @@ public class PDFIndexer extends Indexer {
 		Document document = new Document();
 		URLConnection connection = url.openConnection();
 		connection.connect();
-		addUnindexedField(document, "url", url.toExternalForm());
+		// addUnindexedField(document, "url", url.toExternalForm());
 
-		addKeywordField(document, "modified", timeToString(connection.getLastModified()));
+		// addKeywordField(document, "modified",
+		// timeToString(connection.getLastModified()));
 
 		String uid = url.toExternalForm().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(connection.getLastModified());
-		addUnstoredKeywordField(document, "uid", uid);
+		addUnstoredKeywordField(document, Indexer.uid, uid);
 
 		InputStream input = null;
 		try {
@@ -256,6 +262,7 @@ public class PDFIndexer extends Indexer {
 	 */
 	public static Document getPDFDocument(File file) throws IOException {
 		LucenePDFDocument converter = new LucenePDFDocument();
+
 		return converter.convertDocument(file);
 	}
 

@@ -20,9 +20,13 @@ public class TextFileIndexer extends Indexer {
 
 	static public Document getDocument(File f) throws Exception {
 		Document doc = new Document();
-		doc.add(new Field("contents", new FileReader(f)));
-		doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+		doc.add(new Field(Indexer.contents, new FileReader(f)));
+		doc.add(new Field(Indexer.filename, f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+		doc.add(new Field(Indexer.fullpath, f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+
+		String extension = myFunctions.getFileExtension(f);
+		doc.add(new Field(Indexer.extension, extension, Field.Store.YES, Field.Index.NOT_ANALYZED));
+
 		return doc;
 	}
 }
