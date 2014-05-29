@@ -1,11 +1,9 @@
 package zhaw;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.FilenameFilter;
 
 import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexWriter;
 
 public class myFunctions {
@@ -64,7 +62,7 @@ public class myFunctions {
 				System.out.println("Could not index text file " + f.getName());
 			}
 		}
-
+ 
 		/* if File Extension is "PDF", index it as a PDF */
 		else if (IndexType.equals("PDF")) {
 			try {
@@ -87,7 +85,8 @@ public class myFunctions {
 
 	/* will index all text files extensions */
 	public static void indexTextFile(File f) throws Exception {
-		Document doc = Indexer.getTextFileIndexer().getDocument(f);
+		Indexer.getTextFileIndexer();
+		Document doc = TextFileIndexer.getDocument(f);
 		writer.addDocument(doc);
 	}
 

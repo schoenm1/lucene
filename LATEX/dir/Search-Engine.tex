@@ -49,5 +49,108 @@ stellt Indexierte Dateien von Lucene dar und erlaubt die Suche nach Stichwörtern
 \item CPU: Intel Core i5 661 @ 3.33GHz
 \item Harddisk: Western Digital black Edition - 1TB (WD 1002FAEX-00Y9A0)
 \end{itemize}
+\end{itemize}
+
+%==============  N E W  ==== S E C T I O N ==============%
+\section{Lucene}
+\label{subsec:Lucene}
+
+Der Apache Lucene Core ist in Java geschrieben und ist eine frei verfügbare Information Retrieval Software Bibliothek.
+
+Der grosse Vorteil von Lucene ist, dass die Software frei Verfügbar ist unter der Apache License und eine sehr grosse Akzeptanz findet.
+Auf die Frage, wo Lucene eingesetzt wird, sind online viele Antworten zu finden. Anbei eine kleine Liste von allgmein bekannten Firmen, welche Softare des Apache Lucene Projektes einsezten (Lucene Core, PyLucene Solr):
+\begin{itemize}
+\item HP benutzt Solr
+\item Apple benutzt Solr
+\item Cisco benutzt Solr als Core in der Social Networking Suche
+\item Instagram nutzt Solr für die Geo-Search API
+\item Boing benutzt Solr
+\item Ford benutzt Solr
+\item ...
+\end{itemize}
+Anmerkung: Solr ist Teil des Apache Luccene Projektes. Solr ist ein Enterprise Search-Server\footnote{Details siehe: \url{http://lucene.apache.org/solr/}}
+Quelle: \cite{Who_is_using_Lucene}
+
+
+Lucene selber ist eine Volltext-Such-Bibliothek, welche in Java geschrieben ist.  Dies macht es für einen Programmierer einfach, eine effiziente Volltext-Suche in sein Programm oder eine Webapplikation zu implementieren.
+
+Das Konzept von Lucene besteht aus folgenden (nicht abschliessenden) Punkten, welche kurz erläutert werden:
+\begin{itemize}
+\item indexing and searching  (indexieren und suchen)\\
+Damit Lucene bei einer Suchanfrage schnelle und präsise Antworten liefern kann, werden vorgängig die relvanten Dokumente indexiert. Der index wird als sogenannter invertierter Index abgespeichert.\\
+Invertierter Index bedeutet, dass z.B. nicht gespeichert wird, dass auf der Seite X die Wörter A, B und C stehen, sondern genau umgekehrt. Es wird abgespeichert, dass dass Wort A auf der Seite X zu finden ist (genau so wie B und C).\\
+Auf diese Weise wird erreicht, dass sie Suche sehr effizient ist, denn Lucene kann sofort sagen, in welchem Dokument das gesuchte Wort vorhanden ist.
+\item document (= Dokument)\\
+Ein Dokument in Lucene ist die Einheit für die Indexierung und die Suche. Es ist eine Aneinanderreihung von Feldern.\\
+Ein Dokument in Lucene ist nicht zu verwechseln mit einem Dokument auf einer Dateiablage. Es entspricht in Lucene nicht einem gewöhnlichem Dokument.
+\item field (= Feld)\\
+Ein Feld ist eine benannte Aneinanderreihung von Begriffen. Jedes Feld hat einen Namen und einen Textwert.
+Ein Feld kann in einem Lucene Dokument gespeichert werden. Ist dies der Fall, wird es mit den Suchtreffern des Dokumentes zurückgegeben.\\
+Wird das Feld bei der Indexierung nicht dem Dokument zugewiesen, wird später über die Suche das Dokument über dieses Feld nicht mehr gefunden.
+\end{itemize}
+
+Quelle: \cite{Lucene_Core}
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\section{Aufbau Java Programm}
+\label{subsec:Aufbau Java Programm}
+
+Die Suchkriterien, welche im Kapitel  \ref{subsec:Ausgangslage} gefordert werden, müssen vor der Entwicklung der Java Applikation definiert werden.\\
+Die grundlegende Frage stellt sich aus den Anforderungen, nach welchen Kriterien ein Dokument gesucht werden kann.\\
+
+Für diese Arbeit wurden fogende Felder definiert, welche indexiert werden sollen:
+\begin{itemize}
+\item \textbf{filename}\\
+Dieses Feld beinhaltet den kompletten Filenamen. filename ist nicht zwingend unique\\
+Bsp: \flqq Programm.txt\frqq
+\item \textbf{fullpath}\\
+Dieses Feld beinhaltet den kompletten Pfad des indexierten Files. Da es pro Pfad nur ein File geben kann, ist dieses Feld unique\\
+Bsp: \flqq /Users/micha/ZHAW/1.Jahr/Programmieren/Uebung1/Main.java\flqq
+\item \textbf{FileExtension}\\
+Diese Feld beinhaltet lediglich die Endung des Files. Um die Files mit den verschiedenen Endungen richtig einlesen zu können benötigt man verschiedene Indexer (Text-Indexer, PDF-Indexer, legacy Word-Indexer...)\\
+Bsp: \flqq txt\frqq, \flqq java\frqq
+\item \textbf{Author}\\
+Dieses Feld beinhaltet den Namen des Authors. Es kann nur aus einem Teil der Dokumente gelsen werden, sofern diese Information eingetragen ist. So kann der Author in einem Office Dokument oder einem PDF Dokument stehen, in einem .java oder .txt Dokument fehlt dieser Eintrag.\\
+Bsp:  \flqq micha\frqq, \flqq schönenberger\frqq
+\item \textbf{Title}\\
+Dieses Feld beinhaltet den Titel des Dokumentes. Wie beim Feld Author kann es nur aus einem Teil der Dokumente ausgelesen werden.\\
+Bsp:  \flqq prtg\frqq, \flqq analyse\frqq
+\item \textbf{Title}\\
+Dieses Feld beinhaltet den Titel des Dokumentes. Wie beim Feld Author kann es nur aus einem Teil der Dokumente ausgelesen werden.\\
+Bsp:  \flqq prtg\frqq, \flqq analyse\frqq
+\item \textbf{CreationDate}\\
+Dieses Feld beinhaltet das Datum der Erstellung des Dokumente in der Form von YYYY-MM-DD-HH-MM-SS. Wie beim Feld Author kann es nur aus einem Teil der Dokumente ausgelesen werden. Grundsätzlich wäre es möglich, über die Systemstruktur (anstelle über das File direkt) dies Information herauszulesen. Aus Zeitgründen wurde dies aber weggelassen.\\
+Bsp:  \flqq 20110622101000\frqq, \flqq 20140528130112\frqq
+\item \textbf{ModificationDate}\\
+Dieses Feld beinhaltet das Datum der letzen Änderung des Dokumente in der Form von YYYY-MM-DD-HH-MM-SS. Wie beim Feld Author kann es nur aus einem Teil der Dokumente ausgelesen werden. Grundsätzlich wäre es möglich, über die Systemstruktur (anstelle über das File direkt) dies Information herauszulesen. Aus Zeitgründen wurde dies aber weggelassen.\\
+Bsp:  \flqq 20110622101000\frqq, \flqq 20140528130112\frqq
+\item Es gibt noch weitere Felder wie appname, summary..., welche hier nicht speziell erwähnt werden. Sie funktionieren momentan nur bei PDF Dokumenten.
 
 \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

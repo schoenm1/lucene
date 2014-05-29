@@ -27,7 +27,6 @@ public class Indexer {
 	static final String extension = "FileExtension";
 	static final String uid = "uid";
 	static final String summary = "summary";
-	static final String url = "url";
 	static final String Subject = "Subject";
 	static final String keywords = "keywords";
 
@@ -126,7 +125,7 @@ public class Indexer {
 			/* iterate over subfolders an call recursive method indexer.index */
 			for (int i = 0; i < subdirectories.length; i++) {
 				if (f.isDirectory() && !f.isHidden()) {
-					System.out.println("Dir: " + f.getAbsolutePath());
+					//System.out.println("Dir: " + f.getAbsolutePath());
 					String subdir = dataDir + subdirectories[i] + "/";
 					int tmpcount = indexer.index(indexer, subdir, new TextFilesFilter(), count);
 					count += tmpcount;

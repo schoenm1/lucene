@@ -211,10 +211,6 @@ public class PDFIndexer extends Indexer {
 		Document document = new Document();
 		URLConnection connection = url.openConnection();
 		connection.connect();
-		// addUnindexedField(document, "url", url.toExternalForm());
-
-		// addKeywordField(document, "modified",
-		// timeToString(connection.getLastModified()));
 
 		String uid = url.toExternalForm().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(connection.getLastModified());
 		addUnstoredKeywordField(document, Indexer.uid, uid);

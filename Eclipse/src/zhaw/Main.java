@@ -9,10 +9,10 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 public class Main {
-	static String indexDir = "/Users/micha/TestLucene/";
-	 static String dataDir =
-	"/Users/micha/TestLucene/ToIndex/";
-	//static String dataDir = "/Users/micha/Docs/Dokumente/Ausbildung, Weiterbildung/Micha/ZHAW (2010-2014)/1. Jahr/1. Semester/Informatik 1/";
+	static String indexDir = "/Users/micha/Test2Lucene/";
+ static String dataDir ="/Users/micha/TestLucene/ToIndex/";
+	
+//	 static String dataDir = "/Users/micha/Docs/Dokumente/Ausbildung, Weiterbildung/Micha/ZHAW (2010-2014)/1. Jahr/1. Semester/";
 	static myFunctions _myfunctions;
 	private static IndexWriter writer;
 	static Logger _myLogger;

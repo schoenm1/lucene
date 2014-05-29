@@ -1,7 +1,7 @@
 \select@language {german}
-\contentsline {chapter}{Abbildungsverzeichnis}{III}{chapter*.2}
-\contentsline {chapter}{Tabellenverzeichnis}{IV}{chapter*.3}
-\contentsline {chapter}{Verzeichnis der Listings}{V}{chapter*.4}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.2}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{IV}{chapter*.3}
+\contentsline {chapter}{\nonumberline Verzeichnis der Listings}{V}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Versionierung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Aufw\"ande}{2}{chapter.2}
 \contentsline {chapter}{\numberline {3}Einleitung}{3}{chapter.3}
@@ -14,22 +14,25 @@
 \contentsline {chapter}{\numberline {4}Die Search-Engine}{6}{chapter.4}
 \contentsline {section}{\numberline {4.1}eingesetzte Software}{6}{section.4.1}
 \contentsline {section}{\numberline {4.2}eingesetzte Hardware}{7}{section.4.2}
-\contentsline {chapter}{\numberline {5}Vorbereitung f\"ur Vergleich}{8}{chapter.5}
-\contentsline {section}{\numberline {5.1}Windows Index Suche}{8}{section.5.1}
-\contentsline {section}{\numberline {5.2}Mac OS X Spotlight}{10}{section.5.2}
-\contentsline {section}{\numberline {5.3}Syntax f\"ur Suche mit Lucene / Luke}{11}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Felder}{12}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Wildcard Suche}{12}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Fuzzy Suche}{12}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Proximity Suche (Nachbarschaftliche)}{12}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Range Suche (Bereichssuche)}{13}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Boosting Suche (verst\"arktes Suchen)}{13}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Boolsches Suchen}{13}{subsection.5.3.7}
-\contentsline {chapter}{\numberline {6}Vergleich der Ergebnisse}{14}{chapter.6}
-\contentsline {chapter}{\numberline {7}Fazit}{15}{chapter.7}
+\contentsline {section}{\numberline {4.3}Lucene}{7}{section.4.3}
+\contentsline {section}{\numberline {4.4}Aufbau Java Programm}{8}{section.4.4}
+\contentsline {chapter}{\numberline {5}Vorbereitung f\"ur Vergleich}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}Windows Index Suche}{11}{section.5.1}
+\contentsline {section}{\numberline {5.2}Mac OS X Spotlight}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Syntax f\"ur Suche mit Lucene / Luke}{14}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Felder}{14}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Wildcard Suche}{14}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Fuzzy Suche}{15}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Proximity Suche (Nachbarschaftliche)}{15}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Range Suche (Bereichssuche)}{15}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Boosting Suche (verst\"arktes Suchen)}{15}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Boolsches Suchen}{16}{subsection.5.3.7}
+\contentsline {chapter}{\numberline {6}Vergleich der Ergebnisse}{17}{chapter.6}
+\contentsline {chapter}{\numberline {7}Vergleich Lucene mit Mac OS X}{18}{chapter.7}
+\contentsline {chapter}{\numberline {8}Fazit}{19}{chapter.8}
 \contentsline {chapter}{\numberline {A}Anhang}{i}{appendix.A}
 \contentsline {section}{\numberline {A.1}Java Code}{i}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Main.java}{i}{subsection.A.1.1}
 \contentsline {subsection}{\numberline {A.1.2}Logger.java}{iii}{subsection.A.1.2}
 \contentsline {subsection}{\numberline {A.1.3}Indexer.java}{iv}{subsection.A.1.3}
-\contentsline {chapter}{Literaturverzeichnis}{x}{appendix*.11}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{x}{appendix*.11}

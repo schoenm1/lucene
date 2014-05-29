@@ -9,10 +9,7 @@ import java.util.Date;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.poi.POITextExtractor;
 import org.apache.poi.POIXMLDocument;
-import org.apache.poi.extractor.ExtractorFactory;
-import org.apache.poi.hpsf.DocumentSummaryInformation;
 import org.apache.poi.hslf.extractor.PowerPointExtractor;
 import org.apache.poi.hssf.extractor.ExcelExtractor;
 import org.apache.poi.hwpf.extractor.WordExtractor;
@@ -29,7 +26,8 @@ public class OfficeDocIndexer extends Indexer {
 	public Document getOfficeDocument(File file) throws IOException {
 		Document doc = null;
 		String fileExtension = "NULL";
-		fileExtension = Main.getMyFunctions().getFileExtension(file);
+		Main.getMyFunctions();
+		fileExtension = myFunctions.getFileExtension(file);
 
 		if (isXMLExcel(fileExtension)) {
 			doc = indexXMLExcel(file);
@@ -66,7 +64,8 @@ public class OfficeDocIndexer extends Indexer {
 			OPCPackage pkgDoc = POIXMLDocument.openPackage(file.toString());
 			wordxmlextractor = new XWPFWordExtractor(pkgDoc);
 
-//			doc.add(new Field(Indexer.filename, file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+			// doc.add(new Field(Indexer.filename, file.getName(),
+			// Field.Store.YES, Field.Index.NOT_ANALYZED));
 
 		} catch (Exception e) {
 			System.out.println("Failed to set Word XML Parser");
@@ -100,13 +99,9 @@ public class OfficeDocIndexer extends Indexer {
 		Date created = wordxmlextractor.getCoreProperties().getModified();
 		addTextField(doc, Indexer.created, created);
 
-		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-		addUnstoredKeywordField(doc, Indexer.uid, uid);
-
 		String extension = myFunctions.getFileExtension(file);
 		addTextField(doc, Indexer.extension, extension);
-		
-		
+
 		return doc;
 
 	}
@@ -116,8 +111,8 @@ public class OfficeDocIndexer extends Indexer {
 		Document doc = new Document();
 		XSSFExcelExtractor excelXMLExtractor = null;
 		try {
-			ExtractorFactory extractor = new ExtractorFactory();
-			POITextExtractor fileExtractor = extractor.createExtractor(file);
+		//	ExtractorFactory extractor = new ExtractorFactory();
+			//POITextExtractor fileExtractor = extractor.createExtractor(file);
 
 			String strfile = file.toString();
 			excelXMLExtractor = new XSSFExcelExtractor(strfile);
@@ -129,7 +124,6 @@ public class OfficeDocIndexer extends Indexer {
 
 		String content = excelXMLExtractor.getText();
 		doc.add(new Field(Indexer.contents, new StringReader(content)));
-
 
 		doc.add(new Field(Indexer.filename, file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 
@@ -155,13 +149,9 @@ public class OfficeDocIndexer extends Indexer {
 		Date created = excelXMLExtractor.getCoreProperties().getModified();
 		addTextField(doc, Indexer.created, created);
 
-		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-		addUnstoredKeywordField(doc, Indexer.uid, uid);
-
 		String extension = myFunctions.getFileExtension(file);
 		addTextField(doc, Indexer.extension, extension);
-		
-		
+
 		return doc;
 
 	}
@@ -195,12 +185,9 @@ public class OfficeDocIndexer extends Indexer {
 		String author = extractor.getSummaryInformation().getAuthor();
 		addTextField(doc, Indexer.Author, author);
 
-		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-		addUnstoredKeywordField(doc, Indexer.uid, uid);
-
 		String extension = myFunctions.getFileExtension(file);
 		addTextField(doc, Indexer.extension, extension);
-		
+
 		return doc;
 	}
 
@@ -214,9 +201,9 @@ public class OfficeDocIndexer extends Indexer {
 			extractor = new WordExtractor(fs);
 			String content = extractor.getText();
 			doc.add(new Field(Indexer.contents, new StringReader(content)));
-			
+
 			doc.add(new Field(Indexer.fullpath, file.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-			
+
 		} catch (FileNotFoundException e) {
 			System.out.println("File " + file + " not found");
 			e.printStackTrace();
@@ -231,15 +218,9 @@ public class OfficeDocIndexer extends Indexer {
 		String author = extractor.getSummaryInformation().getAuthor();
 		addTextField(doc, Indexer.Author, author);
 
-		
-		String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-		addUnstoredKeywordField(doc, Indexer.uid, uid);
-
-		
 		String extension = myFunctions.getFileExtension(file);
 		addTextField(doc, Indexer.extension, extension);
-		
-		
+
 		return doc;
 	}
 
@@ -251,34 +232,29 @@ public class OfficeDocIndexer extends Indexer {
 		PowerPointExtractor extractor = null;
 		try {
 			fs = new POIFSFileSystem(new FileInputStream(file));
-			 extractor = new PowerPointExtractor(fs);
-				 content = extractor.getText();
-				doc.add(new Field(Indexer.contents, new StringReader(content)));
-				
-				doc.add(new Field(Indexer.fullpath, file.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-				
-			} catch (FileNotFoundException e) {
-				System.out.println("File " + file + " not found");
-				e.printStackTrace();
-			} catch (IOException e) {
-				System.out.println("Exeption in parsing legacy word document");
-			}
+			extractor = new PowerPointExtractor(fs);
+			content = extractor.getText();
+			doc.add(new Field(Indexer.contents, new StringReader(content)));
 
-			doc.add(new Field(Indexer.filename, file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+			doc.add(new Field(Indexer.fullpath, file.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 
-			String appName = extractor.getSummaryInformation().getApplicationName();
-			addTextField(doc, Indexer.appname, appName);
-			String author = extractor.getSummaryInformation().getAuthor();
-			addTextField(doc, Indexer.Author, author);
+		} catch (FileNotFoundException e) {
+			System.out.println("File " + file + " not found");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("Exeption in parsing legacy word document");
+		}
 
-			
-			String uid = file.getPath().replace(FILE_SEPARATOR, '\u0000') + "\u0000" + timeToString(file.lastModified());
-			addUnstoredKeywordField(doc, Indexer.uid, uid);
+		doc.add(new Field(Indexer.filename, file.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 
-			
-			String extension = myFunctions.getFileExtension(file);
-			addTextField(doc, Indexer.extension, extension);
-			
+		String appName = extractor.getSummaryInformation().getApplicationName();
+		addTextField(doc, Indexer.appname, appName);
+		String author = extractor.getSummaryInformation().getAuthor();
+		addTextField(doc, Indexer.Author, author);
+
+		String extension = myFunctions.getFileExtension(file);
+		addTextField(doc, Indexer.extension, extension);
+
 		return doc;
 	}
 
@@ -295,7 +271,7 @@ public class OfficeDocIndexer extends Indexer {
 	/**
 	 * returns true if ext is a newer XML Excel Office Document, otherwhise
 	 * return false
-	 */ 
+	 */
 	public boolean isXMLExcel(String ext) {
 		if (ext.equals("xlsx"))
 			return true;
