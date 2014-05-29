@@ -292,6 +292,8 @@ public class OfficeDocIndexer extends Indexer {
 	public boolean isXMLWord(String ext) {
 		if (ext.equals("docx"))
 			return true;
+		if (ext.equals("docx"))
+			return true;
 		if (ext.equals("dotx"))
 			return true;
 		if (ext.equals("dotm"))

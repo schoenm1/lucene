@@ -4,14 +4,10 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 import org.apache.lucene.document.Document;
-import org.apache.lucene.index.IndexWriter;
 
 public class myFunctions {
 
-	static IndexWriter writer;
-
-	public myFunctions(IndexWriter _writer) {
-		writer = _writer;
+	public myFunctions() {
 	}
 
 	/* will return a String Array of all Subdirectories */
@@ -60,15 +56,17 @@ public class myFunctions {
 				indexTextFile(f);
 			} catch (Exception e) {
 				System.out.println("Could not index text file " + f.getName());
+				Logger.writeToLog("Could not index text file " + f.getName());
 			}
 		}
- 
+
 		/* if File Extension is "PDF", index it as a PDF */
 		else if (IndexType.equals("PDF")) {
 			try {
 				indexPDFFile(f);
 			} catch (Exception e) {
 				System.out.println("Could not index pdf file " + f.getName());
+				Logger.writeToLog("Could not index pdf file " + f.getName());
 			}
 		}
 
@@ -78,6 +76,7 @@ public class myFunctions {
 				indexOfficeFile(f);
 			} catch (Exception e) {
 				System.out.println("Could not index office document " + f.getName());
+				Logger.writeToLog("Could not index office document " + f.getName());
 			}
 		}
 
@@ -87,7 +86,7 @@ public class myFunctions {
 	public static void indexTextFile(File f) throws Exception {
 		Indexer.getTextFileIndexer();
 		Document doc = TextFileIndexer.getDocument(f);
-		writer.addDocument(doc);
+		Main.getwriter().addDocument(doc);
 	}
 
 	private static void indexPDFFile(File f) throws Exception {
@@ -96,7 +95,7 @@ public class myFunctions {
 		// Logger.writeToLog("PDF:\t" + f.getCanonicalPath());
 
 		Document doc = Indexer.getPDFIndexer().convertDocument(f);
-		writer.addDocument(doc);
+		Main.getwriter().addDocument(doc);
 	}
 
 	private static void indexOfficeFile(File f) throws Exception {

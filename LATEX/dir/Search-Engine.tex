@@ -31,8 +31,6 @@ stellt Indexierte Dateien von Lucene dar und erlaubt die Suche nach Stichwörtern
 %==============  N E W  ==== S E C T I O N ==============%
 \section{eingesetzte Hardware}
 \label{subsec:eigesetzteHardware}
-
-
 \begin{itemize}
 \item Apple Mac Book Air 2011 (MacBookAir4,2)
 \begin{itemize}
@@ -92,14 +90,18 @@ Wird das Feld bei der Indexierung nicht dem Dokument zugewiesen, wird später übe
 Quelle: \cite{Lucene_Core}
 
 %==============  N E W  ==== S U B S E C T I O N ==============%
-\section{Aufbau Java Programm}
-\label{subsec:Aufbau Java Programm}
+\newpage
+\section{Definition der indexierenden Feldern}
+\label{subsec:Definition der indexierenden Feldern}
 
 Die Suchkriterien, welche im Kapitel  \ref{subsec:Ausgangslage} gefordert werden, müssen vor der Entwicklung der Java Applikation definiert werden.\\
 Die grundlegende Frage stellt sich aus den Anforderungen, nach welchen Kriterien ein Dokument gesucht werden kann.\\
 
 Für diese Arbeit wurden fogende Felder definiert, welche indexiert werden sollen:
 \begin{itemize}
+\item \textbf{content}\\
+Dieses Feld beinhaltet den Inhalt eines Dokumentes. Es wird den grössten Teil der indexierten Felder ausmachen. Grundsätzlich stehen hier alle Wörter, welche in irgendeinem der Dokumente vorkommen.\\
+Bsp: \flqq 1\frqq, \flqq hausfriedensbruch\frqq, \flqq private\frqq
 \item \textbf{filename}\\
 Dieses Feld beinhaltet den kompletten Filenamen. filename ist nicht zwingend unique\\
 Bsp: \flqq Programm.txt\frqq
@@ -124,23 +126,103 @@ Bsp:  \flqq 20110622101000\frqq, \flqq 20140528130112\frqq
 \item \textbf{ModificationDate}\\
 Dieses Feld beinhaltet das Datum der letzen Änderung des Dokumente in der Form von YYYY-MM-DD-HH-MM-SS. Wie beim Feld Author kann es nur aus einem Teil der Dokumente ausgelesen werden. Grundsätzlich wäre es möglich, über die Systemstruktur (anstelle über das File direkt) dies Information herauszulesen. Aus Zeitgründen wurde dies aber weggelassen.\\
 Bsp:  \flqq 20110622101000\frqq, \flqq 20140528130112\frqq
-\item Es gibt noch weitere Felder wie appname, summary..., welche hier nicht speziell erwähnt werden. Sie funktionieren momentan nur bei PDF Dokumenten.
+\end{itemize}
+Es gibt noch weitere Felder wie appname, summary..., welche hier nicht speziell erwähnt werden. Sie funktionieren momentan nur bei PDF Dokumenten.
 
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\newpage
+\section{Aufbau Java Programm}
+\label{subsec:Aufbau Java Programm}
+
+Um einen kurzen Überblick über die Java-Applikation zu erhalten, soll das Klassendiagramm der Applikation ein Grundverständnis liefern.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Klassendiagramm.PNG} 
+\caption[Klassendiagramm der Java-Applikation]{Klassendiagramm der Java-Applikation\\Quelle: eigener Screenshot}
+\label{fig:Klassendiagramm}
+\end{figure}
+
+
+Die Main-Klasse startet die Applikation und initialisiert die notwendigen Komponenten wie den Order, welcher indexiert werden sollte oder die Inisialisierung der Indexer Klasse. Danach übergibt die Main-Klasse die komplette Rechenarbeit der Indexer-Klasse.
+
+Die Indexer-Klasse führt den Scan aller Dokumente und Ordner durch, übergibt der nächsten Methode die Files und ruft für die gefundenen Ordner rekursiv die eigene Funktion wieder auf.
+\newpage
+Folgender Code zeigt dieses Vorgehen:
+\lstset{language=java, mathescape=true}
+\lstinputlisting[label=Auszug aus Indexer.java,captionpos=b, caption=Auszug aus Indexer.java]{dir/listings/Indexer_part1.java}
+
+%==============  N E W  ==== S E C T I O N ==============%
+\newpage
+\section{Der Indexer}
+\label{subsec:Der Indexer}
+
+Gegenüber anderen Aufgabenstellungen wie eine Indexierung von reinen Text-Dokumenten oder einer MP3-Sammlung erfordert diese Aufgabenstellung eine Implementierung mehrere Indexer. Lucene selber bietet sehr bequem eine Indexierung von reinen Text-Dokumenten.
+
+Damit Lucene weiss, welche Indexer für welches File benutzt werden muss, ist es notwendig, jede mögliche Endung eines Dokumentes einem Index zuzuweisen. Dazu besitzt jeder Indexer die folgende Methode getValidFileextension(). Das Listing zeigt die Methode des TextFileIndexer.java
+\lstset{language=java, mathescape=true}
+\lstinputlisting[label=getValidFileextension(),captionpos=b, caption=getValidFileextension()]{dir/listings/getValidFileextensions.java}
+
+
+Anmerkung:\\
+Aufgrund des Aufwandes für die Impelementierung von verschiedenen Indexer, wurde bei dieser Arbeit auf eine Analyse und Implementation von Stop-Wörtern und/oder vordefinierten Boosts verzichtet. Bei der Suche nach Dokumenten kann, sofern gewünscht, der Boost eines Attributes selber mitgegeben werden (siehe Kapitel \ref{subsec:Boosting}).
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{TextFile Indexer}
+Der TextFileIndexer.java beinhaltet die Indexierung von reinen Text-Files.
+\begin{itemize}
+\item Mögliche Endungen: *.txt, *.c, *.java, *.h
+\item Mögliche indizierte Felder: content, filename, fullpath, extension
+\end{itemize}
+Der komplette Code ist im Anhang \ref{subsec:TextFileIndexer.java} zu finden.
+
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{PDF Indexer}
+\label{subsec:PDF Indexer}
+Der PDFIndexer.java beinhaltet die Indexierung von nicht geschützten PDF Dokumenten. Dazu ist Apache PDFBox Library notwendig, wie im Kapitel \ref{subsec:eigesetzteSoftware} erwähnt.
+\begin{itemize}
+\item Mögliche Endungen: *.pdf
+\item Mögliche indizierte Felder: content, filename, fullpath, extension, Author, summary, Subject, Title, CreationDate, ModifiedDate
+\end{itemize}
+Der komplette Code ist im Anhang \ref{subsec:PDFIndexer.java} zu finden.
+
+
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{OfficeDoc Indexer}
+\label{subsec:OfficeIndexer}
+Der OfficeDocIndexer.java beinhaltet die Indexierung von Microsoft Office Dokumenten. Hierbei gilt es jedoch zu beachten, dass es mehrere Extractor gibt, welche die verschiedenen Dokumente indiziert.
+\begin{itemize}
+\item ExcelExtractor\\
+Indiziert ältere Excel Formate: *.xls, *.xlt, *.xlm
+\item WordExtractor\\
+Indiziert ältere Word Formate: *.doc, *.dot
+\item XSSFExcelExtractor\\
+Indiziert neuere Excel Formate, welche auf XML basiseren: *.clsx, *.xlsm, *.xltx, *.xltm
+\item XWPFWordExtractor\\
+Indiziert neuere Word Formate, welche auf XML basiseren: *.docx, *.dotx, *.dotm
 \end{itemize}
 
+Die Implementierung dieser Dokumente hat einiges an Zeit benötigt. Vor allem auch deshalb, weil die Vorkenntnisse nicht vorhanden waren, dass es für Excel und Word je zwei Extractor gibt. So wurden die XML-basiserten Office-Dokumente indiziert, jedoch nicht lesbar.\\
+Aufgrund von fehlenden Zeitressourcen wurde auf die korrekte Implementierung von PowerPoint Dokumenten verzichtet.
+
+\begin{itemize}
+\item Mögliche Endungen: *.pdf
+\item Mögliche indizierte Felder: content, filename, fullpath, extension, Author, summary, Subject, Title, CreationDate, ModifiedDate
+\end{itemize}
+Der komplette Code ist im Anhang \ref{subsec:OfficeDocIndexer.java} zu finden.
 
 
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{Suchresultate}
+\label{subsec:Suchresultate}
 
+Die Qualität der Suchresultate kann nicht mittles eines Algorithmus oder mathematischen Formeln beurteilt werden. Er ist alleine abhängig vom Benutzer, der die Suche initialisiert hat. Er muss entscheiden, ob das Suchresultat dem entspricht, was er sich erhofft hat.\\
+Ist der Benutzer mit dem Resultat zufrieden heisst dies jedoch nicht zwingend, dass es kein besserer Resultat gegeben hätte.
 
-
-
-
-
-
-
-
-
-
+Die Stichproben der Qualität der Suche mit der jetztigen Impelemtierung der Java-Applikation war überzeugend. Ob Lucene sich gegeb die Windows Search-Engine behaupten kann, wird im Kapitel \ref{chapter:Vergleich} ersichtlich.
 
 
 

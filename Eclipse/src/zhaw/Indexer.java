@@ -109,30 +109,23 @@ public class Indexer {
 	}
 
 	public int index(Indexer indexer, String dataDir, FileFilter filter, int count) throws Exception {
-		String[] subdirectories = Main.getMyFunctions().getSubDirectories(dataDir);
-
 		File[] files = new File(dataDir).listFiles();
 
 		/* iterate over all files and index it */
 		for (File f : files) {
-
+			/* if it's a file and ... index it */
 			if (!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead() && (filter == null || filter.accept(f))) {
-				System.out.println("File: " + f.getName());
+				Logger.writeToLog("* File Name = " + f.getCanonicalPath());
 				myFunctions.prepareindexFile(f);
-				//System.out.print(f.getPath());
 				count++;
 			}
-			/* iterate over subfolders an call recursive method indexer.index */
-			for (int i = 0; i < subdirectories.length; i++) {
-				if (f.isDirectory() && !f.isHidden()) {
-					//System.out.println("Dir: " + f.getAbsolutePath());
-					String subdir = dataDir + subdirectories[i] + "/";
-					int tmpcount = indexer.index(indexer, subdir, new TextFilesFilter(), count);
-					count += tmpcount;
-				//	System.out.println("");
-				}
+			/* if its a directory, do: */
+			else if (f.isDirectory() && !f.isHidden()) {
+				Logger.writeToLog("# Directory Name = " + f.getCanonicalPath());
+				String subdir = f.getAbsolutePath();
+				int tmpcount = indexer.index(indexer, subdir, new TextFilesFilter(), count);
+				count += tmpcount;
 			}
-
 		}
 		return Main.getwriter().numDocs();
 	}
@@ -154,7 +147,7 @@ public class Indexer {
 	public static zhaw.OfficeDocIndexer getOfficeIndexer() {
 		return _officeindexer;
 	}
-	
+
 	/** returns the Text Indexer */
 	public static zhaw.TextFileIndexer getTextFileIndexer() {
 		return _textfileindexer;

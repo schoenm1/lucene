@@ -3,8 +3,6 @@ package zhaw;
 import java.io.File;
 import java.io.FileFilter;
 
-
-
 /* Filter for File extensions, which should be indexed */
 class TextFilesFilter implements FileFilter {
 
