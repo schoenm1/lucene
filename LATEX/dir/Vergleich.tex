@@ -26,6 +26,7 @@ Ausgwählte Datei, welche für gefunden werden sollte: \flqq../1. Jahr/Software Pr
 
 %==============  N E W  ==== S U B S E C T I O N ==============%
 \subsection{Suche \#1 mit Windows 8.1 Professional}
+\label{Suche1 mit Windows 8.1 Professional}
 
 \textbf{Suche bei Windows}\\
 Bei der klassischen Suche im Windows werden die gesuchten Attribute in die Suchmaske eingegeben:
@@ -66,6 +67,8 @@ Wie die Abbildung \ref{fig:Suche 1 mit Lucene} zeigt, werden hier mehrere Dateie
 %==============  N E W  ==== S U B S E C T I O N ==============%
 \subsection{Fazit zur Suche \#1}
 
+
+
 Die Windows Search Engine sowie die eigene Lucene Applikation finden beide das gewünschte Dokument. Beim Windows ist es das einzige Dokument, welcher gelistet wird. Lucene hingegen listet das gesuchte Dokument an 11. Stelle. Ist nun Lucene schlechter deswegen?
 Um auf diese Frage eine Antwort zu finden, müssen die anderen von Lucene ausgegebenen Dokumenten überprüft werden. Es könnte auch sein, dass Lucene alle Dokumente auflistet, Windows jedoch nur per \grqq Zufall\grqq das richige. Was wäre, wenn das File \grqq Java Aufbau.docx\grqq, welches bei Lucene zuoberst steht, gesucht worden wäre?
 
@@ -82,9 +85,28 @@ Wird die identische Suche mit Luke nochmals durchgeführt, jedoch anstelle des St
 \end{figure}
 
 
-\textcolor{red}{HIER ERKLÄREN WAS UNTERSCHIED VON ANALYZERN IST}
+
+
+\subsection{Kurzer Exkurs zu Analyzern}
+
+
+
+Werden die verschiedenen Analyzer genauer betrachtet, wird das vermeintlich falsche Resultat logisch.\\
+Beim ersten Durchgang mit dem \flqq SimpleAnalyzer\frqq wird der indizierte Text bei Nicht-Schriftzeichen (z.B. \flqq .\frqq, \flqq \ \frqq, \flqq !\frqq) getrennt und alle Buchstaben klein geschrieben.\\
+Wird nun wie bei der Suche \#1 jedoch \flqq address.java\frqq\ gesucht, ändert dies der Analyzer zu \flqq address\frqq\ und \flqq java\frqq. Aus diesem Grund sind nun Dokumente auffindbar, welche \flqq address.java\frqq\ nicht enthalten. Bei genaueren Hinschauen sind jedoch die beiden Wörter einzeln vorhanden.
+
+Beim zweiten Durchgang findet Luke genau das gesuchte Dokument. Als Beispiel wird hier der \flqq StandardAnalyzer\frqq\ betrachtet. Dieser basiert auf einer ausgefeilten Grammatik, welche unter anderem alphanummerische, chinesische, japanische oder koreanische Zeichen, E-Mail Adressen, Akronyme und vieles mehr erkennt. Zusätzlich werden alle Buchstaben wie beim SimpleAnalyzer klein geschrieben. Der  \flqq StandardAnalyzer\frqq\ entfernt ebenfalls Stop-Wörter (auf die hier nicht eingegangen wird).
+
+Anbei ein Auszug aus Luke, bei welchem der Index der gesuchten Datei rekonstruiert wurde. Hier ist ersichtlich, dass \flqq address.java\frqq\ in Zeile 2 korrekt indiziert wurde. Der SimpleAnalyzer erkennt diese beiden Wörter jedoch als zwei Wörter im Gegensatz zum StandardAnalyzer.
+
+\lstset{language=java, mathescape=true}
+\lstinputlisting[label=Auszug aus Index von Dokumentatino SW Projekt 2. Semester,captionpos=b, caption=Auszug aus Index von Dokumentatino SW Projekt 2. Semester]{dir/listings/Suche1.java}
+
+Quelle: \cite{LiA-2ndEdition}, S. 127
+
 
 %==============  N E W  ==== S E C T I O N ==============%
+\newpage
 \section{Vergleich 2 Lucene mit Windows 8.1 Pro}
 \label{sec:Vergleich 2 Lucene mit Windows 8.1 Pro}
 

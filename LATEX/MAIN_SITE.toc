@@ -37,9 +37,10 @@
 \contentsline {section}{\numberline {6.1}Vergleich Lucene mit Windows 8.1 Pro}{22}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Suche \#1 mit Windows 8.1 Professional}{22}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Suche \#1 mit Lucene und Luke}{23}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Fazit zur Suche \#1}{23}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Vergleich 2 Lucene mit Windows 8.1 Pro}{24}{section.6.2}
-\contentsline {chapter}{\numberline {7}Fazit}{25}{chapter.7}
+\contentsline {subsection}{\numberline {6.1.3}Fazit zur Suche \#1}{24}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Kurzer Exkurs zu Analyzern}{24}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Vergleich 2 Lucene mit Windows 8.1 Pro}{25}{section.6.2}
+\contentsline {chapter}{\numberline {7}Fazit}{26}{chapter.7}
 \contentsline {chapter}{\numberline {A}Anhang}{i}{appendix.A}
 \contentsline {section}{\numberline {A.1}Java Code}{ii}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Main.java}{iii}{subsection.A.1.1}

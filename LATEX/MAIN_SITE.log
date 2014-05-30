@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.8)  29 MAY 2014 22:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.8)  30 MAY 2014 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -903,7 +903,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 (./Deckblatt.tex
-<pictures/zhaw_logo_soe.jpg, id=205, 1412.27625pt x 930.47626pt>
+<pictures/zhaw_logo_soe.jpg, id=209, 1412.27625pt x 930.47626pt>
 File: pictures/zhaw_logo_soe.jpg Graphic file (type jpg)
 
 <use pictures/zhaw_logo_soe.jpg>
@@ -963,7 +963,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 146.
  (c:/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-(./MAIN_SITE.toc <pictures/ZHAW_logo.png, id=245, 413.545pt x 432.61626pt>
+(./MAIN_SITE.toc <pictures/ZHAW_logo.png, id=249, 413.545pt x 432.61626pt>
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
@@ -1157,55 +1157,58 @@ Overfull \hbox (21.15096pt too wide) in paragraph at lines 20--20
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 23--23
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 22--22
 []|\T1/cmr/m/n/10.95 29.05.2014|  
  []
 
 
-Overfull \hbox (121.55609pt too wide) in paragraph at lines 8--28
+Overfull \hbox (148.2309pt too wide) in paragraph at lines 8--27
 [][] 
  []
 
 File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 39.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \chapter
+l.39 \chapter
              {Aufwände} [1
 
 
 ]
 Kapitel 2.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 40.
+(babel)             in language  on input line 39.
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
 
 Package xcolor Warning: Incompatible color definition on input line 46.
 
 
 Package xcolor Warning: Incompatible color definition on input line 46.
-
-
-Package xcolor Warning: Incompatible color definition on input line 47.
 
 
 Package xcolor Warning: Incompatible color definition on input line 47.
@@ -1214,60 +1217,62 @@ Package xcolor Warning: Incompatible color definition on input line 47.
 Package xcolor Warning: Incompatible color definition on input line 48.
 
 
-Package xcolor Warning: Incompatible color definition on input line 49.
-
-
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 51--51
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 50--50
 []|\T1/cmr/m/n/10.95 18.03.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 55--55
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 54--54
 []|\T1/cmr/m/n/10.95 26.03.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 58--58
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 57--57
 []|\T1/cmr/m/n/10.95 11.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 65--65
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 64--64
 []|\T1/cmr/m/n/10.95 13.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 69--69
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 68--68
 []|\T1/cmr/m/n/10.95 13.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 75--75
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 74--74
 []|\T1/cmr/m/n/10.95 15.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 78--78
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10.95 17.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 81--81
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 80--80
 []|\T1/cmr/m/n/10.95 18.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 84--84
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 83--83
 []|\T1/cmr/m/n/10.95 28.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 87--87
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 86--86
 []|\T1/cmr/m/n/10.95 29.05.2014|  
  []
 
 
-Overfull \hbox (149.51454pt too wide) in paragraph at lines 45--91
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 89--89
+[]|\T1/cmr/m/n/10.95 30.05.2014|  
+ []
+
+
+Overfull \hbox (149.51454pt too wide) in paragraph at lines 44--92
 [][] 
  []
 
@@ -1552,7 +1557,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 135.
 
-<pictures/Klassendiagramm.PNG, id=429, 591.71063pt x 594.72188pt>
+<pictures/Klassendiagramm.PNG, id=439, 591.71063pt x 594.72188pt>
 File: pictures/Klassendiagramm.PNG Graphic file (type png)
 
 <use pictures/Klassendiagramm.PNG>
@@ -1719,7 +1724,7 @@ Package babel Info: Redefining german shorthand "~
  [15
 
 ]
-<pictures/WindowsSearchDefault.PNG, id=493, 682.04813pt x 415.5525pt>
+<pictures/WindowsSearchDefault.PNG, id=503, 682.04813pt x 415.5525pt>
 File: pictures/WindowsSearchDefault.PNG Graphic file (type png)
 
 <use pictures/WindowsSearchDefault.PNG>
@@ -1750,7 +1755,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 44.
 
-<pictures/MACOSXSpotlight.PNG, id=500, 677.53125pt x 620.3175pt>
+<pictures/MACOSXSpotlight.PNG, id=510, 677.53125pt x 620.3175pt>
 File: pictures/MACOSXSpotlight.PNG Graphic file (type png)
 
 <use pictures/MACOSXSpotlight.PNG>
@@ -1780,7 +1785,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 64.
 
-<pictures/Luke-Query.PNG, id=505, 996.72375pt x 403.5075pt>
+<pictures/Luke-Query.PNG, id=515, 996.72375pt x 403.5075pt>
 File: pictures/Luke-Query.PNG Graphic file (type png)
 
 <use pictures/Luke-Query.PNG>
@@ -1942,20 +1947,20 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 28.
 
-<pictures/Win8_Search1_normal.PNG, id=533, 819.8128pt x 277.78781pt>
+<pictures/Win8_Search1_normal.PNG, id=543, 819.8128pt x 277.78781pt>
 File: pictures/Win8_Search1_normal.PNG Graphic file (type png)
 
 <use pictures/Win8_Search1_normal.PNG>
-Package pdftex.def Info: pictures/Win8_Search1_normal.PNG used on input line 34
+Package pdftex.def Info: pictures/Win8_Search1_normal.PNG used on input line 35
 .
 (pdftex.def)             Requested size: 426.79135pt x 144.62003pt.
 
-<pictures/Win8_Search1_extended.PNG, id=535, 833.36343pt x 222.07968pt>
+<pictures/Win8_Search1_extended.PNG, id=545, 833.36343pt x 222.07968pt>
 File: pictures/Win8_Search1_extended.PNG Graphic file (type png)
 
 <use pictures/Win8_Search1_extended.PNG>
 Package pdftex.def Info: pictures/Win8_Search1_extended.PNG used on input line 
-45.
+46.
 (pdftex.def)             Requested size: 426.79135pt x 113.73354pt.
 
 
@@ -1963,74 +1968,98 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 53.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 54.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
  [22 <./pictures/Win8_Search1_normal.PNG>]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 54.
 
-<pictures/Lucene_Search_1.PNG, id=543, 1222.5675pt x 633.36626pt>
+<pictures/Lucene_Search_1.PNG, id=554, 1204.5pt x 682.55pt>
 File: pictures/Lucene_Search_1.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_1.PNG>
-Package pdftex.def Info: pictures/Lucene_Search_1.PNG used on input line 61.
-(pdftex.def)             Requested size: 426.79135pt x 221.10164pt.
+Package pdftex.def Info: pictures/Lucene_Search_1.PNG used on input line 62.
+(pdftex.def)             Requested size: 426.79135pt x 241.8539pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 68.
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 71.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 74.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 71.
+(babel)             in language  on input line 74.
  [23 <./pictures/Win8_Search1_extended.PNG> <./pictures/Lucene_Search_1.PNG>]
-<pictures/Lucene_Search_1_english.PNG, id=552, 1223.57124pt x 418.56375pt>
+<pictures/Lucene_Search_1_english.PNG, id=562, 1223.57124pt x 418.56375pt>
 File: pictures/Lucene_Search_1_english.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_1_english.PNG>
 Package pdftex.def Info: pictures/Lucene_Search_1_english.PNG used on input lin
-e 79.
+e 82.
 (pdftex.def)             Requested size: 426.79135pt x 145.99495pt.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 90.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 88.
-) (./dir/Fazit.tex
+(babel)             in language  on input line 90.
 File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 99.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 99.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 99.
 
-<use pictures/ZHAW_logo.png>
+[24 <./pictures/Lucene_Search_1_english.PNG>] (./dir/listings/Suche1.java)
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 122.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 122.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 122.
+)
+(./dir/Fazit.tex
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 Package babel Info: Redefining german shorthand "f
@@ -2045,7 +2074,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 1.
- [24 <./pictures/Lucene_Search_1_english.PNG>]
+ [25]
 Kapitel 7.
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 1.
@@ -2070,7 +2099,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 228.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 228.
- [25
+ [26
 
 ] (./dir/Anhang/Anhang.tex
 Anhang A.
@@ -2686,9 +2715,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `MAIN_SITE.out' has not changed.
-(rerunfilecheck)             Checksum: E1397A2434BA5C09B5A9EEC6CD19E9DC;3291.
+(rerunfilecheck)             Checksum: 2F9F60F09C35ADA73197A4811BEF682C;3370.
 Package rerunfilecheck Info: File `MAIN_SITE.brf' has not changed.
-(rerunfilecheck)             Checksum: 40B02C9F05DFCAEF5B215278196EFCDA;200.
+(rerunfilecheck)             Checksum: 047A4459B1BD62056D6BDA798E831519;257.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2696,10 +2725,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 15582 strings out of 493308
- 234864 string characters out of 6141368
- 514064 words of memory out of 5000000
- 17549 multiletter control sequences out of 15000+600000
+ 15646 strings out of 493308
+ 235777 string characters out of 6141368
+ 514223 words of memory out of 5000000
+ 17599 multiletter control sequences out of 15000+600000
  25480 words of font info for 64 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,15n,59p,603b,1994s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2720,10 +2749,10 @@ sfsx1728.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfti1095.p
 fb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb><c:/tex
 live/2013/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2013/
 texmf-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on MAIN_SITE.pdf (60 pages, 1231208 bytes).
+Output written on MAIN_SITE.pdf (61 pages, 1241423 bytes).
 PDF statistics:
- 1955 PDF objects out of 2073 (max. 8388607)
- 1841 compressed objects within 19 object streams
- 1132 named destinations out of 1200 (max. 500000)
- 451 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1982 PDF objects out of 2073 (max. 8388607)
+ 1867 compressed objects within 19 object streams
+ 1143 named destinations out of 1200 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
