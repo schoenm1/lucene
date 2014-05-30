@@ -14,7 +14,7 @@
 \BOOKMARK [1][]{section.4.1}{eingesetzte Software}{chapter.4}% 14
 \BOOKMARK [1][]{section.4.2}{eingesetzte Hardware}{chapter.4}% 15
 \BOOKMARK [1][]{section.4.3}{Lucene}{chapter.4}% 16
-\BOOKMARK [1][]{section.4.4}{Definition der indexierenden Feldern}{chapter.4}% 17
+\BOOKMARK [1][]{section.4.4}{Definition der zu indizierenden Feldern}{chapter.4}% 17
 \BOOKMARK [1][]{section.4.5}{Aufbau Java Programm}{chapter.4}% 18
 \BOOKMARK [1][]{section.4.6}{Der Indexer}{chapter.4}% 19
 \BOOKMARK [2][]{subsection.4.6.1}{TextFile Indexer}{section.4.6}% 20
@@ -23,29 +23,34 @@
 \BOOKMARK [2][]{subsection.4.6.4}{Suchresultate}{section.4.6}% 23
 \BOOKMARK [0][]{chapter.5}{Vorbereitung f\374r Vergleich}{}% 24
 \BOOKMARK [1][]{section.5.1}{Windows Index Suche}{chapter.5}% 25
-\BOOKMARK [1][]{section.5.2}{Mac OS X Spotlight}{chapter.5}% 26
-\BOOKMARK [1][]{section.5.3}{Syntax f\374r Suche mit Lucene / Luke}{chapter.5}% 27
-\BOOKMARK [2][]{subsection.5.3.1}{Felder}{section.5.3}% 28
-\BOOKMARK [2][]{subsection.5.3.2}{Wildcard Suche}{section.5.3}% 29
-\BOOKMARK [2][]{subsection.5.3.3}{Fuzzy Suche}{section.5.3}% 30
-\BOOKMARK [2][]{subsection.5.3.4}{Proximity Suche \(Nachbarschaftliche\)}{section.5.3}% 31
-\BOOKMARK [2][]{subsection.5.3.5}{Range Suche \(Bereichssuche\)}{section.5.3}% 32
-\BOOKMARK [2][]{subsection.5.3.6}{Boosting Suche \(verst\344rktes Suchen\)}{section.5.3}% 33
-\BOOKMARK [2][]{subsection.5.3.7}{Boolsches Suchen}{section.5.3}% 34
-\BOOKMARK [0][]{chapter.6}{Vergleich der Ergebnisse}{}% 35
-\BOOKMARK [1][]{section.6.1}{Vergleich Lucene mit Windows 8.1 Pro}{chapter.6}% 36
-\BOOKMARK [2][]{subsection.6.1.1}{Suche \0431 mit Windows 8.1 Professional}{section.6.1}% 37
-\BOOKMARK [2][]{subsection.6.1.2}{Suche \0431 mit Lucene und Luke}{section.6.1}% 38
-\BOOKMARK [2][]{subsection.6.1.3}{Fazit zur Suche \0431}{section.6.1}% 39
-\BOOKMARK [2][]{subsection.6.1.4}{Kurzer Exkurs zu Analyzern}{section.6.1}% 40
-\BOOKMARK [1][]{section.6.2}{Vergleich 2 Lucene mit Windows 8.1 Pro}{chapter.6}% 41
-\BOOKMARK [0][]{chapter.7}{Fazit}{}% 42
-\BOOKMARK [0][]{appendix.A}{Anhang}{}% 43
-\BOOKMARK [1][]{section.A.1}{Java Code}{appendix.A}% 44
-\BOOKMARK [2][]{subsection.A.1.1}{Main.java}{section.A.1}% 45
-\BOOKMARK [2][]{subsection.A.1.2}{Logger.java}{section.A.1}% 46
-\BOOKMARK [2][]{subsection.A.1.3}{Indexer.java}{section.A.1}% 47
-\BOOKMARK [2][]{subsection.A.1.4}{TextFileIndexer.java}{section.A.1}% 48
-\BOOKMARK [2][]{subsection.A.1.5}{PDFIndexer.java}{section.A.1}% 49
-\BOOKMARK [2][]{subsection.A.1.6}{OfficeDocIndexer.java}{section.A.1}% 50
-\BOOKMARK [0][]{appendix*.16}{Literaturverzeichnis}{}% 51
+\BOOKMARK [1][]{section.5.2}{Syntax f\374r Suche mit Lucene / Luke}{chapter.5}% 26
+\BOOKMARK [2][]{subsection.5.2.1}{Felder}{section.5.2}% 27
+\BOOKMARK [2][]{subsection.5.2.2}{Wildcard Suche}{section.5.2}% 28
+\BOOKMARK [2][]{subsection.5.2.3}{Fuzzy Suche}{section.5.2}% 29
+\BOOKMARK [2][]{subsection.5.2.4}{Proximity Suche \(Nachbarschaftliche\)}{section.5.2}% 30
+\BOOKMARK [2][]{subsection.5.2.5}{Range Suche \(Bereichssuche\)}{section.5.2}% 31
+\BOOKMARK [2][]{subsection.5.2.6}{Boosting Suche \(verst\344rktes Suchen\)}{section.5.2}% 32
+\BOOKMARK [2][]{subsection.5.2.7}{Boolsches Suchen}{section.5.2}% 33
+\BOOKMARK [0][]{chapter.6}{Vergleich der Ergebnisse}{}% 34
+\BOOKMARK [1][]{section.6.1}{Vergleich Lucene mit Windows 8.1 Pro}{chapter.6}% 35
+\BOOKMARK [2][]{subsection.6.1.1}{Suche \0431 mit Windows 8.1 Professional}{section.6.1}% 36
+\BOOKMARK [2][]{subsection.6.1.2}{Suche \0431 mit Lucene und Luke}{section.6.1}% 37
+\BOOKMARK [2][]{subsection.6.1.3}{Fazit zur Suche \0431}{section.6.1}% 38
+\BOOKMARK [2][]{subsection.6.1.4}{Kurzer Exkurs zu Analyzern}{section.6.1}% 39
+\BOOKMARK [1][]{section.6.2}{Vergleich 2 Lucene mit Windows 8.1 Pro}{chapter.6}% 40
+\BOOKMARK [2][]{subsection.6.2.1}{Suche \0431 mit Windows 8.1 Professional}{section.6.2}% 41
+\BOOKMARK [2][]{subsection.6.2.2}{Suche \0432 mit Lucene und Luke}{section.6.2}% 42
+\BOOKMARK [2][]{subsection.6.2.3}{Fazit zur Suche \0432}{section.6.2}% 43
+\BOOKMARK [0][]{chapter.7}{Fazit}{}% 44
+\BOOKMARK [0][]{appendix.A}{Anhang}{}% 45
+\BOOKMARK [1][]{section.A.1}{Java Code}{appendix.A}% 46
+\BOOKMARK [2][]{subsection.A.1.1}{Main.java}{section.A.1}% 47
+\BOOKMARK [2][]{subsection.A.1.2}{Logger.java}{section.A.1}% 48
+\BOOKMARK [2][]{subsection.A.1.3}{Indexer.java}{section.A.1}% 49
+\BOOKMARK [2][]{subsection.A.1.4}{TextFileIndexer.java}{section.A.1}% 50
+\BOOKMARK [2][]{subsection.A.1.5}{PDFIndexer.java}{section.A.1}% 51
+\BOOKMARK [2][]{subsection.A.1.6}{OfficeDocIndexer.java}{section.A.1}% 52
+\BOOKMARK [2][]{subsection.A.1.7}{myFunctions.java}{section.A.1}% 53
+\BOOKMARK [2][]{subsection.A.1.8}{TextFilesFilter}{section.A.1}% 54
+\BOOKMARK [0][]{appendix*.20}{Index}{}% 55
+\BOOKMARK [0][]{appendix*.21}{Literaturverzeichnis}{}% 56

@@ -64,9 +64,6 @@ public class OfficeDocIndexer extends Indexer {
 			OPCPackage pkgDoc = POIXMLDocument.openPackage(file.toString());
 			wordxmlextractor = new XWPFWordExtractor(pkgDoc);
 
-			// doc.add(new Field(Indexer.filename, file.getName(),
-			// Field.Store.YES, Field.Index.NOT_ANALYZED));
-
 		} catch (Exception e) {
 			System.out.println("Failed to set Word XML Parser");
 			e.printStackTrace();
@@ -111,9 +108,6 @@ public class OfficeDocIndexer extends Indexer {
 		Document doc = new Document();
 		XSSFExcelExtractor excelXMLExtractor = null;
 		try {
-		//	ExtractorFactory extractor = new ExtractorFactory();
-			//POITextExtractor fileExtractor = extractor.createExtractor(file);
-
 			String strfile = file.toString();
 			excelXMLExtractor = new XSSFExcelExtractor(strfile);
 
@@ -290,8 +284,6 @@ public class OfficeDocIndexer extends Indexer {
 	 * return false
 	 */
 	public boolean isXMLWord(String ext) {
-		if (ext.equals("docx"))
-			return true;
 		if (ext.equals("docx"))
 			return true;
 		if (ext.equals("dotx"))

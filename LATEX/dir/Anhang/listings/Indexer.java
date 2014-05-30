@@ -14,6 +14,22 @@ import org.apache.lucene.document.Field;
 
 public class Indexer {
 
+	/* static final Strings for Field names which can be indexed */
+	static final String Author = "Author";
+	static final String description = "description";
+	static final String modified = "ModificationDate";
+	static final String Title = "Title";
+	static final String created = "CreationDate";
+	static final String fullpath = "fullpath";
+	static final String contents = "contents";
+	static final String filename = "filename";
+	static final String appname = "appname";
+	static final String extension = "FileExtension";
+	static final String uid = "uid";
+	static final String summary = "summary";
+	static final String Subject = "Subject";
+	static final String keywords = "keywords";
+
 	String indexDir = "NULL";
 	int numIndexed = 0;
 	static PDFIndexer _pdfindexer;
@@ -93,32 +109,23 @@ public class Indexer {
 	}
 
 	public int index(Indexer indexer, String dataDir, FileFilter filter, int count) throws Exception {
-		String[] subdirectories = Main.getMyFunctions().getSubDirectories(dataDir);
-
-		/* Print on console every subfolder found */
-		try {
-			for (int i = 0; i < subdirectories.length; i++) {
-				// System.out.println("Found subdirectory: " +
-				// subdirectories[i]);
-			}
-		} catch (Exception e) {
-			// System.out.println("No subdirectories...");
-		}
-
 		File[] files = new File(dataDir).listFiles();
 
 		/* iterate over all files and index it */
 		for (File f : files) {
-			// System.out.println("Filename = " + f.getName());
+			/* if it's a file and ... index it */
 			if (!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead() && (filter == null || filter.accept(f))) {
+				Logger.writeToLog("* File Name = " + f.getCanonicalPath());
 				myFunctions.prepareindexFile(f);
+				count++;
 			}
-			for (int i = 0; i < subdirectories.length; i++) {
-				String subdir = dataDir + subdirectories[i] + "/";
+			/* if its a directory, do: */
+			else if (f.isDirectory() && !f.isHidden()) {
+				Logger.writeToLog("# Directory Name = " + f.getCanonicalPath());
+				String subdir = f.getAbsolutePath();
 				int tmpcount = indexer.index(indexer, subdir, new TextFilesFilter(), count);
 				count += tmpcount;
 			}
- 
 		}
 		return Main.getwriter().numDocs();
 	}
@@ -128,6 +135,7 @@ public class Indexer {
 		System.out.println("Optimizing index...");
 		Main.getwriter().optimize();
 		Main.getwriter().close();
+		System.out.println("Finished with indexing....");
 	}
 
 	/** returns the PDF Indexer */
@@ -138,6 +146,11 @@ public class Indexer {
 	/** returns the Office Indexer */
 	public static zhaw.OfficeDocIndexer getOfficeIndexer() {
 		return _officeindexer;
+	}
+
+	/** returns the Text Indexer */
+	public static zhaw.TextFileIndexer getTextFileIndexer() {
+		return _textfileindexer;
 	}
 
 	/**
@@ -157,10 +170,6 @@ public class Indexer {
 	 */
 	protected void setDateTimeResolution(DateTools.Resolution resolution) {
 		dateTimeResolution = resolution;
-	}
-
-	protected String timeToString(long time) {
-		return DateTools.timeToString(time, dateTimeResolution);
 	}
 
 	protected void addTextField(Document document, String name, Reader value) {
@@ -189,7 +198,7 @@ public class Indexer {
 
 	protected static void addUnindexedField(Document document, String name, String value) {
 		if (value != null) {
-			document.add(new Field(name, value, Field.Store.YES, Field.Index.NO));
+			document.add(new Field(name, value, Field.Store.YES, Field.Index.NOT_ANALYZED));
 		}
 	}
 

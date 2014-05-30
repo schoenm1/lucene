@@ -2,20 +2,21 @@
 \label{sec:Einleitung}
 \section{Das Projekt}
 %------------------------------------------------------------------------------------------------------------------------------
-\subsection{Ausgangslage} \index{Ausgangslage}
+\subsection{Ausgangslage} \index{Ausgangslage|(}
 \label{subsec:Ausganslage}
 In den knapp 4 Jahren an der ZHAW haben sich verschiedenste Dateien angehäuft. Die Thematiken überschneiden die Module und sind somit nicht immer über eine übersichtliche Ordnerstruktur auffindbar.\\
 Die vielen Typen von Dokumenten (Office, pdf, txt, java...) vorhanden sind, wird durch die Betriebssystem integrierte Suche nicht immer das erwartete Resultat geliefert.
-Alle diese Dokumente sollen über Lucene mit einem Index versehen und für eine effiziente Suche optimiert werden. So können unter anderem auch PDF inhaltlich indexiert werden, was bei der Search-Engine des Betriebssystems nicht funktioniert.
-
+Alle diese Dokumente sollen über Lucene mit einem Index versehen und für eine effiziente Suche optimiert werden. So können unter anderem auch PDF inhaltlich indiziert werden, was bei der Search-Engine des Windows Betriebssystems nicht standardmässig funktioniert.
+\index{Ausgangslage|)}
 %------------------------------------------------------------------------------------------------------------------------------
-\subsection{Ziel der Arbeit} \index{Ziel der Arbeit}
+\subsection{Ziel der Arbeit} \index{Ziel der Arbeit|(}
 Das Ziel der Arbeit soll ein direkter Vergleich zwischen der Suchresultate von Lucene mit denjenigen des Betriebssystems stattfinden.\\
 Aufgrund der subjektiven Sicht der suchenden Person soll schlussendlich entschieden werden, welche Search-Engine die besseren Suchresultate liefert. Es sollen mindestens zwei reale Begriffe gesucht werden und anhand dieser ein Fazit gezogen werden (eventuell mit Versbesserungsvorschlägen für die Optimierung von Lucene).\\
-Für die Indexierung von PDF, welche nicht durch die Search-Engine des Betriebssystems bei der Indexierung eingeschlossen werden soll Lucene Abhilfe schaffen.
+Für die Indexierung von PDF, welche nicht durch die Search-Engine des Betriebssystems bei der Indexierung eingeschlossen werden, soll Lucene Abhilfe schaffen.
+\index{Ziel der Arbeit|)}
 %------------------------------------------------------------------------------------------------------------------------------
 \newpage
-\subsection{Aufgabenstellung} \index{Aufgabenstellung}
+\subsection{Aufgabenstellung} \index{Aufgabenstellung|(}
 \label{subsec:Ausgangslage}
 \begin{enumerate}
 \item Definierung der Suchkriterien über alle zu indexierenden Dateien\\
@@ -32,20 +33,22 @@ Behandelt in Kapitel \ref{chapter:Vergleich}
 \item Fazit der Implementierung von Lucene. Sind die Suchresultate besser als diejenigen des Betriebssystemes?\\
 Behandelt im Kapitel \ref{chapter:Fazit}
 \end{enumerate}
-
+\index{Aufgabenstellung|)}
 %------------------------------------------------------------------------------------------------------------------------------
 \newpage
 \subsection{Erwartetes Resultat} \label{subsec:erwartetesResultat}
-\label{subsec:erwartetesResultat}
+\index{erwartetes Resultat|(}
 \begin{enumerate}
-\item PDF sollen in den Suchresultaten mitberücksichtigt werden
-\item Die Eingabe der Suchbegriffe soll intuitiv und einfach gehalten werden
-\item Die Qualität der Suchresultate von Lucene soll diejenige vom Betriebssystem übertreffen. Falls dies nicht der Fall sein sollte, soll eine kurze Analyse aufzeigen, wieso das Betriebssystem bessere Resultate hervorbringen kann
+\item PDF sollen in den Suchresultaten mitberücksichtigt werden\\
+Implementiert gemäss Kapitel \ref{subsec:PDF Indexer}
+\item Die Eingabe der Suchbegriffe soll intuitiv und einfach gehalten werden\\
+Suchbegriffe gemäss Standards von Lucene gemäss Kapitel \ref{sec:LukeQuery}
+\item Die Qualität der Suchresultate von Lucene soll diejenige vom Betriebssystem übertreffen. Falls dies nicht der Fall sein sollte, soll eine kurze Analyse aufzeigen, wieso das Betriebssystem bessere Resultate hervorbringen kann\\
+Die Vergleiche der Suchresultate werden im Kapitel \ref{chapter:Vergleich} behandelt.
 \end{enumerate}
-
+\index{erwartetes Resultat|)}
 %------------------------------------------------------------------------------------------------------------------------------
 \subsection{Geplante Termine}
-
 \begin{table}[h!]
 \begin{minipage}{10cm}
 \begin{tabular}[t]{|l|l|} \hline

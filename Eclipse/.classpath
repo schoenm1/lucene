@@ -110,5 +110,20 @@
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-scratchpad-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-common-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-icu-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-kuromoji-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-morfologik-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-phonetic-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-smartcn-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-stempel-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-uima-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-benchmark-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-classification-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-codecs-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-core-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-demo-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-queryparser-4.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

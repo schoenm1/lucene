@@ -3,7 +3,6 @@ package zhaw;
 import java.io.File;
 
 import org.apache.lucene.analysis.de.GermanAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -11,8 +10,6 @@ import org.apache.lucene.util.Version;
 
 public class Main {
 	static String indexDir = "/Users/micha/Test2Lucene/";
-	//static String dataDir ="/Users/micha/TestLucene/ToIndex/";
-
 	static String dataDir = "/Users/micha/Docs/Dokumente/Ausbildung, Weiterbildung/Micha/ZHAW (2010-2014)/";
 	static myFunctions _myfunctions;
 	private static IndexWriter writer;

@@ -172,10 +172,6 @@ public class Indexer {
 		dateTimeResolution = resolution;
 	}
 
-	protected String timeToString(long time) {
-		return DateTools.timeToString(time, dateTimeResolution);
-	}
-
 	protected void addTextField(Document document, String name, Reader value) {
 		if (value != null) {
 			document.add(new Field(name, value));

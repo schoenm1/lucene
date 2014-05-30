@@ -1,7 +1,7 @@
 \select@language {german}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.2}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{IV}{chapter*.3}
-\contentsline {chapter}{\nonumberline Verzeichnis der Listings}{V}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{III}{chapter*.2}
+\contentsline {chapter}{Tabellenverzeichnis}{IV}{chapter*.3}
+\contentsline {chapter}{Verzeichnis der Listings}{V}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Versionierung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Aufw\"ande}{2}{chapter.2}
 \contentsline {chapter}{\numberline {3}Einleitung}{3}{chapter.3}
@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {4.1}eingesetzte Software}{6}{section.4.1}
 \contentsline {section}{\numberline {4.2}eingesetzte Hardware}{7}{section.4.2}
 \contentsline {section}{\numberline {4.3}Lucene}{7}{section.4.3}
-\contentsline {section}{\numberline {4.4}Definition der indexierenden Feldern}{9}{section.4.4}
+\contentsline {section}{\numberline {4.4}Definition der zu indizierenden Feldern}{9}{section.4.4}
 \contentsline {section}{\numberline {4.5}Aufbau Java Programm}{11}{section.4.5}
 \contentsline {section}{\numberline {4.6}Der Indexer}{13}{section.4.6}
 \contentsline {subsection}{\numberline {4.6.1}TextFile Indexer}{13}{subsection.4.6.1}
@@ -24,29 +24,34 @@
 \contentsline {subsection}{\numberline {4.6.4}Suchresultate}{14}{subsection.4.6.4}
 \contentsline {chapter}{\numberline {5}Vorbereitung f\"ur Vergleich}{15}{chapter.5}
 \contentsline {section}{\numberline {5.1}Windows Index Suche}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Mac OS X Spotlight}{17}{section.5.2}
-\contentsline {section}{\numberline {5.3}Syntax f\"ur Suche mit Lucene / Luke}{18}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Felder}{18}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Wildcard Suche}{18}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Fuzzy Suche}{19}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Proximity Suche (Nachbarschaftliche)}{19}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Range Suche (Bereichssuche)}{19}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Boosting Suche (verst\"arktes Suchen)}{19}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Boolsches Suchen}{20}{subsection.5.3.7}
-\contentsline {chapter}{\numberline {6}Vergleich der Ergebnisse}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Vergleich Lucene mit Windows 8.1 Pro}{22}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Suche \#1 mit Windows 8.1 Professional}{22}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Suche \#1 mit Lucene und Luke}{23}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Fazit zur Suche \#1}{24}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Kurzer Exkurs zu Analyzern}{24}{subsection.6.1.4}
+\contentsline {section}{\numberline {5.2}Syntax f\"ur Suche mit Lucene / Luke}{17}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Felder}{17}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Wildcard Suche}{17}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Fuzzy Suche}{18}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Proximity Suche (Nachbarschaftliche)}{18}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Range Suche (Bereichssuche)}{18}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Boosting Suche (verst\"arktes Suchen)}{18}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Boolsches Suchen}{19}{subsection.5.2.7}
+\contentsline {chapter}{\numberline {6}Vergleich der Ergebnisse}{20}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vergleich Lucene mit Windows 8.1 Pro}{21}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Suche \#1 mit Windows 8.1 Professional}{21}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Suche \#1 mit Lucene und Luke}{22}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Fazit zur Suche \#1}{22}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Kurzer Exkurs zu Analyzern}{23}{subsection.6.1.4}
 \contentsline {section}{\numberline {6.2}Vergleich 2 Lucene mit Windows 8.1 Pro}{25}{section.6.2}
-\contentsline {chapter}{\numberline {7}Fazit}{26}{chapter.7}
+\contentsline {subsection}{\numberline {6.2.1}Suche \#1 mit Windows 8.1 Professional}{25}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Suche \#2 mit Lucene und Luke}{26}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Fazit zur Suche \#2}{26}{subsection.6.2.3}
+\contentsline {chapter}{\numberline {7}Fazit}{28}{chapter.7}
 \contentsline {chapter}{\numberline {A}Anhang}{i}{appendix.A}
-\contentsline {section}{\numberline {A.1}Java Code}{ii}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Main.java}{iii}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Logger.java}{v}{subsection.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Indexer.java}{vi}{subsection.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}TextFileIndexer.java}{xii}{subsection.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}PDFIndexer.java}{xiii}{subsection.A.1.5}
-\contentsline {subsection}{\numberline {A.1.6}OfficeDocIndexer.java}{xx}{subsection.A.1.6}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{xxix}{appendix*.16}
+\contentsline {section}{\numberline {A.1}Java Code}{i}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Main.java}{i}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Logger.java}{iii}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Indexer.java}{iv}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}TextFileIndexer.java}{ix}{subsection.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}PDFIndexer.java}{x}{subsection.A.1.5}
+\contentsline {subsection}{\numberline {A.1.6}OfficeDocIndexer.java}{xviii}{subsection.A.1.6}
+\contentsline {subsection}{\numberline {A.1.7}myFunctions.java}{xxvii}{subsection.A.1.7}
+\contentsline {subsection}{\numberline {A.1.8}TextFilesFilter}{xxx}{subsection.A.1.8}
+\contentsline {chapter}{Index}{xxxi}{appendix*.20}
+\contentsline {chapter}{Literaturverzeichnis}{xxxii}{appendix*.21}

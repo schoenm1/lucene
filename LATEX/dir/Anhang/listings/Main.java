@@ -2,15 +2,15 @@ package zhaw;
 
 import java.io.File;
 
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.de.GermanAnalyzer;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 public class Main {
-	static String indexDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/";
-	static String dataDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/ToIndex/";
+	static String indexDir = "/Users/micha/Test2Lucene/";
+	static String dataDir = "/Users/micha/Docs/Dokumente/Ausbildung, Weiterbildung/Micha/ZHAW (2010-2014)/";
 	static myFunctions _myfunctions;
 	private static IndexWriter writer;
 	static Logger _myLogger;
@@ -24,10 +24,10 @@ public class Main {
 
 		/* prepare choosen directory and a IndexWriter */
 		Directory dir = FSDirectory.open(new File(indexDir));
-		writer = new IndexWriter(dir, new StandardAnalyzer(Version.LUCENE_30), true, IndexWriter.MaxFieldLength.UNLIMITED);
+		writer = new IndexWriter(dir, new GermanAnalyzer(Version.LUCENE_30), true, IndexWriter.MaxFieldLength.LIMITED);
 
 		/* init my functions */
-		_myfunctions = new myFunctions(writer);
+		_myfunctions = new myFunctions();
 
 		/* init the indexer */
 		_indexer = new Indexer();
@@ -37,7 +37,7 @@ public class Main {
 		try {
 			int _numIndexed = _indexer.index(_indexer, dataDir, new TextFilesFilter(), numIndexed);
 			numIndexed += _numIndexed;
-
+			System.out.println("Anzahl Files = " + numIndexed);
 		}
 		/* at end, close the writer */
 		finally {
@@ -45,10 +45,7 @@ public class Main {
 		}
 
 		long end = System.currentTimeMillis();
-
-		/* Print time to used for indexing the set folder */
-		// System.out.println("Indexing " + numIndexed + " files took " + (end -
-		// start) + " milliseconds");
+		System.out.println("Indexing in " + (end - start) + " milliseconds");
 	}
 
 	/* returns the path of the directory, which should be indexed */

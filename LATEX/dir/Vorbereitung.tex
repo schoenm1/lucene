@@ -2,17 +2,17 @@
 %==============  N E W  ==== C H A P T E R ==============%
 \chapter{Vorbereitung für Vergleich}
 \label{chapter:Vorbereitung}
-
+\index{Vorbereitung für Suche|(}
 Bevor ein Vergleich zwischen den verschiedenen Search-Engines gemacht werden kann, sollte ein Überblick über die Search-Engines erstellt werden.
 
 %==============  N E W  ==== S E C T I O N ==============%
 \section{Windows Index Suche}
 \label{sec:WindowsSearchEngine}
 
-Standardmässig werden bei Windows nur einzelne Ordner indexiert. Gleichzeitig indexiert Windows nicht die kompletten Datei Inhalte, sondern lediglich die Einstellungen.\\
-Um die Inhalte auch zu indexieren, muss dies in den Einstellungen geändert werden (siehe Abbildung \ref{fig:WindowsSearchDefault} rechte Seite).
+Standardmässig werden bei Windows nur einzelne Ordner indiziert. Gleichzeitig indiziert Windows nicht die kompletten Datei Inhalte, sondern lediglich die Einstellungen und deren Metadaten.\\
+Um die Inhalte auch zu indizieren, muss dies in den Einstellungen geändert werden (siehe Abbildung \ref{fig:WindowsSearchDefault} rechte Seite).
 
-Um nun ein Netzlaufwerk indexieren zu können (was hier auch gewünscht ist), muss ein Add-in von Microsoft installiert werden. Dieses nennt sich \flqq Windows Desktop Search: Add-in for Files on Microsoft Networks\frqq und ist auf der Microsoft Homepage verfügbar\footnote{\url{http://www.microsoft.com/en-us/download/details.aspx?id=3383}}.
+Um nun ein Netzlaufwerk indexieren zu können (was hier auch gewünscht ist), muss ein Add-in von Microsoft installiert werden. Dieses nennt sich \flqq Windows Desktop Search: Add-in for Files on Microsoft Networks\frqq\ und ist auf der Microsoft Homepage verfügbar\footnote{\url{http://www.microsoft.com/en-us/download/details.aspx?id=3383}}.
 
 Da dies leider nach einem Neustart nicht funktionierte, wurde eine weitere Möglichkeit gesucht.\\
 So wurde gemäss dem Microsoft Technet-Artikel\footnote{\url{http://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking}} folgende Punkte erledigt:
@@ -36,31 +36,13 @@ Mit diesem Befehl wurde ein symbolischer Link des Netzwerkpfades auf den lokalen
 \label{fig:WindowsSearchDefault}
 \end{figure}
 
-Da die Indexierung über den Softlink gemäss Anleitung leider nicht wie gewüsncht funktionierte, wurden alle Schuldaten auf dem Windows Rechner auf die lokale Festplatte kopiert und indexiert. So kann sichergestellt werden, dass ein fairer Vergleich der Resultate stattfinden kann.
+Da die Indizierung über den Softlink gemäss Anleitung leider nicht wie gewüsncht funktionierte, wurden alle Schuldaten auf dem Windows Rechner auf die lokale Festplatte kopiert und indiziert. So kann sichergestellt werden, dass ein fairer Vergleich der Resultate stattfinden kann.
 
 
 %==============  N E W  ==== S E C T I O N ==============%
 \newpage
-\section{Mac OS X Spotlight}
-\label{sec:Mac OS X Spotlight}
-
-Beim MAC OS X Spotlight gibt es weniger Einstellungen, die man selber vornehmen kann. So kann zum Beispiel nicht gewählt werden, ob das ganze File oder nur die Einstellungen oder Metadaten zum Index hinzugefügt werden.
-
-Abbildung \ref{fig:MACOSXSpotlight} zeigt die Einstellungsmöglichkeiten. Wird hier Nummer 7 (=PDF) angewählt, indexiert MAC OS X automatisch den ganzen Inhalt des PDF, vorausgesetzt der Text im PDF ist lesbar und das PDF ist nicht geschützt.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.75\textwidth]{MACOSXSpotlight.PNG} 
-\caption[Mac OS X Spotlight - Default Einstellungen]{Mac OS X Spotlight - Default Einstellungen\\Quelle: eigener Screenshot}
-\label{fig:MACOSXSpotlight}
-\end{figure}
-
-Beim MAC OS ist war es nicht notwendig, ein Netzlaufwerk zu indexieren, da die Daten bereits lokal auf der Festplatte vorhanden waren.
-
-
-
-%==============  N E W  ==== S E C T I O N ==============%
-\newpage
+\index{Lucene Syntax|see{Syntax Lucene}}
+\index{Syntax Lucene|(}
 \section{Syntax für Suche mit Lucene / Luke}
 \label{sec:LukeQuery}
 
@@ -108,7 +90,7 @@ roam$\sim$0.8 & Gibt die gesuchte Ähnlichkeit an [0-1]. Je grösser die Zahl, des
 Lucene erlaubt es, zwei Wörter in einer bestimmten Distanz zu suchen.
 
 \begin{tabular}[t]{|l|l|} \hline
- \multirow{2}{5.75cm}{\grqq prtg monitor\grqq $\sim$10} & Sucht die Wörter \flqq prtg\frqq \ und \flqq monitor\frqq mit einem \\
+ \multirow{2}{5.75cm}{\grqq prtg monitor\grqq $\sim$10} & Sucht die Wörter \flqq prtg\frqq \ und \flqq monitor\frqq\ mit einem \\
  & maximalen Abstand von 10 Wörtern.\\  \cline{1-2}
 
 \end{tabular}
@@ -156,6 +138,7 @@ Anstelle von AND kann auch \&\& oder + verwendet werden.\\
 Anstelle von NOT kann auch ! oder - verwendet werden.\\
 
 Quelle Kapitel \ref{sec:LukeQuery}: \cite{Luke_Query}
+\index{Syntax Lucene|)}
 
 
 
@@ -163,7 +146,7 @@ Quelle Kapitel \ref{sec:LukeQuery}: \cite{Luke_Query}
 
 
 
-
+\index{Vorbereitung für Suche|)}
 
 
 
