@@ -1,0 +1,81 @@
+\begin{theindex}
+{\bfseries\hfil A\hfil}\nopagebreak
+
+  \item Analyzer\dotfill \hyperpage{26}
+  \item Aufgabenstellung\dotfill \hyperpage{4}
+  \item Ausgangslage\dotfill \hyperpage{3}
+
+  \indexspace
+{\bfseries\hfil E\hfil}\nopagebreak
+
+  \item erwartetes Resultat\dotfill \hyperpage{5}
+
+  \indexspace
+{\bfseries\hfil F\hfil}\nopagebreak
+
+  \item Fazit der Arbeit\dotfill \hyperpage{30}
+  \item Fazit Suchergebnis\dotfill \hyperpage{25}
+
+  \indexspace
+{\bfseries\hfil I\hfil}\nopagebreak
+
+  \item Indexer\dotfill \hyperpage{13--15}
+    \subitem OfficeDoc Indexer\dotfill 
+		\hyperindexformat{\see{OfficeDoc Indexer}}{14}
+    \subitem PDF Indexer\dotfill 
+		\hyperindexformat{\see{PDF Indexer}}{14}
+    \subitem TextFile Indexer\dotfill 
+		\hyperindexformat{\see{TextFile Indexer}}{13}
+  \item indizierte Felder\dotfill \hyperpage{9--10}
+
+  \indexspace
+{\bfseries\hfil J\hfil}\nopagebreak
+
+  \item Java\dotfill \hyperpage{11--12}
+    \subitem Klassendiagramm\dotfill \hyperpage{11--12}
+    \subitem Souce-Code\dotfill \hyperpage{i--xxx}
+
+  \indexspace
+{\bfseries\hfil L\hfil}\nopagebreak
+
+  \item Lucene Syntax\dotfill 
+		\hyperindexformat{\see{Syntax Lucene}}{18}
+
+  \indexspace
+{\bfseries\hfil O\hfil}\nopagebreak
+
+  \item OfficeDoc Indexer\dotfill \hyperpage{14}
+
+  \indexspace
+{\bfseries\hfil P\hfil}\nopagebreak
+
+  \item PDF Indexer\dotfill \hyperpage{14}
+
+  \indexspace
+{\bfseries\hfil S\hfil}\nopagebreak
+
+  \item Syntax Lucene\dotfill \hyperpage{18--20}
+
+  \indexspace
+{\bfseries\hfil T\hfil}\nopagebreak
+
+  \item TextFile Indexer\dotfill \hyperpage{13}
+
+  \indexspace
+{\bfseries\hfil V\hfil}\nopagebreak
+
+  \item Vergleich mit Windows\dotfill \hyperpage{22--29}
+  \item Vorbereitung f\"ur Suche\dotfill \hyperpage{16--20}
+
+  \indexspace
+{\bfseries\hfil W\hfil}\nopagebreak
+
+  \item Windows 8.1\dotfill 
+		\hyperindexformat{\see{Vergleich mit Windows}}{22}
+
+  \indexspace
+{\bfseries\hfil Z\hfil}\nopagebreak
+
+  \item Ziel der Arbeit\dotfill \hyperpage{3}
+
+\end{theindex}

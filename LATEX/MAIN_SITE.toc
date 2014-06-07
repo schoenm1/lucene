@@ -1,7 +1,7 @@
 \select@language {german}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.2}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{IV}{chapter*.3}
-\contentsline {chapter}{\nonumberline Verzeichnis der Listings}{V}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{III}{chapter*.2}
+\contentsline {chapter}{Tabellenverzeichnis}{IV}{chapter*.3}
+\contentsline {chapter}{Verzeichnis der Listings}{V}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Versionierung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Aufw\"ande}{2}{chapter.2}
 \contentsline {chapter}{\numberline {3}Einleitung}{3}{chapter.3}
@@ -53,4 +53,5 @@
 \contentsline {subsection}{\numberline {A.1.6}OfficeDocIndexer.java}{xviii}{subsection.A.1.6}
 \contentsline {subsection}{\numberline {A.1.7}myFunctions.java}{xxvii}{subsection.A.1.7}
 \contentsline {subsection}{\numberline {A.1.8}TextFilesFilter}{xxx}{subsection.A.1.8}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{xxxi}{appendix*.21}
+\contentsline {chapter}{Index}{xxxi}{appendix*.20}
+\contentsline {chapter}{Literaturverzeichnis}{xxxii}{appendix*.21}
