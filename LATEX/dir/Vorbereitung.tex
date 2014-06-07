@@ -3,19 +3,26 @@
 \chapter{Vorbereitung für Vergleich}
 \label{chapter:Vorbereitung}
 \index{Vorbereitung für Suche|(}
-Bevor ein Vergleich zwischen den verschiedenen Search-Engines gemacht werden kann, sollte ein Überblick über die Search-Engines erstellt werden.
+Bevor ein Vergleich zwischen den verschiedenen Search-Engines gemacht werden kann sollte ein Überblick über die Search-Engines erstellt werden.
 
 %==============  N E W  ==== S E C T I O N ==============%
 \section{Windows Index Suche}
 \label{sec:WindowsSearchEngine}
 
-Standardmässig werden bei Windows nur einzelne Ordner indiziert. Gleichzeitig indiziert Windows nicht die kompletten Datei Inhalte, sondern lediglich die Einstellungen und deren Metadaten.\\
+Standardmässig werden bei Windows nur einzelne Ordner indiziert. Gleichzeitig indiziert Windows nicht die kompletten Dateiinhalte, sondern lediglich die Einstellungen und deren Metadaten.\\
 Um die Inhalte auch zu indizieren, muss dies in den Einstellungen geändert werden (siehe Abbildung \ref{fig:WindowsSearchDefault} rechte Seite).
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{WindowsSearchDefault.PNG} 
+\caption[Windows Indexing - Default Einstellungen]{Windows Indexing - Default Einstellungen\\Quelle: eigener Screenshot}
+\label{fig:WindowsSearchDefault}
+\end{figure}
 
-Um nun ein Netzlaufwerk indexieren zu können (was hier auch gewünscht ist), muss ein Add-in von Microsoft installiert werden. Dieses nennt sich \flqq Windows Desktop Search: Add-in for Files on Microsoft Networks\frqq\ und ist auf der Microsoft Homepage verfügbar\footnote{\url{http://www.microsoft.com/en-us/download/details.aspx?id=3383}}.
+\newpage
+Um ein Netzlaufwerk indexieren zu können (was hier auch gewünscht ist), muss ein Add-in von Microsoft installiert werden. Dieses nennt sich \flqq Windows Desktop Search: Add-in for Files on Microsoft Networks\frqq\ und ist auf der Microsoft Homepage verfügbar\footnote{\url{http://www.microsoft.com/en-us/download/details.aspx?id=3383}}.
 
 Da dies leider nach einem Neustart nicht funktionierte, wurde eine weitere Möglichkeit gesucht.\\
-So wurde gemäss dem Microsoft Technet-Artikel\footnote{\url{http://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking}} folgende Punkte erledigt:
+So wurden gemäss dem Microsoft Technet-Artikel\footnote{\url{http://social.technet.microsoft.com/Forums/windows/en-US/afb904c1-1c61-4aae-b6b1-5cf525b9f8de/how-do-i-get-windows-7-to-index-a-network-mapped-drive?forum=w7itpronetworking}} folgende Punkte erledigt:
 
  \begin{itemize}
 \item  Erstellen einer neuen Windows Library \flqq ZHAW Docs\frqq  \ erstellt.
@@ -28,13 +35,7 @@ Mit diesem Befehl wurde ein symbolischer Link des Netzwerkpfades auf den lokalen
 
 \end{itemize}
 
-\newpage
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.95\textwidth]{WindowsSearchDefault.PNG} 
-\caption[Windows Indexing - Default Einstellungen]{Windows Indexing - Default Einstellungen\\Quelle: eigener Screenshot}
-\label{fig:WindowsSearchDefault}
-\end{figure}
+
 
 Da die Indizierung über den Softlink gemäss Anleitung leider nicht wie gewüsncht funktionierte, wurden alle Schuldaten auf dem Windows Rechner auf die lokale Festplatte kopiert und indiziert. So kann sichergestellt werden, dass ein fairer Vergleich der Resultate stattfinden kann.
 
@@ -102,7 +103,7 @@ Lucene erlaubt es, zum Beispiel Daten in einem bestimmten Bereich zu suchen.
  \multirow{2}{5.75cm}{modified:[20140501 TO 20140515]}&  Sucht eine Datei mit einem Änderungsdatum \\
  & zwischen dem \flqq 01.05.2014\frqq\ und \flqq 15.05.2014\frqq\\ \cline{1-2}
  
-  \multirow{2}{5.75cm}{Title:\{Anton TO Max\}}&  Sucht eine Datei mit dem Titel \\
+  \multirow{2}{5.75cm}{Title:\{anton TO max\}}&  Sucht eine Datei mit dem Titel \\
  & zwischen \flqq Anton\frqq\ und \flqq Max\frqq\ (alphabetisch)\\ \cline{1-2}
  \end{tabular}
 
@@ -124,8 +125,7 @@ Ganz wichtig beim Suchen sind die verschiedenen Verknüpfungen der eingegebenen S
 \begin{tabular}[t]{|l|l|} \hline
 
 prtg OR monitor & Sucht entweder nach \flqq prtg\frqq \ oder nach \flqq monitor\frqq \\  \cline{1-2}
- \multirow{2}{4cm}{prtg AND monitor} & Sucht nach  \flqq prtg\frqq \ und nach \flqq monitor\frqq . Beide\\
- & Wörter müssen im selben Dokument enthalten sein.\\  \cline{1-2}
+ prtg AND monitor & Sucht nach  \flqq prtg\frqq \ und nach \flqq monitor\frqq .\\  \cline{1-2}
  
   \multirow{2}{4cm}{prtg NOT monitor} & Sucht ein Dokument, in welchem \flqq prtg\frqq \ vorkommt, \\
    & \flqq monitor\frqq \ aber nicht.\\ \cline{1-2}

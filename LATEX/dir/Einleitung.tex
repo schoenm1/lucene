@@ -5,7 +5,7 @@
 \subsection{Ausgangslage} \index{Ausgangslage|(}
 \label{subsec:Ausganslage}
 In den knapp 4 Jahren an der ZHAW haben sich verschiedenste Dateien angehäuft. Die Thematiken überschneiden die Module und sind somit nicht immer über eine übersichtliche Ordnerstruktur auffindbar.\\
-Die vielen Typen von Dokumenten (Office, pdf, txt, java...) vorhanden sind, wird durch die Betriebssystem integrierte Suche nicht immer das erwartete Resultat geliefert.
+Da viele Typen von Dokumenten (Office, pdf, txt, java...) vorhanden sind, wird durch die Betriebssystem integrierte Suche nicht immer das erwartete Resultat geliefert.
 Alle diese Dokumente sollen über Lucene mit einem Index versehen und für eine effiziente Suche optimiert werden. So können unter anderem auch PDF inhaltlich indiziert werden, was bei der Search-Engine des Windows Betriebssystems nicht standardmässig funktioniert.
 \index{Ausgangslage|)}
 %------------------------------------------------------------------------------------------------------------------------------
@@ -19,19 +19,25 @@ Für die Indexierung von PDF, welche nicht durch die Search-Engine des Betriebssy
 \subsection{Aufgabenstellung} \index{Aufgabenstellung|(}
 \label{subsec:Ausgangslage}
 \begin{enumerate}
-\item Definierung der Suchkriterien über alle zu indexierenden Dateien\\
-Behandelt im Kapitel \ref{subsec:Definition der indexierenden Feldern}
-\item Erstellen einer einfachen Demo-Applikation in Java\\
+\item Definierung der Suchkriterien über alle zu indexierenden Dateien
+
+Dieser Teilbereich wird im Kapitel \ref{subsec:Definition der indizierten Feldern} behandelt.
+\item Erstellen einer einfachen Demo-Applikation in Java
+
 Dieser Teilbereich wird im Kapitel \ref{subsec:Aufbau Java Programm} behandelt.
 \item Indexierung aller Schuldateien
-\item Implementierung für die Indexierung von PDF. Wenn dies nicht direkt möglich sein sollte in Lucene, werden PDF in Textdateien umgewandelt und dann indizieren.\\
+\item Implementierung für die Indexierung von PDF. Wenn dies nicht direkt möglich sein sollte in Lucene, werden PDF in Textdateien umgewandelt und dann indizieren.
+
 Dieser Teilbereich wird im Kapitel \ref{subsec:PDF Indexer} behandelt.
-\item Überprüfung der Suchresultate und Optimierung von Lucene\\
+\item Überprüfung der Suchresultate und Optimierung von Lucene
+
 Behandelt im Kapitel \ref{subsec:Suchresultate} und zusätzliche Implementierung von Office Indexer (siehe Kapitel \ref{subsec:OfficeIndexer})
-\item Reale Suche von mindestens zwei Begriffen in Lucene und direkter Verlgeich mit den Suchresultaten des Betriebssystemes\\
+\item Reale Suche von mindestens zwei Begriffen in Lucene und direkter Verlgeich mit den Suchresultaten des Betriebssystemes
+
 Behandelt in Kapitel \ref{chapter:Vergleich}
-\item Fazit der Implementierung von Lucene. Sind die Suchresultate besser als diejenigen des Betriebssystemes?\\
-Behandelt im Kapitel \ref{chapter:Fazit}
+\item Fazit der Implementierung von Lucene. Sind die Suchresultate besser als diejenigen des Betriebssystemes?
+
+Dieser Teilbereich wird im Kapitel \ref{chapter:Fazit} behandelt.
 \end{enumerate}
 \index{Aufgabenstellung|)}
 %------------------------------------------------------------------------------------------------------------------------------
@@ -39,11 +45,14 @@ Behandelt im Kapitel \ref{chapter:Fazit}
 \subsection{Erwartetes Resultat} \label{subsec:erwartetesResultat}
 \index{erwartetes Resultat|(}
 \begin{enumerate}
-\item PDF sollen in den Suchresultaten mitberücksichtigt werden\\
+\item PDF sollen in den Suchresultaten mitberücksichtigt werden
+
 Implementiert gemäss Kapitel \ref{subsec:PDF Indexer}
-\item Die Eingabe der Suchbegriffe soll intuitiv und einfach gehalten werden\\
+\item Die Eingabe der Suchbegriffe soll intuitiv und einfach gehalten werden
+
 Suchbegriffe gemäss Standards von Lucene gemäss Kapitel \ref{sec:LukeQuery}
-\item Die Qualität der Suchresultate von Lucene soll diejenige vom Betriebssystem übertreffen. Falls dies nicht der Fall sein sollte, soll eine kurze Analyse aufzeigen, wieso das Betriebssystem bessere Resultate hervorbringen kann\\
+\item Die Qualität der Suchresultate von Lucene soll diejenige vom Betriebssystem übertreffen. Falls dies nicht der Fall sein sollte, soll eine kurze Analyse aufzeigen, wieso das Betriebssystem bessere Resultate hervorbringen kann
+
 Die Vergleiche der Suchresultate werden im Kapitel \ref{chapter:Vergleich} behandelt.
 \end{enumerate}
 \index{erwartetes Resultat|)}
