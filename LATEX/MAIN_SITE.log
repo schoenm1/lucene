@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.8)  7 JUN 2014 10:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.8)  7 JUN 2014 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1444,6 +1444,17 @@ Overfull \hbox (115.44789pt too wide) in paragraph at lines 63--71
 [][] 
  []
 
+
+Package xcolor Warning: Incompatible color definition on input line 84.
+
+
+Package xcolor Warning: Incompatible color definition on input line 85.
+
+
+Overfull \hbox (12.79999pt too wide) in paragraph at lines 82--97
+[][] 
+ []
+
 ) (./dir/Search-Engine.tex
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
@@ -1608,7 +1619,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 138.
 
-<pictures/Klassendiagramm.PNG, id=478, 591.71063pt x 594.72188pt>
+<pictures/Klassendiagramm.PNG, id=480, 591.71063pt x 594.72188pt>
 File: pictures/Klassendiagramm.PNG Graphic file (type png)
 
 <use pictures/Klassendiagramm.PNG>
@@ -1755,7 +1766,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 9.
-<pictures/WindowsSearchDefault.PNG, id=534, 682.04813pt x 415.5525pt>
+<pictures/WindowsSearchDefault.PNG, id=536, 682.04813pt x 415.5525pt>
 File: pictures/WindowsSearchDefault.PNG Graphic file (type png)
 
 <use pictures/WindowsSearchDefault.PNG>
@@ -1816,7 +1827,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 47.
 
-<pictures/Luke-Query.PNG, id=552, 996.72375pt x 403.5075pt>
+<pictures/Luke-Query.PNG, id=554, 996.72375pt x 403.5075pt>
 File: pictures/Luke-Query.PNG Graphic file (type png)
 
 <use pictures/Luke-Query.PNG>
@@ -1978,7 +1989,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 31.
 
-<pictures/Win8_Search1_normal.PNG, id=582, 819.8128pt x 277.78781pt>
+<pictures/Win8_Search1_normal.PNG, id=584, 819.8128pt x 277.78781pt>
 File: pictures/Win8_Search1_normal.PNG Graphic file (type png)
 
 <use pictures/Win8_Search1_normal.PNG>
@@ -2002,7 +2013,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 44.
  [22 <./pictures/Win8_Search1_normal.PNG>]
-<pictures/Win8_Search1_extended.PNG, id=590, 833.36343pt x 222.07968pt>
+<pictures/Win8_Search1_extended.PNG, id=592, 833.36343pt x 222.07968pt>
 File: pictures/Win8_Search1_extended.PNG Graphic file (type png)
 
 <use pictures/Win8_Search1_extended.PNG>
@@ -2033,7 +2044,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 57.
 
-<pictures/Lucene_Search_1.PNG, id=598, 1204.5pt x 682.55pt>
+<pictures/Lucene_Search_1.PNG, id=600, 1204.5pt x 682.55pt>
 File: pictures/Lucene_Search_1.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_1.PNG>
@@ -2068,7 +2079,7 @@ Overfull \hbox (2.003pt too wide) in paragraph at lines 77--78
  aus-ser dem con-tents:address.java.
  []
 
-<pictures/Lucene_Search_1_english.PNG, id=606, 1223.57124pt x 418.56375pt>
+<pictures/Lucene_Search_1_english.PNG, id=608, 1223.57124pt x 418.56375pt>
 File: pictures/Lucene_Search_1_english.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_1_english.PNG>
@@ -2131,7 +2142,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 127.
 
-<pictures/Win8_Search2_normal.PNG, id=626, 814.54312pt x 211.54031pt>
+<pictures/Win8_Search2_normal.PNG, id=628, 814.54312pt x 211.54031pt>
 File: pictures/Win8_Search2_normal.PNG Graphic file (type png)
 
 <use pictures/Win8_Search2_normal.PNG>
@@ -2139,7 +2150,7 @@ Package pdftex.def Info: pictures/Win8_Search2_normal.PNG used on input line 13
 4.
 (pdftex.def)             Requested size: 426.79135pt x 110.84082pt.
 
-<pictures/Win8_Search2_extended_1.PNG, id=627, 969.6225pt x 191.21437pt>
+<pictures/Win8_Search2_extended_1.PNG, id=629, 969.6225pt x 191.21437pt>
 File: pictures/Win8_Search2_extended_1.PNG Graphic file (type png)
 
 <use pictures/Win8_Search2_extended_1.PNG>
@@ -2147,7 +2158,7 @@ Package pdftex.def Info: pictures/Win8_Search2_extended_1.PNG used on input lin
 e 143.
 (pdftex.def)             Requested size: 426.79135pt x 84.16667pt.
 
-<pictures/Win8_Search2_extended_2.PNG, id=630, 969.6225pt x 191.21437pt>
+<pictures/Win8_Search2_extended_2.PNG, id=632, 969.6225pt x 191.21437pt>
 File: pictures/Win8_Search2_extended_2.PNG Graphic file (type png)
 
 <use pictures/Win8_Search2_extended_2.PNG>
@@ -2179,7 +2190,7 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 159.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 159.
- <pictures/Lucene_Search_2_1.PNG, id=637, 1233.60875pt x 489.83pt>
+ <pictures/Lucene_Search_2_1.PNG, id=639, 1233.60875pt x 489.83pt>
 File: pictures/Lucene_Search_2_1.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_2_1.PNG>
@@ -2211,7 +2222,7 @@ Package babel Info: Redefining german shorthand "|
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 172.
 
-<pictures/Lucene_Search_2_2.PNG, id=644, 1230.5975pt x 641.39626pt>
+<pictures/Lucene_Search_2_2.PNG, id=646, 1230.5975pt x 641.39626pt>
 File: pictures/Lucene_Search_2_2.PNG Graphic file (type png)
 
 <use pictures/Lucene_Search_2_2.PNG>
@@ -2927,7 +2938,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `MAIN_SITE.out' has not changed.
-(rerunfilecheck)             Checksum: F28C48405AA5F795938D2AF63D284326;3697.
+(rerunfilecheck)             Checksum: D0DD121154976B1694369E71AECF1AF7;3697.
 Package rerunfilecheck Info: File `MAIN_SITE.brf' has not changed.
 (rerunfilecheck)             Checksum: 51C66A8882CF70E8E5174976A43B5D12;255.
 
@@ -2937,10 +2948,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 15909 strings out of 493308
- 240849 string characters out of 6141368
- 526017 words of memory out of 5000000
- 17661 multiletter control sequences out of 15000+600000
+ 15912 strings out of 493308
+ 240899 string characters out of 6141368
+ 526063 words of memory out of 5000000
+ 17663 multiletter control sequences out of 15000+600000
  25480 words of font info for 64 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,15n,59p,603b,1984s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2962,10 +2973,10 @@ fb><c:/texlive/2013/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/tex
 live/2013/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb><c:/texlive/2013/
 texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2013/texmf-dist
 /fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on MAIN_SITE.pdf (68 pages, 1324600 bytes).
+Output written on MAIN_SITE.pdf (68 pages, 1330393 bytes).
 PDF statistics:
- 2282 PDF objects out of 2487 (max. 8388607)
- 2149 compressed objects within 22 object streams
- 1334 named destinations out of 1440 (max. 500000)
+ 2284 PDF objects out of 2487 (max. 8388607)
+ 2151 compressed objects within 22 object streams
+ 1335 named destinations out of 1440 (max. 500000)
  511 words of extra memory for PDF output out of 10000 (max. 10000000)
 
