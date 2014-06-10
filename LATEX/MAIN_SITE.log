@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  7 JUN 2014 12:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 JUN 2014 10:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -961,18 +961,13 @@ Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 32.
 
 
  <./pictures/ZHAW_logo.png>]
-Overfull \hbox (3.69435pt too wide) detected at line 53
- [][][]\T1/cmr/m/n/10.95 xviii[][]
+Overfull \hbox (9.4405pt too wide) detected at line 54
+ [][][]\T1/cmr/m/n/10.95 xxviii[][]
  []
 
 
-Overfull \hbox (6.41441pt too wide) detected at line 54
- [][][]\T1/cmr/m/n/10.95 xxvii[][]
- []
-
-
-Overfull \hbox (0.36223pt too wide) detected at line 55
- [][][]\T1/cmr/m/n/10.95 xxx[][]
+Overfull \hbox (3.38832pt too wide) detected at line 55
+ [][][]\T1/cmr/m/n/10.95 xxxi[][]
  []
 
 )
@@ -1015,18 +1010,13 @@ Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 180.
  [4
 
 ] (./MAIN_SITE.lol
-Overfull \hbox (3.69435pt too wide) detected at line 17
- [][][]\T1/cmr/m/n/10.95 xviii[][]
+Overfull \hbox (9.4405pt too wide) detected at line 18
+ [][][]\T1/cmr/m/n/10.95 xxviii[][]
  []
 
 
-Overfull \hbox (6.41441pt too wide) detected at line 18
- [][][]\T1/cmr/m/n/10.95 xxvii[][]
- []
-
-
-Overfull \hbox (0.36223pt too wide) detected at line 19
- [][][]\T1/cmr/m/n/10.95 xxx[][]
+Overfull \hbox (3.38832pt too wide) detected at line 19
+ [][][]\T1/cmr/m/n/10.95 xxxi[][]
  []
 
 )
@@ -1134,57 +1124,57 @@ Overfull \hbox (21.15096pt too wide) in paragraph at lines 54--54
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 61--61
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 60--60
 []|\T1/cmr/m/n/10.95 13.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 65--65
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 64--64
 []|\T1/cmr/m/n/10.95 14.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 71--71
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 70--70
 []|\T1/cmr/m/n/10.95 15.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 73--73
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 72--72
 []|\T1/cmr/m/n/10.95 17.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 76--76
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 75--75
 []|\T1/cmr/m/n/10.95 18.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 79--79
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 78--78
 []|\T1/cmr/m/n/10.95 19.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 82--82
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 81--81
 []|\T1/cmr/m/n/10.95 20.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 86--86
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 85--85
 []|\T1/cmr/m/n/10.95 28.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 89--89
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 88--88
 []|\T1/cmr/m/n/10.95 29.05.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 92--92
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 91--91
 []|\T1/cmr/m/n/10.95 30.05.2014|  
  []
 
 
-Overfull \hbox (149.51454pt too wide) in paragraph at lines 40--96
+Overfull \hbox (149.51454pt too wide) in paragraph at lines 40--98
 [][] 
  []
 
@@ -1540,175 +1530,180 @@ Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 30.
  [1
 
 
-]
+])
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 70.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 20.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [2]) (./dir/Anhang/listings/Logger.java)
+ [2] (./dir/Anhang/listings/Logger.java)
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 26.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 22.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [3] (./dir/Anhang/listings/Indexer.java
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 37.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [4]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 78.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [5]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 117.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 120.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [6]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 157.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 161.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [7]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 196.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 200.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [8]) (./dir/Anhang/listings/TextFileIndexer.java
-File: pictures/ZHAW_logo.png Graphic file (type png)
-
-<use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 11.
-(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [9]) (./dir/Anhang/listings/PDFIndexer.java
-File: pictures/ZHAW_logo.png Graphic file (type png)
-
-<use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 15.
-(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [10]
+ [8])
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 56.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 28.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [11]
+ [9]
+(./dir/Anhang/listings/TextFileIndexer.java)
 File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 34.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 
-<use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 96.
+[10] (./dir/Anhang/listings/PDFIndexer.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[11]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [12]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 132.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 119.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [13]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 170.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 158.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [14]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 211.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 196.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [15]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 251.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 236.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [16]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 291.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 277.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [17])
-(./dir/Anhang/listings/OfficeDocIndexer.java
 File: pictures/ZHAW_logo.png Graphic file (type png)
- <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 7.
-(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 
-[18]
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [18] (./dir/Anhang/listings/OfficeDocIndexer.java
 File: pictures/ZHAW_logo.png Graphic file (type png)
- <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 48.
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 42.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [19]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 87.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 80.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [20]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 126.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 122.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [21]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 167.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 160.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [22]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 204.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 199.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [23]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 244.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 237.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [24]
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 282.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 276.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [25]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 323.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 318.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [26])
-(./dir/Anhang/listings/myFunctions.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 46.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [27] (./dir/Anhang/listings/myFunctions.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 41.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [28]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 13.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [27]
+ [29])
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 52.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [28]
+ [30] (./dir/Anhang/listings/TextFilesFilter.java)) (./MAIN_SITE.ind
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 93.
-(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [29])
-(./dir/Anhang/listings/TextFilesFilter.java)) (./MAIN_SITE.ind
-File: pictures/ZHAW_logo.png Graphic file (type png)
-
-<use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [30] [31
+ [31] [32
 
 
 
-]) (./MAIN_SITE.bbl (./MAIN_SITE.brf)
+]) (./MAIN_SITE.bbl
+(./MAIN_SITE.brf)
 \tf@brf=\write10
 \openout10 = `MAIN_SITE.brf'.
 
@@ -1730,7 +1725,7 @@ File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 248.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [32
+ [33
 
 
 ]
@@ -1741,7 +1736,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `MAIN_SITE.out' has not changed.
 (rerunfilecheck)             Checksum: 24B9A85F75E38D9F4A216EF661E80D19;3740.
 Package rerunfilecheck Info: File `MAIN_SITE.brf' has not changed.
-(rerunfilecheck)             Checksum: B8F7F44C0645299857AB1D643184B794;253.
+(rerunfilecheck)             Checksum: C2C8C590F908E90B542CA7BBE5D07416;254.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1749,13 +1744,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 15397 strings out of 493488
- 232818 string characters out of 3141326
- 650485 words of memory out of 3000000
+ 15382 strings out of 493488
+ 232561 string characters out of 3141326
+ 647485 words of memory out of 3000000
  17007 multiletter control sequences out of 15000+200000
  25480 words of font info for 64 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,15n,55p,603b,1976s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,15n,55p,603b,1979s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -1776,10 +1771,10 @@ xmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2012/texm
 f-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-
 dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texmf-di
 st/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on MAIN_SITE.pdf (68 pages, 1319950 bytes).
+Output written on MAIN_SITE.pdf (69 pages, 1320158 bytes).
 PDF statistics:
- 2317 PDF objects out of 2487 (max. 8388607)
- 2181 compressed objects within 22 object streams
- 1336 named destinations out of 1440 (max. 500000)
+ 2302 PDF objects out of 2487 (max. 8388607)
+ 2165 compressed objects within 22 object streams
+ 1321 named destinations out of 1440 (max. 500000)
  519 words of extra memory for PDF output out of 10000 (max. 10000000)
 

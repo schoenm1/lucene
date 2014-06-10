@@ -12,8 +12,8 @@
 \contentsline {lstlisting}{\numberline {A.1}Main.java}{i}{lstlisting.A.1}
 \contentsline {lstlisting}{\numberline {A.2}Logger.java}{iii}{lstlisting.A.2}
 \contentsline {lstlisting}{\numberline {A.3}Indexer.java}{iv}{lstlisting.A.3}
-\contentsline {lstlisting}{\numberline {A.4}TextFileIndexer.java}{ix}{lstlisting.A.4}
-\contentsline {lstlisting}{\numberline {A.5}PDFIndexer.java}{x}{lstlisting.A.5}
-\contentsline {lstlisting}{\numberline {A.6}OfficeDocIndexer.java}{xviii}{lstlisting.A.6}
-\contentsline {lstlisting}{\numberline {A.7}myFunctions.java}{xxvii}{lstlisting.A.7}
-\contentsline {lstlisting}{\numberline {A.8}TextFilesFilter}{xxx}{lstlisting.A.8}
+\contentsline {lstlisting}{\numberline {A.4}TextFileIndexer.java}{x}{lstlisting.A.4}
+\contentsline {lstlisting}{\numberline {A.5}PDFIndexer.java}{xi}{lstlisting.A.5}
+\contentsline {lstlisting}{\numberline {A.6}OfficeDocIndexer.java}{xix}{lstlisting.A.6}
+\contentsline {lstlisting}{\numberline {A.7}myFunctions.java}{xxviii}{lstlisting.A.7}
+\contentsline {lstlisting}{\numberline {A.8}TextFilesFilter}{xxxi}{lstlisting.A.8}

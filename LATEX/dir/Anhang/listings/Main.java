@@ -47,22 +47,18 @@ public class Main {
 		long end = System.currentTimeMillis();
 		System.out.println("Indexing in " + (end - start) + " milliseconds");
 	}
-
 	/* returns the path of the directory, which should be indexed */
 	public static String getIndexDir() {
 		return indexDir;
 	}
-
 	/* returns my functions */
 	public static myFunctions getMyFunctions() {
 		return _myfunctions;
 	}
-
 	/* returns writer */
 	public static IndexWriter getwriter() {
 		return writer;
 	}
-
 	/* returns Indexer */
 	public static Indexer getIndexer() {
 		return _indexer;

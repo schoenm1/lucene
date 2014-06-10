@@ -134,7 +134,6 @@ public class PDFIndexer {
 
 	/**
 	 * Convert the PDF stream to a lucene document.
-	 * 
 	 * @param is
 	 *            The input stream.
 	 * @return The input stream converted to a lucene document.
@@ -149,7 +148,6 @@ public class PDFIndexer {
 	 * @param file
 	 *            A reference to a PDF document.
 	 * @return The converted lucene document.
-	 * 
 	 * @throws IOException
 	 *             If there is an exception while converting the document.
 	 */
@@ -181,9 +179,7 @@ public class PDFIndexer {
 	 * 
 	 * @param is
 	 *            The stream to read the PDF from.
-	 * 
 	 * @return The lucene document.
-	 * 
 	 * @throws IOException
 	 *             If there is an error parsing or indexing the document.
 	 */
@@ -194,12 +190,10 @@ public class PDFIndexer {
 
 	/**
 	 * This will get a lucene document from a PDF file.
-	 * 
 	 * @param file
 	 *            The file to get the document for.
 	 * 
 	 * @return The lucene document.
-	 * 
 	 * @throws IOException
 	 *             If there is an error parsing or indexing the document.
 	 */
@@ -213,9 +207,7 @@ public class PDFIndexer {
 	 * 
 	 * @param url
 	 *            The file to get the document for.
-	 * 
 	 * @return The lucene document.
-	 * 
 	 * @throws IOException
 	 *             If there is an error parsing or indexing the document.
 	 */
@@ -233,7 +225,6 @@ public class PDFIndexer {
 	 *            The stream to get the contents from.
 	 * @param documentLocation
 	 *            The location of the document, used just for debug messages.
-	 * 
 	 * @throws IOException
 	 *             If there is an error parsing the document.
 	 */
@@ -298,13 +289,10 @@ public class PDFIndexer {
 
 	/**
 	 * This will test creating a document.
-	 * 
 	 * usage: java pdfparser.searchengine.lucene.LucenePDFDocument
 	 * &lt;pdf-document&gt;
-	 * 
 	 * @param args
-	 *            command line arguments.
-	 * 
+	 *            command line arguments. 
 	 * @throws IOException
 	 *             If there is an error.
 	 */
