@@ -1,111 +1,216 @@
 package zhaw;
 
-/**
- * Copyright Manning Publications Co.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific lan      
- */
-
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.DateTools;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.Version;
 
-// From chapter 1
-
-/**
- * This code was originally written for Erik's Lucene intro java.net article
- */
 public class Indexer {
 
-	public static void main(String[] args) throws Exception {
-		/*
-		 * if (args.length != 2) { throw new
-		 * IllegalArgumentException("Usage: java " + Indexer.class.getName() +
-		 * " <index dir> <data dir>"); }
-		 */
+	/* static final Strings for Field names which can be indexed */
+	static final String Author = "Author";
+	static final String description = "description";
+	static final String modified = "ModificationDate";
+	static final String Title = "Title";
+	static final String created = "CreationDate";
+	static final String fullpath = "fullpath";
+	static final String contents = "contents";
+	static final String filename = "filename";
+	static final String appname = "appname";
+	static final String extension = "FileExtension";
+	static final String uid = "uid";
+	static final String summary = "summary";
+	static final String Subject = "Subject";
+	static final String keywords = "keywords";
 
-		String indexDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/";
-		String dataDir = "/Users/micha/Dropbox_ZHAW/Dropbox/TestLucene/ToIndex/";
-		// String indexDir = args[0]; // 1
-		// String dataDir = args[1]; // 2
+	String indexDir = "NULL";
+	int numIndexed = 0;
+	static PDFIndexer _pdfindexer;
+	static OfficeDocIndexer _officeindexer;
+	static TextFileIndexer _textfileindexer;
+	static final char FILE_SEPARATOR = System.getProperty("file.separator").charAt(0);
+	private DateTools.Resolution dateTimeResolution = DateTools.Resolution.SECOND;
+	ArrayList<String> _validFileextensions = new ArrayList<String>();
 
-		long start = System.currentTimeMillis();
-		Indexer indexer = new Indexer(indexDir);
-		int numIndexed;
-		try {
-			numIndexed = indexer.index(dataDir, new TextFilesFilter());
-		} finally {
-			indexer.close();
+	public Indexer() {
+		indexDir = Main.getIndexDir();
+	}
+
+	/**
+	 * update all valid file extensions
+	 */
+	public void updateValidFileExtensions() {
+		String[] tmpvalid = _pdfindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			_validFileextensions.add(tmpvalid[i]);
 		}
-		long end = System.currentTimeMillis();
+		tmpvalid = _officeindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			_validFileextensions.add(tmpvalid[i]);
+		}
+		tmpvalid = _textfileindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			_validFileextensions.add(tmpvalid[i]);
+		}
 
-		System.out.println("Indexing " + numIndexed + " files took " + (end - start) + " milliseconds");
 	}
 
-	private IndexWriter writer;
-
-	public Indexer(String indexDir) throws IOException {
-		Directory dir = FSDirectory.open(new File(indexDir));
-		writer = new IndexWriter(dir, // 3
-				new StandardAnalyzer( // 3
-						Version.LUCENE_30),// 3
-				true, IndexWriter.MaxFieldLength.UNLIMITED); // 3
+	/**
+	 * create all Sub-indexer "PDF", "TEXT", "OFFICE"
+	 */
+	public void createSubindexer() {
+		_officeindexer = new OfficeDocIndexer();
+		_pdfindexer = new PDFIndexer();
+		_textfileindexer = new TextFileIndexer();
+		updateValidFileExtensions();
 	}
 
-	public void close() throws IOException {
-		writer.close();
+	/** returns the File Function "TEXT", "PDF", "OFFICE" */
+	public String getFileExtensionFunction(String ext) {
+
+		String[] tmpvalid = _pdfindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			if (ext.equals(tmpvalid[i]))
+				return "PDF";
+		}
+
+		tmpvalid = _officeindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			if (ext.equals(tmpvalid[i]))
+				return "OFFICE";
+		}
+
+		tmpvalid = _textfileindexer.getvalidFileextensions();
+		for (int i = 0; i < tmpvalid.length; i++) {
+			if (ext.equals(tmpvalid[i]))
+				return "TEXT";
+		}
+
+		return "NULL";
+
 	}
 
-	public int index(String dataDir, FileFilter filter) throws Exception {
-
-		File[] files = new File(dataDir).listFiles();
-
-		for (File f : files) {
-			if (!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead() && (filter == null || filter.accept(f))) {
-				indexFile(f);
+	/* return true if file extension is in index, else false */
+	public boolean isValidFileExtension(String ext) {
+		for (int i = 0; i < _validFileextensions.size(); i++) {
+			if (ext.equals(_validFileextensions.get(i))) {
+				return true;
 			}
 		}
 
-		return writer.numDocs(); // 5
+		return false;
 	}
 
-	/* Filter for File extensions, which should be indexed */
-	private static class TextFilesFilter implements FileFilter {
-		public boolean accept(File path) {
-			// return path.getName().toLowerCase().endsWith(".java");
-			return true;
+	public int index(Indexer indexer, String dataDir, FileFilter filter, int count) throws Exception {
+		File[] files = new File(dataDir).listFiles();
+
+		/* iterate over all files and index it */
+		for (File f : files) {
+			/* if it's a file and ... index it */
+			if (!f.isDirectory() && !f.isHidden() && f.exists() && f.canRead() && (filter == null || filter.accept(f))) {
+				Logger.writeToLog("* File Name = " + f.getCanonicalPath());
+				myFunctions.prepareindexFile(f);
+				count++;
+			}
+			/* if its a directory, do: */
+			else if (f.isDirectory() && !f.isHidden()) {
+				Logger.writeToLog("# Directory Name = " + f.getCanonicalPath());
+				String subdir = f.getAbsolutePath();
+				int tmpcount = indexer.index(indexer, subdir, new TextFilesFilter(), count);
+				count += tmpcount;
+			}
+		}
+		return Main.getwriter().numDocs();
+	}
+
+	/** will close the writer of the index Files */
+	public void closeWriter() throws IOException {
+		System.out.println("Optimizing index...");
+		Main.getwriter().optimize();
+		Main.getwriter().close();
+		System.out.println("Finished with indexing....");
+	}
+
+	/** returns the PDF Indexer */
+	public static zhaw.PDFIndexer getPDFIndexer() {
+		return _pdfindexer;
+	}
+
+	/** returns the Office Indexer */
+	public static zhaw.OfficeDocIndexer getOfficeIndexer() {
+		return _officeindexer;
+	}
+
+	/** returns the Text Indexer */
+	public static zhaw.TextFileIndexer getTextFileIndexer() {
+		return _textfileindexer;
+	}
+
+	/**
+	 * Get the Lucene data time resolution.
+	 * 
+	 * @return current date/time resolution
+	 */
+	protected DateTools.Resolution getDateTimeResolution() {
+		return dateTimeResolution;
+	}
+
+	/**
+	 * Set the Lucene data time resolution.
+	 * 
+	 * @param resolution
+	 *            set new date/time resolution
+	 */
+	protected void setDateTimeResolution(DateTools.Resolution resolution) {
+		dateTimeResolution = resolution;
+	}
+
+	protected void addTextField(Document document, String name, Reader value) {
+		if (value != null) {
+			document.add(new Field(name, value));
 		}
 	}
 
-	protected Document getDocument(File f) throws Exception {
-		Document doc = new Document();
-		doc.add(new Field("contents", new FileReader(f)));
-		doc.add(new Field("filename", f.getName(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		doc.add(new Field("fullpath", f.getCanonicalPath(), Field.Store.YES, Field.Index.NOT_ANALYZED));
-		return doc;
+	protected void addTextField(Document document, String name, String value) {
+		if (value != null) {
+			document.add(new Field(name, value, Field.Store.YES, Field.Index.ANALYZED));
+		}
 	}
 
-	private void indexFile(File f) throws Exception {
-		System.out.println("Indexing " + f.getCanonicalPath());
-		Document doc = getDocument(f);
-		writer.addDocument(doc);
+	protected void addTextField(Document document, String name, Date value) {
+		if (value != null) {
+			addTextField(document, name, DateTools.dateToString(value, dateTimeResolution));
+		}
+	}
+
+	protected void addTextField(Document document, String name, Calendar value) {
+		if (value != null) {
+			addTextField(document, name, value.getTime());
+		}
+	}
+
+	protected static void addUnindexedField(Document document, String name, String value) {
+		if (value != null) {
+			document.add(new Field(name, value, Field.Store.YES, Field.Index.NOT_ANALYZED));
+		}
+	}
+
+	protected void addUnstoredKeywordField(Document document, String name, String value) {
+		if (value != null) {
+			document.add(new Field(name, value, Field.Store.NO, Field.Index.NOT_ANALYZED));
+		}
+	}
+
+	protected void addKeywordField(Document document, String name, String value) {
+		if (value != null) {
+			document.add(new Field(name, value, Field.Store.YES, Field.Index.NOT_ANALYZED));
+		}
 	}
 }

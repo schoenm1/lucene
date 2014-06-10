@@ -93,7 +93,7 @@
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-fsa-1.7.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-polish-1.7.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/morfologik-stemming-1.7.1.jar"/>
-	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/pdfbox-app-1.8.5.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/pdfbox-app-1.8.5.jar" sourcepath="/Users/micha/.m2/repository/org/apache/pdfbox/pdfbox-app/1.8.5/pdfbox-app-1.8.5-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/servlet-api-2.4.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/Tagger-2.3.1.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/tika-app-0.6.jar"/>
@@ -103,5 +103,27 @@
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/hadoop-0.19.1-core.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/lucene-core-2.4.0.jar"/>
 	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/nutch/nutch-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/poi-src-3.8.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-examples-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-excelant-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="/Users/micha/Dropbox_ZHAW/Dropbox/IR - Information Retrieval/github-schoenm1/Eclipse/lib/new/poi-scratchpad-3.10-FINAL-20140208.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-common-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-icu-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-kuromoji-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-morfologik-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-phonetic-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-smartcn-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-stempel-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-analyzers-uima-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-benchmark-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-classification-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-codecs-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-core-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-demo-4.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/4.8/lucene-queryparser-4.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

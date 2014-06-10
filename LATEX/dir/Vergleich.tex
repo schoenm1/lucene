@@ -3,121 +3,190 @@
 \chapter{Vergleich der Ergebnisse}
 \label{chapter:Vergleich}
 
-Wie in der Aufgabenstellung erwähnt, sollen die Suchresultate von Lucene mit denjenigen des Betriebssystems verglichen werden. Die Suche im Betriebssystem ist sehr intuitiv. Es wird der gewünschte Suchbegriff eingegeben und nach ein paar Sekunden (oder Minuten), je nach dem ob alle Ordner indexiert waren oder nicht, erscheint das Resultat.
+Wie in der Aufgabenstellung (siehe Kapitel \ref{subsec:Ausgangslage}) erwähnt, sollen die Suchresultate von Lucene mit denjenigen des Betriebssystems verglichen werden. Die einfache Suche im Betriebssystem ist sehr intuitiv. Es wird der gewünschte Suchbegriff eingegeben und nach ein paar Sekunden (oder Minuten), je nach dem ob alle Ordner indiziert wurden oder nicht, erscheint das Resultat.
 
-Bevor jedoch ein Vergleich stattfinden kann, wird aufgezeigt, wie mit Luke eine effiziente Suche ausgeführt werden kann über die indexierten Dateien der Lucene-Applikation.
-Diese werden im nächsten Unterkapitel erläutert:
+Die Qualität der Suche wird nicht anhand der Geschwindigkeit ermittelt. Anhand der im Kapitel \ref{subsec:eigesetzteHardware} aufgelisteten Hardware wäre es kein fairer Vergleich, eine SSD mit einer herkömmlichen HDD zu vergleichen.
+
+Um einen Vergleich zu starten, wird ein beliebiges File ausgewählt. Danach wird anhand verschiedener Kriterien gesucht. Eine erlaube Suchanfrage ist zum Beispiel: File enthält \flqq beispiel\frqq, eine nicht erlaube Suchanfrage: Der Filename ist \flqq beispiel.txt\frqq.
 
 %==============  N E W  ==== S E C T I O N ==============%
-\section{Syntax für Suche mit Lucene / Luke}
-\label{sec:LukeQuery}
+\newpage
+\index{Windows 8.1|see{Vergleich mit Windows}}
+\index{Vergleich mit Windows|(}
+\section{Vergleich Lucene mit Windows 8.1 Pro}
+\label{sec:Vergleich Lucene mit Windows 8.1 Pro}
+
+Die gewählte Datei, welche durch die Suche gefunden werden sollte ist:\\
+\flqq../1. Jahr/Software Projekt 1/Dokumentation SW Projekt 2. Semester V0.1.docx\frqq
+
+\textbf{Annahme für die Suche}
+\begin{itemize}
+\item Filename ist unbekannt
+\item Autor: entweder \flqq micha\frqq\ oder \flqq reto\frqq
+\item File Extension: *.doc oder *.docx
+\item Im Inhalt muss vorkommen: \flqq Address.java\frqq.
+\end{itemize}
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{Suche \#1 mit Windows 8.1 Professional}
+\label{Suche1 mit Windows 8.1 Professional}
+
+Bei der klassischen Suche im Windows werden die gesuchten Attribute in die Suchmaske eingegeben:\\
+Die meisten Windows-Benutzer würden hier 2 Suchanfragen starten. Die Erste mit \flqq micha Address.java\frqq\  wie Abbildung \ref{fig:Gewohnte Windows Suche 1} zeigt,  die Zweite mit \flqq reto Address.java\frqq \\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Win8_Search1_normal.PNG} 
+\caption[Gewohnte Windows Suche 1]{Gewohnte Windows Suche 1\\Quelle: eigener Screenshot}
+\label{fig:Gewohnte Windows Suche 1}
+\end{figure}
+
+Durch das Auseinandersetzen mit der effizienten Windows-Suche wurde klar, dass Windows von Haus aus weit mehr beherrscht als nur nach Stichworten zu suchen. Erweiterte Tipps für die Suche mit Windows gibt es von Mircosoft über \url{http://windows.microsoft.com/de-ch/windows7/advanced-tips-for-searching-in-windows}.
+\newpage
+Werden die fortgeschrittenen Syntax bei der Suche eingehalten, sieht diese Anfrage folgedermassen aus: \flqq authors:~=\grqq micha\grqq\ OR authors:~=\grqq reto\grqq\ AND Address.java\frqq. Diese Anfrage bedeutet, dass entweder \flqq micha\frqq\ oder \flqq reto\frqq\ im Feld Author vorhanden sein muss. Da \flqq Address.java\frqq\ nicht zugeordnet wurde, muss es irgendwo vorkommen.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Win8_Search1_extended.PNG} 
+\caption[Erweiterte Suche 1 mit Windows]{Erweiterte Suche 1 mit Windows\\Quelle: eigener Screenshot}
+\label{fig:Erweiterte Suche 1 mit Windows}
+\end{figure}
+ 
+Durch den Einsatz des optimierten Syntax für die Windows suche lässt das Resultat mit genau einem File dem Herausforderer Lucene bereits im Vorfeld keine grosse Chance, wie die Abbildung \ref{fig:Erweiterte Suche 1 mit Windows} zeigt.
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\newpage
+\subsection{Suche \#1 mit Lucene und Luke}
+
+Die Suche mit Luke, welche auf die von Lucene indizierte Files zugreift, dauerte im Schnitt 300-500$\mu$s.\\
+Wie die Abbildung \ref{fig:Suche 1 mit Lucene} zeigt, werden hier mehrere Dateien gefunden. Die gesuchte Datei ist ebenfalls vorhanden (\#11).
+
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1\textwidth]{Luke-Query.PNG} 
-\caption[Such-Maske von Luke]{Such-Maske von Luke\\ Quelle: eigener Screenshot}
-\label{fig:Luke-Query}
+\includegraphics[width=1\textwidth]{Lucene_Search_1.PNG} 
+\caption[Suche 1 mit Lucene]{Suche 1 mit Lucene\\Quelle: eigener Screenshot}
+\label{fig:Suche 1 mit Lucene}
 \end{figure}
 
+%==============  N E W  ==== S U B S E C T I O N ==============%
 \newpage
-Anbei einige Beispiele, wie man den Syntax optimal einsetzen kann für sie Suche mit Luke/Lucene:
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Felder}
-\begin{tabular}[t]{|l|l|} \hline
-contents:prtg & sucht das Wort \grqq prtg\grqq\ im Feld contents   \\ \cline{1-2}
-Author:micha monitor & sucht das Wort \grqq micha\grqq\ im Feld Author, \\ 
- & das Wort \grqq netzwerk\grqq\ im default Feld \\ \cline{1-2}
-contents:?mit prtg? & sucht die Wörter \grqq mit prtg\grqq\ als ganzes im Feld contents \\   \cline{1-2}
-\end{tabular}
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Wildcard Suche}
-\begin{tabular}[t]{|l|l|} \hline
-pr?g	& Das ? ersetzt einen einzelnen Charakter. So wird hier \\
- & z.B. nach ?prtg?, aber auch nach ?prag? gesucht \\ \cline{1-2}
-bildschirm* & * steht für beliebig viele Zeichen (0 bis x) .\\
-& Suche nach z.B. \grqq bildschirmeingabe\grqq\ oder \grqq bildschirme\grqq\\ \cline{1-2}
-ver*en & * steht auch hier für beliebige Zeichen (0 bis x)\\
-& Suche nach z.B. \grqq verwerfen\grqq\, \grqq verwalten\grqq\  oder \grqq veruntreuen\grqq \\ \cline{1-2}
-\end{tabular}
+\subsection{Fazit zur Suche \#1}
+\index{Fazit Suchergebnis|(}
+Die Windows Search Engine sowie die eigene Lucene Applikation finden beide das gewünschte Dokument. Beim Windows ist es das einzige Dokument, welches aufgelistet wird. Lucene hingegen listet das gesuchte Dokument an der 11. Stelle auf. Ist nun Lucene schlechter deswegen?
+Um auf diese Frage eine Antwort zu finden, müssen die anderen von Lucene ausgegebenen Dokumenten überprüft werden. Es könnte auch sein, dass Lucene alle Dokumente auflistet, Windows jedoch nur per \grqq Zufall\grqq\ das Richtige. Was wäre, wenn das File \grqq Java Aufbau.docx\grqq, welches bei Lucene zuoberst steht, gesucht worden wäre?
+
+Die beiden ersten Dokumente wurden genauer untersucht. Das Fazit hierbei ist, dass alle gesuchten Merkmale bei den Dokumenten vorhanden waren, ausser dem contents:address.java. \flqq address.java\frqq\ wurde in beiden Dokumenten nicht gefunden. Wo liegt der Fehler?
+
+
+Wird die identische Suche mit Luke nochmals durchgeführt, jedoch anstelle des Simple-Analyzer der Standard, German- oder English-Analyzer eingesetzt, findet Lucene genau eine einzige Datei (siehe Abbildung \ref{fig:Suche 1 mit Lucene English Analyzer}). Das Resultat entspricht derjenigen Datei, die gefunden werden sollte.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Lucene_Search_1_english.PNG} 
+\caption[Suche 1 mit Lucene mit English-Analyzer]{Suche 1 mit Lucene mit English-Analyzer\\Quelle: eigener Screenshot}
+\label{fig:Suche 1 mit Lucene English Analyzer}
+\end{figure}
+\index{Fazit Suchergebnis|)}
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\newpage
+\subsection{Kurzer Exkurs zu Analyzern}
+\index{Analyzer|(}
+Werden die verschiedenen Analyzer genauer betrachtet, wird das vermeintlich falsche Resultat logisch erklärbar.\\
+Beim ersten Durchgang mit dem \flqq SimpleAnalyzer\frqq\ wird der indizierte Text bei Nicht-Schriftzeichen (z.B. \flqq .\frqq, \flqq \ \frqq, \flqq !\frqq) getrennt und alle Buchstaben klein geschrieben.\\
+Wird nun wie bei der Suche \#1 jedoch \flqq address.java\frqq\ gesucht, ändert dies der Analyzer zu \flqq address\frqq\ und \flqq java\frqq. Aus diesem Grund sind nun Dokumente auffindbar, welche \flqq address.java\frqq\ nicht enthalten. Bei genaueren Hinschauen sind jedoch die beiden Wörter einzeln vorhanden.
+
+Beim zweiten Durchgang findet Luke genau das gesuchte Dokument. Als Beispiel wird hier der \flqq StandardAnalyzer\frqq\ betrachtet. Dieser basiert auf einer ausgefeilten Grammatik, welche unter anderem alphanumerische, chinesische, japanische oder koreanische Zeichen, E-Mail Adressen, Akronyme und vieles mehr erkennt. Zusätzlich werden alle Buchstaben wie beim SimpleAnalyzer klein geschrieben. Der  \flqq StandardAnalyzer\frqq\ entfernt ebenfalls Stop-Wörter (auf die hier nicht eingegangen wird).
+
+Anbei ein Auszug aus Luke, bei welchem der Index der gesuchten Datei rekonstruiert wurde. Hier ist ersichtlich, dass \flqq address.java\frqq\ in Zeile 2 korrekt indiziert wurde. Der SimpleAnalyzer erkennt diese beiden verknüpften Wörter im Gegensatz zum StandardAnalyzer jedoch als zwei einzelne Wörter.
+
+\lstset{language=java, mathescape=true}
+\lstinputlisting[label=Auszug aus Index von Dokumentation SW Projekt 2. Semester,captionpos=b, caption=Auszug aus Index von Dokumentation SW Projekt 2. Semester]{dir/listings/Suche1.java}
+
+Quelle: \cite{LiA-2ndEdition}, S. 127
+\index{Analyzer|)}
+
+
+
+%==============  N E W  ==== S E C T I O N ==============%
+\newpage
+\section{Vergleich 2 Lucene mit Windows 8.1 Pro}
+\label{sec:Vergleich 2 Lucene mit Windows 8.1 Pro}
+
+Die gewählte Datei, welche durch die Suche gefunden werden sollte ist:\\
+\flqq../3. Jahr/Kryptologie/KK 05/05 - Slides der Woche 5.pdf\frqq
+
+\textbf{Annahme für die Suche}
+\begin{itemize}
+\item Filename ist unbekannt
+\item Im Inhalt muss vorkommen: \flqq Inverse\frqq
+\item File Extension: *.pdf
+\end{itemize}
+
+
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{Suche \#1 mit Windows 8.1 Professional}
+\label{Suche1 mit Windows 8.1 Professional}
+
+Zu Beginn soll Windows anhand der klassischen Benutzersuche die Anfrage starten.\\
+Die Abbildung \ref{fig:Gewohnte Windows Suche 2} zeigt, dass das gewünschte Dokument nicht vorhanden ist.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Win8_Search2_normal.PNG} 
+\caption[Gewohnte Windows Suche 2]{Gewohnte Windows Suche 2\\Quelle: eigener Screenshot}
+\label{fig:Gewohnte Windows Suche 2}
+\end{figure}
+
+ Deshalb soll nun versucht werden, mit dem erweiterten Windows Syntax das Dokument zu finden:
  
-Grundsätzlich gilt: * und ? dürfen nicht am Anfang der suche sein. (bei Luke gibt es eine Einstellung, mit der man * am Anfang erlauben kann)
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Fuzzy Suche}
-Die Fuzzy Suche basiert auf dem Levenshtein Distanz Algorithmus\footnote{siehe \url{http://www.levenshtein.de/}}, auf welchen hier nicht eingegangen wird.\\
-Um eine Fuzzy Suche durchzuführen, wird mit der Tilde (~) gearbeitet.
-
-\begin{tabular}[t]{|l|l|} \hline
-roam~ & Sucht ähnliche Wörter zu roam \\ \cline{1-2}
-roam~0.8 & Gibt die gesuchte Ähnlichkeit an [0-1]. Je grösser die Zahl, desto ähnlicher. \\ \cline{1-2}
-\end{tabular}
-
-
-
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Proximity Suche (Nachbarschaftliche)}
-Lucene erlaubt es, zwei Wörter in einer bestimmten Distanz zu suchen.
-
-\begin{tabular}[t]{|l|l|} \hline
- \multirow{2}{3.5cm}{\grqq prtg monitor\grqq \textasciitilde10} &  Sucht die Wörter \grqq prtg\grqq \ und \grqq monitor\grqq  \\   
- & mit einem maximalen Abstand von 10 Wörtern\\ \cline{1-2}
-\end{tabular}
-
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Range Suche (Bereichssuche)}
-Lucene erlaubt es, zum Beispiel Daten in einem bestimmten Bereich zu suchen.
-
-\begin{tabular}[t]{|l|l|} \hline
- \multirow{2}{5.75cm}{modified:[20140501 TO 20140515]}&  Sucht eine Datei mit einem Änderungsdatum \\
- & zwischen dem 01.05.2014 und 15.05.2014\\ \cline{1-2}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Win8_Search2_extended_1.PNG} 
+\caption[Erweiterte Suche 2 mit Windows 1]{Erweiterte Suche 2 mit Windows 1\\Quelle: eigener Screenshot}
+\label{fig:Erweiterte Suche 2 mit Windows1}
+\end{figure}
  
-  \multirow{2}{5.75cm}{Title:\{Anton TO Max\}}&  Sucht eine Datei mit dem Titel \\
- & zwischen Anton und Max (alphabetisch)\\ \cline{1-2}
- \end{tabular}
-
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Boosting Suche (verstärktes Suchen)}
-Lucene erlaubt es, gewissen Suchbegriffen eine stärkere Gewichtung zu verleihen. Durch diesen Boost wird das Ergebnis die Relevanz der gefundenen Dateien verändert.
-
-\begin{tabular}[t]{|l|l|} \hline
- \multirow{2}{5.75cm}{prtg\^\ 4 monitoring}&  Sucht eine Datei mit \flqq prtg\frqq \ und \flqq monitoring\frqq \\
- & wobei \flqq prtg\frqq \ 4-fach gewertet wird.\\ \cline{1-2}
-  \end{tabular}
-
-
-%==============  N E W  ==== S U B - S E C T I O N ==============%
-\subsection{Boolsches Suchen}
-Ganz wichtig beim Suchen sind die verschiedenen Verknüpfungen der eingegebenen Suchbegriffe. Erlaubt sind AND, +, NOT, -
-
-\begin{tabular}[t]{|l|l|} \hline
-
-prtg OR monitor & Sucht entweder nach \flqq prtg\frqq \ oder nach \flqq monitor\frqq \\  \cline{1-2}
- \multirow{2}{4cm}{prtg AND monitor} & Sucht nach  \flqq prtg\frqq \ und nach \flqq monitor\frqq . Beide\\
- & Wörter müssen im selben Dokument enthalten sein.\\  \cline{1-2}
+ Wie nicht anders erwartet, liefert Windows keine richtige Antwort, wie Abbildung \ref{fig:Erweiterte Suche 2 mit Windows1} zeigt. Da bereits die herkömmliche Suche, welche nur nach \flqq Invers\frqq\ und \flqq pdf\frqq\ gesucht hat, kein einziges PDF gefunden hat, ist es nicht verwunderlich, dass bei der erweiterten Suche keine Treffer gab.
  
-  \multirow{2}{4cm}{prtg NOT monitor} & Sucht ein Dokument, in welchem \flqq prtg\frqq \ vorkommt, \\
-   & \flqq monitor\frqq \ aber nicht.\\ \cline{1-2}
-  \multirow{2}{4cm}{NOT prtg} & NOT darf nicht mit nur einem Wort verwendet werden.\\
-  & Das Resultat wird hier leer sein.\\ \cline{1-2}
-  \end{tabular}
-  
-  
-Anstelle von AND kann auch \&\& oder + verwendet werden.\\
-Anstelle von NOT kann auch ! oder - verwendet werden.\\
+Die untenstehende Abbildung \ref{fig:Erweiterte Suche 2 mit Windows2} zeigt jedoch, dass das Dokument existiert.
+ \begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Win8_Search2_extended_2.PNG} 
+\caption[Erweiterte Suche 2 mit Windows 2]{Erweiterte Suche 2 mit Windows 2\\Quelle: eigener Screenshot}
+\label{fig:Erweiterte Suche 2 mit Windows2}
+\end{figure}
 
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\subsection{Suche \#2 mit Lucene und Luke}
 
+Bei der Suche mit Lucene findet Luke leider auch keinen Treffer.
 
-Quelle: \cite{Luke_Query}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Lucene_Search_2_1.PNG} 
+\caption[Suche 2 mit Lucene]{Suche 2 mit Lucene\\Quelle: eigener Screenshot}
+\label{fig:Suche 2 mit Lucene1}
+\end{figure}
 
+%==============  N E W  ==== S U B S E C T I O N ==============%
+\newpage
+\subsection{Fazit zur Suche \#2}
 
+Weder Windows noch Lucene konnten das gesuchte Dokument finden. Woran könnte dies liegen?\\
+Beim Windows wurde bereits bei der Abbildung \ref{fig:Erweiterte Suche 2 mit Windows2} gezeigt, dass das Dokument grundsätzlich gefunden wird. Jedoch indiziert Windows nicht den Inhalt des PDF.\\
+Die Frage stellt sich nun, ob die Lucene Java Applikation Fehler enthält, so dass das PDF Dokument zwar indiziert wurde,  jedoch wie bei der Windows Suche nur die Metadaten, nicht aber die Inhalte indiziert wurden.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{Lucene_Search_2_2.PNG} 
+\caption[Angepasste Suche 2 mit Lucene]{Angepasste Suche 2 mit Lucene\\Quelle: eigener Screenshot}
+\label{fig:Suche 2 mit Lucene2}
+\end{figure}
 
+Die Abbildung \ref{fig:Suche 2 mit Lucene2} zeigt eindeutig, dass Lucene den Inhalt der PDF Files indiziert hat und das gesuchte File auch mit der besten Trefferrate findet.\\
+Beim näheren hinschauen ist ersichtlich, dass bei der Indizierung anstelle von \flqq inverse\frqq\ nur \flqq inv\frqq\ eingelesen wurde. Auf die möglichen Gründe wird hier nicht eingegangen.
 
-
-
-
-
-
-
+Als Fazit der zweiten Suchanfrage kann man sagen, dass Lucene klar den Vorteil hat, dass PDF Inhalte indiziert werden und auch gefunden werden. Mit kleinen Anpassungen der Suchanfrage kann man das gesuchte Dokument ohne Probleme finden.
+\index{Vergleich mit Windows|)}
 
 
 

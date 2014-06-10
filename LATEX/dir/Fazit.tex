@@ -1,3 +1,13 @@
 \chapter{Fazit}
-\label{sec:Fazit}
+\label{chapter:Fazit}
+\index{Fazit der Arbeit|(}
+Die Einarbeitung mit Lucene war nicht immer einfach. Vor allem wegen der verschiedenen Datei-Formaten. Die Nicht-Kompatibilität des Standard-Indexer von Lucene mit PDF und Office Dokumenten war recht schnell ersichtlich. Jedoch wirft Lucene keine Fehlermeldung, sondern indiziert die Dateien sinnlos, da der Inhalt falsch interpretiert wird.\\
+Bei den Office-Dokumenten war es schwieriger. Anfangs wurde eine Indexer für Excel und ein Indexer für Word Dokumente eingesetzt. Jedoch wurden mit diesem Indexer nur ältere Office-Dokumente richtig indiziert. Für XML-basierte Office-Dokumente musste nachträglich nochmals ein eigener Indexer hinzugefügt werden.
 
+Aufgrund dessen, dass vor Beginn der Arbeit noch nie mit Lucene gearbeitet wurde, war eine Einarbeitungszeit unabdingbar.
+Mittels eines Testordners mit verschiedenen Dateiendungen und einem Subfolder wurde die Implementation der Java-Applikation getestet, was einwandfrei funktionierte. Leider war die Applikation in der Praxis beim Indizieren der Schuldateien nicht performant und es wurden hundertaussende Dateien indiziert. Das Problem wurde erst nach Stunden durch Debuggen entdeckt. Es versteckte sich in der Klasse Indexer.java in der Methode public int indexer(...). Hier war ein rekursiver Aufruf falsch implementiert, was zur 1000fachen Indizierung einzelner Dateien führte.
+
+Aufgrund der bequemlichkeit von bereits vorhandenen Search-Engine (vor allem beim Arbeiten mit Mac OS X) würde ich persönlich kein Anlass sehen, im privaten Umfeld auf eine Lucene basiserte Applikation umzusteigen, um meine Dateien indizieren zu lassen. Bei grösseren Datenmengen in Firmen oder bei Webapplikationen im geschäftlichen Umfeld jedoch wäre Lucene sicherlich eine sehr gute Möglichkeit für eine schnelle, kostengünstige und effiziente Indexierung und Suche.
+
+
+\index{Fazit der Arbeit|)}

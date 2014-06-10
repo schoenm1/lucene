@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  15 MAY 2014 22:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 JUN 2014 10:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -406,8 +406,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen117
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
@@ -417,6 +417,17 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 )
+\TX@col@width=\dimen120
+\TX@old@table=\dimen121
+\TX@old@col=\dimen122
+\TX@target=\dimen123
+\TX@delta=\dimen124
+\TX@cols=\count104
+\TX@ftn=\toks26
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
 (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -434,9 +445,9 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count104
+\Gread@gobject=\count105
 ))
-\everycr=\toks26
+\everycr=\toks27
 \minrowclearance=\skip52
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/makeidx.sty
@@ -459,77 +470,77 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2012/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count105
-\Gm@cntv=\count106
-\c@Gm@tempcnt=\count107
-\Gm@bindingoffset=\dimen120
-\Gm@wd@mp=\dimen121
-\Gm@odd@mp=\dimen122
-\Gm@even@mp=\dimen123
-\Gm@layoutwidth=\dimen124
-\Gm@layoutheight=\dimen125
-\Gm@layouthoffset=\dimen126
-\Gm@layoutvoffset=\dimen127
-\Gm@dimlist=\toks27
+\Gm@cnth=\count106
+\Gm@cntv=\count107
+\c@Gm@tempcnt=\count108
+\Gm@bindingoffset=\dimen125
+\Gm@wd@mp=\dimen126
+\Gm@odd@mp=\dimen127
+\Gm@even@mp=\dimen128
+\Gm@layoutwidth=\dimen129
+\Gm@layoutheight=\dimen130
+\Gm@layouthoffset=\dimen131
+\Gm@layoutvoffset=\dimen132
+\Gm@dimlist=\toks28
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen128
-\nom@tempdim=\dimen129
+\nomlabelwidth=\dimen133
+\nom@tempdim=\dimen134
 \nomitemsep=\skip53
 )
 (/usr/local/texlive/2012/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box32
 \UL@hyphenbox=\box33
 \UL@skip=\skip54
-\UL@hook=\toks28
-\UL@height=\dimen130
-\UL@pe=\count108
-\UL@pixel=\dimen131
+\UL@hook=\toks29
+\UL@height=\dimen135
+\UL@pe=\count109
+\UL@pixel=\dimen136
 \ULC@box=\box34
 Package: ulem 2012/05/18
-\ULdepth=\dimen132
+\ULdepth=\dimen137
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/floatflt/floatflt.sty
 Package: floatflt 1997/07/16 v. 1.31
-\c@OptionTest=\count109
+\c@OptionTest=\count110
 \figbox=\box35
 \tabbox=\box36
 \pagebox=\box37
-\ffigcount=\count110
-\ftabcount=\count111
-\fftest=\count112
-\hangcount=\count113
-\nosuccesstryfig=\count114
-\nosuccesstrytab=\count115
-\figgutter=\dimen133
-\tabgutter=\dimen134
-\htdone=\dimen135
-\pageht=\dimen136
-\startpageht=\dimen137
-\tabbredd=\dimen138
-\floatfltwidth=\dimen139
-\fltitemwidth=\dimen140
-\outputpretest=\toks29
+\ffigcount=\count111
+\ftabcount=\count112
+\fftest=\count113
+\hangcount=\count114
+\nosuccesstryfig=\count115
+\nosuccesstrytab=\count116
+\figgutter=\dimen138
+\tabgutter=\dimen139
+\htdone=\dimen140
+\pageht=\dimen141
+\startpageht=\dimen142
+\tabbredd=\dimen143
+\floatfltwidth=\dimen144
+\fltitemwidth=\dimen145
+\outputpretest=\toks30
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count116
+\lst@mode=\count117
 \lst@gtempboxa=\box38
-\lst@token=\toks30
-\lst@length=\count117
-\lst@currlwidth=\dimen141
-\lst@column=\count118
-\lst@pos=\count119
-\lst@lostspace=\dimen142
-\lst@width=\dimen143
-\lst@newlines=\count120
-\lst@lineno=\count121
-\lst@maxwidth=\dimen144
+\lst@token=\toks31
+\lst@length=\count118
+\lst@currlwidth=\dimen146
+\lst@column=\count119
+\lst@pos=\count120
+\lst@lostspace=\dimen147
+\lst@width=\dimen148
+\lst@newlines=\count121
+\lst@lineno=\count122
+\lst@maxwidth=\dimen149
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count122
-\lst@skipnumbers=\count123
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
 \lst@framebox=\box39
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
@@ -607,14 +618,14 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 (/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen145
-\Hy@linkcounter=\count124
-\Hy@pagecounter=\count125
+\@linkdim=\dimen150
+\Hy@linkcounter=\count125
+\Hy@pagecounter=\count126
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/05/13 v6.82q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count126
+\Hy@SavedSpaceFactor=\count127
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -643,11 +654,11 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count127
+\c@Hy@tempcnt=\count128
 LaTeX Info: Redefining \url on input line 4653.
-\Fld@menulength=\count128
-\Field@Width=\dimen146
-\Fld@charsize=\dimen147
+\Fld@menulength=\count129
+\Field@Width=\dimen151
+\Fld@charsize=\dimen152
 Package hyperref Info: Hyper figures OFF on input line 5773.
 Package hyperref Info: Link nesting OFF on input line 5778.
 Package hyperref Info: Hyper index ON on input line 5781.
@@ -657,17 +668,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5798.
 Package hyperref Info: PDF/A mode OFF on input line 5803.
 LaTeX Info: Redefining \ref on input line 5843.
 LaTeX Info: Redefining \pageref on input line 5847.
-\Hy@abspage=\count129
-\c@Item=\count130
-\c@Hfootnote=\count131
+\Hy@abspage=\count130
+\c@Item=\count131
+\c@Hfootnote=\count132
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/05/13 v6.82q Hyperref driver for pdfTeX
-\Fld@listcount=\count132
-\c@bookmark@seq@number=\count133
+\Fld@listcount=\count133
+\c@bookmark@seq@number=\count134
 \Hy@SectionHShift=\skip55
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/chngcntr/chngcntr.sty
@@ -679,17 +690,17 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTright=\skip57
 \LTpre=\skip58
 \LTpost=\skip59
-\LTchunksize=\count134
-\LTcapwidth=\dimen148
+\LTchunksize=\count135
+\LTcapwidth=\dimen153
 \LT@head=\box40
 \LT@firsthead=\box41
 \LT@foot=\box42
 \LT@lastfoot=\box43
-\LT@cols=\count135
-\LT@rows=\count136
-\c@LT@tables=\count137
-\c@LT@chunks=\count138
-\LT@p@ftn=\toks31
+\LT@cols=\count136
+\LT@rows=\count137
+\c@LT@tables=\count138
+\c@LT@chunks=\count139
+\LT@p@ftn=\toks32
 )
 Class scrbook Info: longtable captions redefined on input line 307.
 
@@ -723,7 +734,7 @@ Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 \plpartopsep=\skip75
 \plitemsep=\skip76
 \plparsep=\skip77
-\pl@lab=\toks32
+\pl@lab=\toks33
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
@@ -733,15 +744,15 @@ Package: caption 2012/02/19 v3.2f Customizing captions (AR)
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
-\captionmargin=\dimen149
-\captionmargin@=\dimen150
-\captionwidth=\dimen151
-\caption@indent=\dimen152
-\caption@parindent=\dimen153
-\caption@hangindent=\dimen154
+\captionmargin=\dimen154
+\captionmargin@=\dimen155
+\captionwidth=\dimen156
+\caption@indent=\dimen157
+\caption@parindent=\dimen158
+\caption@hangindent=\dimen159
 )
 Package caption Info: KOMA-Script document class.
-\c@ContinuedFloat=\count139
+\c@ContinuedFloat=\count140
 Package caption Info: float package is loaded.
 Package caption Info: floatflt package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -753,8 +764,8 @@ Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
 )
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count140
-\c@subtable=\count141
+\c@subfigure=\count141
+\c@subtable=\count142
 ))
 \@indexfile=\write3
 \openout3 = `MAIN_SITE.idx'.
@@ -772,7 +783,7 @@ Writing nomenclature file MAIN_SITE.nlo
 No file Silbentrennung.tex.
 (./MAIN_SITE.aux (./Deckblatt.aux)
 
-LaTeX Warning: Label `subsec:erwartetesResultat' multiply defined.
+LaTeX Warning: Label `Suche1 mit Windows 8.1 Professional' multiply defined.
 
 )
 \openout1 = `MAIN_SITE.aux'.
@@ -818,17 +829,17 @@ e
 ))
 (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count142
-\scratchdimen=\dimen155
+\scratchcounter=\count143
+\scratchdimen=\dimen160
 \scratchbox=\box44
-\nofMPsegments=\count143
-\nofMParguments=\count144
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count145
-\MPscratchDim=\dimen156
-\MPnumerator=\count146
-\makeMPintoPDFobject=\count147
-\everyMPtoPDFconversion=\toks34
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen161
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks35
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -864,7 +875,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count148
+\c@lstlisting=\count149
 \AtBeginShipoutBox=\box45
 Package hyperref Info: Link coloring ON on input line 106.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -873,7 +884,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count150
 )
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
@@ -891,12 +902,12 @@ Package caption Info: End \AtBeginDocument code.
 
 
 (./Deckblatt.tex
-<pictures/zhaw_logo_soe.jpg, id=108, 1412.27625pt x 930.47626pt>
+<pictures/zhaw_logo_soe.jpg, id=229, 1412.27625pt x 930.47626pt>
 File: pictures/zhaw_logo_soe.jpg Graphic file (type jpg)
 
 <use pictures/zhaw_logo_soe.jpg>
 Package pdftex.def Info: pictures/zhaw_logo_soe.jpg used on input line 23.
-(pdftex.def)             Requested size: 302.29741pt x 199.16928pt.
+(pdftex.def)             Requested size: 215.92671pt x 142.26378pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -939,20 +950,36 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 146.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) (./MAIN_SITE.toc)
-\tf@toc=\write6
-\openout6 = `MAIN_SITE.toc'.
-
-(./MAIN_SITE.nls) <pictures/ZHAW_logo.png, id=144, 413.545pt x 432.61626pt>
+) (./MAIN_SITE.toc
+<pictures/ZHAW_logo.png, id=269, 413.545pt x 432.61626pt>
 File: pictures/ZHAW_logo.png Graphic file (type png)
 
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 177.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 32.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [1
 
 
- <./pictures/ZHAW_logo.png>] (./MAIN_SITE.lof)
+ <./pictures/ZHAW_logo.png>]
+Overfull \hbox (9.4405pt too wide) detected at line 54
+ [][][]\T1/cmr/m/n/10.95 xxviii[][]
+ []
+
+
+Overfull \hbox (3.38832pt too wide) detected at line 55
+ [][][]\T1/cmr/m/n/10.95 xxxi[][]
+ []
+
+)
+\tf@toc=\write6
+\openout6 = `MAIN_SITE.toc'.
+
+ (./MAIN_SITE.nls)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 177.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [2] (./MAIN_SITE.lof)
 \tf@lof=\write7
 \openout7 = `MAIN_SITE.lof'.
 
@@ -961,7 +988,7 @@ File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 178.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [2
+ [3
 
 ] (./MAIN_SITE.lot)
 \tf@lot=\write8
@@ -980,18 +1007,27 @@ File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 180.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [3
+ [4
 
-] (./MAIN_SITE.lol)
+] (./MAIN_SITE.lol
+Overfull \hbox (9.4405pt too wide) detected at line 18
+ [][][]\T1/cmr/m/n/10.95 xxviii[][]
+ []
+
+
+Overfull \hbox (3.38832pt too wide) detected at line 19
+ [][][]\T1/cmr/m/n/10.95 xxxi[][]
+ []
+
+)
 \tf@lol=\write9
 \openout9 = `MAIN_SITE.lol'.
 
 File: pictures/ZHAW_logo.png Graphic file (type png)
-
-<use pictures/ZHAW_logo.png>
+ <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 188.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [4
+ [5
 
 ] (./dir/Versionierung_Aufwaende.tex
 Kapitel 1.
@@ -1021,60 +1057,70 @@ Package xcolor Warning: Incompatible color definition on input line 11.
 Package xcolor Warning: Incompatible color definition on input line 12.
 
 
-Overfull \hbox (121.31415pt too wide) in paragraph at lines 8--19
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 20--20
+[]|\T1/cmr/m/n/10.95 20.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 22--22
+[]|\T1/cmr/m/n/10.95 29.05.2014|  
+ []
+
+
+Overfull \hbox (148.2309pt too wide) in paragraph at lines 8--27
 [][] 
  []
 
 File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 31.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 35.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \chapter
+l.35 \chapter
              {Aufwände} [1
 
 
 ]
 Kapitel 2.
 
-Package xcolor Warning: Incompatible color definition on input line 37.
+Package xcolor Warning: Incompatible color definition on input line 41.
 
 
-Package xcolor Warning: Incompatible color definition on input line 37.
+Package xcolor Warning: Incompatible color definition on input line 41.
 
 
-Package xcolor Warning: Incompatible color definition on input line 38.
+Package xcolor Warning: Incompatible color definition on input line 42.
 
 
-Package xcolor Warning: Incompatible color definition on input line 38.
+Package xcolor Warning: Incompatible color definition on input line 42.
 
 
-Package xcolor Warning: Incompatible color definition on input line 39.
+Package xcolor Warning: Incompatible color definition on input line 43.
 
 
-Package xcolor Warning: Incompatible color definition on input line 40.
+Package xcolor Warning: Incompatible color definition on input line 44.
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 42--42
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 46--46
 []|\T1/cmr/m/n/10.95 18.03.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 46--46
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 47--47
+[]|\T1/cmr/m/n/10.95 18.03.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 51--51
 []|\T1/cmr/m/n/10.95 26.03.2014|  
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 49--49
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 54--54
 []|\T1/cmr/m/n/10.95 11.05.2014|  
- []
-
-
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 56--56
-[]|\T1/cmr/m/n/10.95 13.05.2014|  
  []
 
 
@@ -1083,16 +1129,56 @@ Overfull \hbox (21.15096pt too wide) in paragraph at lines 60--60
  []
 
 
-Overfull \hbox (21.15096pt too wide) in paragraph at lines 66--66
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 64--64
+[]|\T1/cmr/m/n/10.95 14.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 70--70
 []|\T1/cmr/m/n/10.95 15.05.2014|  
  []
 
 
-Overfull \hbox (149.51454pt too wide) in paragraph at lines 36--75
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 72--72
+[]|\T1/cmr/m/n/10.95 17.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 75--75
+[]|\T1/cmr/m/n/10.95 18.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 78--78
+[]|\T1/cmr/m/n/10.95 19.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 81--81
+[]|\T1/cmr/m/n/10.95 20.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 85--85
+[]|\T1/cmr/m/n/10.95 28.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 88--88
+[]|\T1/cmr/m/n/10.95 29.05.2014|  
+ []
+
+
+Overfull \hbox (21.15096pt too wide) in paragraph at lines 91--91
+[]|\T1/cmr/m/n/10.95 30.05.2014|  
+ []
+
+
+Overfull \hbox (149.51454pt too wide) in paragraph at lines 40--98
 [][] 
  []
 
-) (./dir/Einleitung/00-Einleitung.tex
+) (./dir/Einleitung.tex
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
@@ -1103,30 +1189,30 @@ Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
 Kapitel 3.
 File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 24.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 18.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [3
 
 ]
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 38.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 44.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [4]
 
-Package xcolor Warning: Incompatible color definition on input line 53.
+Package xcolor Warning: Incompatible color definition on input line 64.
 
 
-Package xcolor Warning: Incompatible color definition on input line 54.
+Package xcolor Warning: Incompatible color definition on input line 65.
 
 
-Package xcolor Warning: Incompatible color definition on input line 54.
+Package xcolor Warning: Incompatible color definition on input line 65.
 
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 66.
 
 
-Overfull \hbox (115.44789pt too wide) in paragraph at lines 52--60
+Overfull \hbox (115.44789pt too wide) in paragraph at lines 63--71
 [][] 
  []
 
@@ -1152,128 +1238,543 @@ Overfull \hbox (2.82805pt too wide) in paragraph at lines 23--26
 / detail ? name = lukeall -[] 3 . 5 . 0 . jar&$[][] 
  []
 
-) (./dir/Vergleich.tex
 File: pictures/ZHAW_logo.png Graphic file (type png)
- <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 3.
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 30.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [6
 
 ]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 78.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [7]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 96.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+File: pictures/ZHAW_logo.png Graphic file (type png)
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 127.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [9]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 135.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [10]
+<pictures/Klassendiagramm.PNG, id=480, 591.71063pt x 594.72188pt>
+File: pictures/Klassendiagramm.PNG Graphic file (type png)
+
+<use pictures/Klassendiagramm.PNG>
+Package pdftex.def Info: pictures/Klassendiagramm.PNG used on input line 145.
+(pdftex.def)             Requested size: 426.79135pt x 428.97078pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 153.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [11 <./pictures/Klassendiagramm.PNG>]
+(/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(./dir/listings/Indexer_part1.java)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 160.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [12]
+(./dir/listings/getValidFileextensions.java)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 189.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[13]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 236.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [14]
+Overfull \hbox (14.80438pt too wide) in paragraph at lines 237--238
+[]\T1/cmr/m/n/10.95 Die Stich-pro-ben der Qua-li-tät der Su-che mit der jet-zi-
+gen Im-ple-men-tie-rung der Java-Applikation
+ []
+
+) (./dir/Vorbereitung.tex
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 3.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [15]
 Kapitel 5.
-<pictures/Luke-Query.PNG, id=229, 996.72375pt x 403.5075pt>
+<pictures/WindowsSearchDefault.PNG, id=536, 902.37125pt x 548.0475pt>
+File: pictures/WindowsSearchDefault.PNG Graphic file (type png)
+
+<use pictures/WindowsSearchDefault.PNG>
+Package pdftex.def Info: pictures/WindowsSearchDefault.PNG used on input line 1
+6.
+(pdftex.def)             Requested size: 405.45047pt x 246.25114pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 21.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [16
+
+ <./pictures/WindowsSearchDefault.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+[][][][][]$\T1/cmtt/m/n/9 http : / / social . technet . microsoft . com / Forum
+s / windows / en -[] US / afb904c1 -[] 1c61 -[] 4aae -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/cmtt/m/n/9 b6b1 -[] 5cf525b9f8de / how -[] do -[] i -[] get -[] windows -[]
+ 7 -[] to -[] index -[] a -[] network -[] mapped -[] drive ? forum =
+ []
+
+File: pictures/ZHAW_logo.png Graphic file (type png)
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 44.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [17]
+<pictures/Luke-Query.PNG, id=554, 1317.92375pt x 528.97626pt>
 File: pictures/Luke-Query.PNG Graphic file (type png)
 
 <use pictures/Luke-Query.PNG>
-Package pdftex.def Info: pictures/Luke-Query.PNG used on input line 17.
-(pdftex.def)             Requested size: 426.79135pt x 172.7783pt.
-File: pictures/ZHAW_logo.png Graphic file (type png)
- <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 22.
-(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [7
+Package pdftex.def Info: pictures/Luke-Query.PNG used on input line 52.
+(pdftex.def)             Requested size: 426.79135pt x 171.3018pt.
 
- <./pictures/Luke-Query.PNG>]
-Overfull \hbox (8.72342pt too wide) in paragraph at lines 49--53
+Overfull \hbox (10.88788pt too wide) in paragraph at lines 65--67
+[] 
+ []
+
+
+Overfull \hbox (10.88788pt too wide) in paragraph at lines 75--76
+[] 
+ []
+
+File: pictures/ZHAW_logo.png Graphic file (type png)
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 87.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [18 <./pictures/Luke-Query.PNG>]
+Overfull \hbox (10.88788pt too wide) in paragraph at lines 87--88
+[][] 
+ []
+
+
+Overfull \hbox (16.9747pt too wide) in paragraph at lines 93--99
 [][] 
  []
 
 File: pictures/ZHAW_logo.png Graphic file (type png)
 <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 69.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 137.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
-) (./dir/Fazit.tex
+) (./dir/Vergleich.tex
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 3.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [20]
+Kapitel 6.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 13.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [21
+
+]
+<pictures/Win8_Search1_normal.PNG, id=584, 1086.0575pt x 364.36125pt>
+File: pictures/Win8_Search1_normal.PNG Graphic file (type png)
+
+<use pictures/Win8_Search1_normal.PNG>
+Package pdftex.def Info: pictures/Win8_Search1_normal.PNG used on input line 38
+.
+(pdftex.def)             Requested size: 426.79135pt x 143.18445pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 44.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [22 <./pictures/Win8_Search1_normal.PNG>]
+<pictures/Win8_Search1_extended.PNG, id=592, 1103.12125pt x 290.08376pt>
+File: pictures/Win8_Search1_extended.PNG Graphic file (type png)
+
+<use pictures/Win8_Search1_extended.PNG>
+Package pdftex.def Info: pictures/Win8_Search1_extended.PNG used on input line 
+48.
+(pdftex.def)             Requested size: 426.79135pt x 112.23366pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 56.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [23 <./pictures/Win8_Search1_extended.PNG>]
+<pictures/Lucene_Search_1.PNG, id=600, 1196.47pt x 674.52pt>
+File: pictures/Lucene_Search_1.PNG Graphic file (type png)
+
+<use pictures/Lucene_Search_1.PNG>
+Package pdftex.def Info: pictures/Lucene_Search_1.PNG used on input line 65.
+(pdftex.def)             Requested size: 426.79135pt x 240.60387pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 71.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [24 <./pictures/Lucene_Search_1.PNG>]
+Overfull \hbox (2.003pt too wide) in paragraph at lines 77--78
+\T1/cmr/m/n/10.95 such-ten Merk-ma-le bei den Do-ku-men-ten vor-han-den wa-ren,
+ aus-ser dem con-tents:address.java.
+ []
+
+<pictures/Lucene_Search_1_english.PNG, id=608, 1219.55624pt x 415.5525pt>
+File: pictures/Lucene_Search_1_english.PNG Graphic file (type png)
+
+<use pictures/Lucene_Search_1_english.PNG>
+Package pdftex.def Info: pictures/Lucene_Search_1_english.PNG used on input lin
+e 84.
+(pdftex.def)             Requested size: 426.79135pt x 145.42653pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 91.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[25 <./pictures/Lucene_Search_1_english.PNG>] (./dir/listings/Suche1.java)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 111.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [26]
+<pictures/Win8_Search2_normal.PNG, id=630, 1080.035pt x 275.0275pt>
+File: pictures/Win8_Search2_normal.PNG Graphic file (type png)
+
+<use pictures/Win8_Search2_normal.PNG>
+Package pdftex.def Info: pictures/Win8_Search2_normal.PNG used on input line 13
+4.
+(pdftex.def)             Requested size: 426.79135pt x 108.67873pt.
+
+<pictures/Win8_Search2_extended_1.PNG, id=631, 1285.80376pt x 245.91875pt>
+File: pictures/Win8_Search2_extended_1.PNG Graphic file (type png)
+
+<use pictures/Win8_Search2_extended_1.PNG>
+Package pdftex.def Info: pictures/Win8_Search2_extended_1.PNG used on input lin
+e 143.
+(pdftex.def)             Requested size: 426.79135pt x 81.62624pt.
+
+<pictures/Win8_Search2_extended_2.PNG, id=634, 1286.8075pt x 250.9375pt>
+File: pictures/Win8_Search2_extended_2.PNG Graphic file (type png)
+
+<use pictures/Win8_Search2_extended_2.PNG>
+Package pdftex.def Info: pictures/Win8_Search2_extended_2.PNG used on input lin
+e 153.
+(pdftex.def)             Requested size: 426.79135pt x 83.22697pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 157.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[27 <./pictures/Win8_Search2_normal.PNG> <./pictures/Win8_Search2_extended_1.PN
+G>] <pictures/Lucene_Search_2_1.PNG, id=641, 1226.5825pt x 482.80376pt>
+File: pictures/Lucene_Search_2_1.PNG Graphic file (type png)
+
+<use pictures/Lucene_Search_2_1.PNG>
+Package pdftex.def Info: pictures/Lucene_Search_2_1.PNG used on input line 165.
+
+(pdftex.def)             Requested size: 426.79135pt x 167.9893pt.
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 171.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [28 <./pictures/Win8_Search2_extended_2.PNG> <./pictures/Lucene_Search_2_1.PNG
+>]
+<pictures/Lucene_Search_2_2.PNG, id=649, 1230.5975pt x 641.39626pt>
+File: pictures/Lucene_Search_2_2.PNG Graphic file (type png)
+
+<use pictures/Lucene_Search_2_2.PNG>
+Package pdftex.def Info: pictures/Lucene_Search_2_2.PNG used on input line 180.
+
+(pdftex.def)             Requested size: 426.79135pt x 222.44658pt.
+) (./dir/Fazit.tex
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
 Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [9]
-Kapitel 6.
+ [29 <./pictures/Lucene_Search_2_2.PNG>]
+Kapitel 7.
 )
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 227.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 228.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [10
+ [30
 
 ] (./dir/Anhang/Anhang.tex
 Anhang A.
-)
-No file MAIN_SITE.ind.
-(./MAIN_SITE.bbl (./MAIN_SITE.brf)
-\tf@brf=\write10
-\openout10 = `MAIN_SITE.brf'.
-
+(./dir/Anhang/listings/Main.java
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 30.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
  [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 7--7
+])
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 20.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [2] (./dir/Anhang/listings/Logger.java)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 22.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [3] (./dir/Anhang/listings/Indexer.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [4]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [5]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 120.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [6]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 161.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [7]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 200.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [8])
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 28.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [9]
+(./dir/Anhang/listings/TextFileIndexer.java)
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 34.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[10] (./dir/Anhang/listings/PDFIndexer.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+
+[11]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [12]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 119.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [13]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 158.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [14]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 196.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [15]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 236.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [16]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 277.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [17])
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 40.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [18] (./dir/Anhang/listings/OfficeDocIndexer.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 42.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [19]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 80.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [20]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 122.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [21]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 160.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [22]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 199.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [23]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 237.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [24]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 276.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [25]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 318.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [26])
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 46.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [27] (./dir/Anhang/listings/myFunctions.java
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 41.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [28]
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 81.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [29])
+File: pictures/ZHAW_logo.png Graphic file (type png)
+
+<use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 52.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [30] (./dir/Anhang/listings/TextFilesFilter.java)) (./MAIN_SITE.ind
+File: pictures/ZHAW_logo.png Graphic file (type png)
+ <use pictures/ZHAW_logo.png>
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 1.
+(pdftex.def)             Requested size: 33.08427pt x 34.61pt.
+ [31] [32
+
+
+
+]) (./MAIN_SITE.bbl
+(./MAIN_SITE.brf)
+\tf@brf=\write10
+\openout10 = `MAIN_SITE.brf'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
 []\T1/cmr/m/it/10.95 Lucene Que-ry Par-ser Syn-tax\T1/cmr/m/n/10.95 .  [][]$\T1
 /cmtt/m/n/10.95 http : / / lucene . apache . org / core / 2 _ 9 _ 4 /
  []
 
+
+Underfull \hbox (badness 8151) in paragraph at lines 15--15
+[]\T1/cmr/m/it/10.95 Who is using Lu-ce-ne/-Solr\T1/cmr/m/n/10.95 .  [][]$\T1/c
+mtt/m/n/10.95 http : / / searchhub . org / 2012 / 01 / 21 / who -[] uses -[]
+ []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
 File: pictures/ZHAW_logo.png Graphic file (type png)
  <use pictures/ZHAW_logo.png>
-Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 247.
+Package pdftex.def Info: pictures/ZHAW_logo.png used on input line 248.
 (pdftex.def)             Requested size: 33.08427pt x 34.61pt.
- [2
+ [33
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
  (./MAIN_SITE.aux (./Deckblatt.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `MAIN_SITE.out' has not changed.
-(rerunfilecheck)             Checksum: E220AF807825553BA88C02A650AA1597;1626.
+(rerunfilecheck)             Checksum: 24B9A85F75E38D9F4A216EF661E80D19;3740.
 Package rerunfilecheck Info: File `MAIN_SITE.brf' has not changed.
-(rerunfilecheck)             Checksum: 0CA5B64A2A3B362E4F31BCF73C85551F;87.
+(rerunfilecheck)             Checksum: C2C8C590F908E90B542CA7BBE5D07416;254.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 247.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 248.
  ) 
 Here is how much of TeX's memory you used:
- 12870 strings out of 493488
- 193490 string characters out of 3141326
- 325257 words of memory out of 3000000
- 15814 multiletter control sequences out of 15000+200000
- 25167 words of font info for 63 fonts, out of 3000000 for 9000
+ 15382 strings out of 493488
+ 232561 string characters out of 3141326
+ 647485 words of memory out of 3000000
+ 17007 multiletter control sequences out of 15000+200000
+ 25480 words of font info for 64 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,15n,55p,446b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,15n,55p,603b,1979s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2
-012/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/te
-xmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/public/cm-super/sfxc2074.pfb>
-Output written on MAIN_SITE.pdf (17 pages, 659643 bytes).
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/201
+2/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2012/
+texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2012/te
+xmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2012/texm
+f-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2012/texmf-
+dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2012/texmf-di
+st/fonts/type1/public/cm-super/sfxc2074.pfb>
+Output written on MAIN_SITE.pdf (69 pages, 1320158 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 296 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2302 PDF objects out of 2487 (max. 8388607)
+ 2165 compressed objects within 22 object streams
+ 1321 named destinations out of 1440 (max. 500000)
+ 519 words of extra memory for PDF output out of 10000 (max. 10000000)
 
